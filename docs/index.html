@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,45 +7,84 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="wrap">
-    <h1>CS Deadlines Hub MVP</h1>
-    <p class="sub">venues.yml 중심 스캔 + 분야별 필터 + GitHub Pages 정적 배포</p>
+  <header class="wrap hero">
+    <div>
+      <h1>CS Deadlines Hub MVP</h1>
+      <p class="sub">Venue-first scanning, broad CS domain filters, and GitHub Pages deployment.</p>
+    </div>
+    <div class="summary-box">
+      <div class="summary-label">Visible venues</div>
+      <div class="summary-value" id="resultCount">0</div>
+    </div>
   </header>
 
   <section class="wrap controls">
-    <input id="search" type="search" placeholder="학회명, short name, domain 검색" />
+    <input id="search" type="search" placeholder="Search by venue name, acronym, or domain" />
     <select id="domainFilter">
-      <option value="">모든 분야</option>
+      <option value="">All domains</option>
     </select>
     <select id="typeFilter">
-      <option value="">모든 타입</option>
-      <option value="conference">conference</option>
-      <option value="symposium">symposium</option>
-      <option value="workshop">workshop</option>
+      <option value="">All types</option>
+      <option value="conference">Conference</option>
+      <option value="symposium">Symposium</option>
+      <option value="workshop">Workshop</option>
+      <option value="journal-track">Journal track</option>
     </select>
     <select id="tierFilter">
-      <option value="">모든 tier</option>
-      <option value="top">top</option>
-      <option value="strong">strong</option>
-      <option value="mid">mid</option>
-      <option value="workshop">workshop</option>
-      <option value="fast">fast</option>
+      <option value="">All tiers</option>
+      <option value="top">Top</option>
+      <option value="strong">Strong</option>
+      <option value="mid">Mid</option>
+      <option value="workshop">Workshop</option>
+      <option value="fast">Fast</option>
+    </select>
+    <select id="scanFilter">
+      <option value="">All scan states</option>
+      <option value="enabled">Scan enabled</option>
+      <option value="catalog">Catalog only</option>
     </select>
   </section>
 
-  <main id="list" class="wrap grid"></main>
+  <main id="list" class="wrap list"></main>
 
   <template id="cardTemplate">
-    <article class="card">
-      <div class="meta-row">
-        <span class="badge tier"></span>
-        <span class="badge type"></span>
+    <article class="venue-row">
+      <div class="row-top">
+        <div>
+          <div class="meta-row">
+            <span class="badge tier"></span>
+            <span class="badge type"></span>
+            <span class="badge scan-state"></span>
+          </div>
+          <h2 class="title"></h2>
+          <p class="domains"></p>
+        </div>
+        <div class="year-block">
+          <div class="year-label">Year</div>
+          <div class="year"></div>
+        </div>
       </div>
-      <h2 class="title"></h2>
-      <p class="domains"></p>
-      <p class="year"></p>
-      <p class="status"></p>
-      <p class="confidence"></p>
+
+      <div class="row-grid">
+        <div class="info-block">
+          <div class="label">Status</div>
+          <div class="status"></div>
+        </div>
+        <div class="info-block">
+          <div class="label">Confidence</div>
+          <div class="confidence"></div>
+        </div>
+        <div class="info-block deadlines-block">
+          <div class="label">Deadlines</div>
+          <div class="deadlines"></div>
+        </div>
+        <div class="info-block location-block">
+          <div class="label">Venue</div>
+          <div class="location"></div>
+        </div>
+      </div>
+
+      <div class="notes"></div>
       <div class="preview"></div>
       <p class="links"></p>
     </article>

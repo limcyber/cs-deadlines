@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import json
 import re
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -17,7 +16,7 @@ INSTANCES_PATH = ROOT / "data" / "instances.yml"
 CANDIDATES_PATH = ROOT / "data" / "candidate_venues.json"
 
 HEADERS = {
-    "User-Agent": "cs-deadlines-mvp/0.1 (+https://github.com/your-org/cs-deadlines-mvp)"
+    "User-Agent": "cs-deadlines-mvp/0.2 (+https://github.com/your-org/cs-deadlines-mvp)"
 }
 DATE_PATTERNS = [
     r"(?:deadline|abstract|paper|submission|important dates?)",
@@ -51,8 +50,7 @@ def fetch_text(url: str, timeout: int = 20) -> str:
     soup = BeautifulSoup(resp.text, "html.parser")
     for tag in soup(["script", "style", "noscript"]):
         tag.extract()
-    text = soup.get_text("\n", strip=True)
-    return text
+    return soup.get_text("\n", strip=True)
 
 
 def extract_candidate_lines(text: str, max_lines: int = 10) -> List[str]:
@@ -93,10 +91,6 @@ def update_instances_with_scan(instances, result: ScanResult, year: int) -> list
 
 
 def discover_new_candidates() -> None:
-    """Optional hook.
-    In production, this could read OpenReview/WikiCFP/etc. For the MVP,
-    we keep it as a placeholder file to support human-reviewed append-only growth.
-    """
     if not CANDIDATES_PATH.exists():
         CANDIDATES_PATH.write_text("[]\n", encoding="utf-8")
 
@@ -106,8 +100,11 @@ def main() -> int:
     venues = load_yaml(VENUES_PATH)
     instances = load_yaml(INSTANCES_PATH)
 
-    print(f"[INFO] scanning {len(venues)} venues")
-    for venue in venues:
+    enabled = [v for v in venues if v.get("scan_enabled", False)]
+    skipped = len(venues) - len(enabled)
+
+    print(f"[INFO] scanning {len(enabled)} venues (skipping {skipped} catalog-only entries)")
+    for venue in enabled:
         target_url = venue.get("cfp_url") or venue.get("website")
         checked_at = datetime.now(timezone.utc).isoformat()
         try:
@@ -119,7 +116,7 @@ def main() -> int:
                 source_url=target_url,
                 checked_at=checked_at,
                 matched_lines=matched_lines,
-                notes="MVP scanner: extracted candidate lines only; manual confirmation still recommended.",
+                notes="MVP scanner: extracted candidate lines only; manual confirmation is still recommended.",
             )
             print(f"[OK] {venue['short_name']}: {len(matched_lines)} candidate lines")
         except Exception as exc:
