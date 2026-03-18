@@ -10,37 +10,57 @@
   <header class="wrap hero">
     <div>
       <h1>CS Deadlines Hub MVP</h1>
-      <p class="sub">Venue-first scanning, four broad CS area filters, and GitHub Pages deployment.</p>
+      <p class="sub">Track venues, upcoming submission windows, source confidence, and deadline countdowns in venue time.</p>
     </div>
-    <div class="summary-box">
-      <div class="summary-label">Visible venues</div>
-      <div class="summary-value" id="resultCount">0</div>
+    <div class="header-actions">
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
+      <div class="summary-box">
+        <div class="summary-label">Visible venues</div>
+        <div class="summary-value" id="resultCount">0</div>
+      </div>
     </div>
   </header>
 
   <section class="wrap controls">
-    <input id="search" type="search" placeholder="Search by venue name, acronym, or area" />
-    <select id="domainFilter">
-      <option value="">All areas</option>
-    </select>
-    <select id="typeFilter">
-      <option value="">All types</option>
-      <option value="conference">Conference</option>
-      <option value="workshop">Workshop</option>
-    </select>
-    <select id="tierFilter">
-      <option value="">All tiers</option>
-      <option value="top">Top</option>
-      <option value="strong">Strong</option>
-      <option value="mid">Mid</option>
-      <option value="workshop">Workshop</option>
-      <option value="fast">Fast</option>
-    </select>
-    <select id="scanFilter">
-      <option value="">All scan states</option>
-      <option value="enabled">Scan enabled</option>
-      <option value="catalog">Catalog only</option>
-    </select>
+    <div class="control-row primary-row">
+      <input id="search" type="search" placeholder="Search venue name, acronym, alias, domain, or area" />
+      <select id="typeFilter">
+        <option value="">All types</option>
+        <option value="conference">Conference</option>
+        <option value="workshop">Workshop</option>
+      </select>
+      <select id="scanFilter">
+        <option value="">All scan states</option>
+        <option value="enabled">Scan enabled</option>
+        <option value="catalog">Catalog only</option>
+      </select>
+      <select id="sortFilter">
+        <option value="nearest">Sort: nearest deadline</option>
+        <option value="latest">Sort: latest deadline</option>
+        <option value="alphabetical">Sort: A–Z</option>
+        <option value="tier">Sort: tier</option>
+      </select>
+    </div>
+
+    <div class="control-row secondary-row">
+      <div class="quick-filter-group">
+        <span class="control-label">Areas</span>
+        <div id="areaButtons" class="area-buttons">
+          <button type="button" class="chip is-active" data-area="">All</button>
+          <button type="button" class="chip" data-area="AI+Data">AI+Data</button>
+          <button type="button" class="chip" data-area="Systems">Systems</button>
+          <button type="button" class="chip" data-area="Security">Security</button>
+          <button type="button" class="chip" data-area="SE+Theory">SE+Theory</button>
+        </div>
+      </div>
+
+      <div class="toggle-group">
+        <label class="toggle-pill">
+          <input id="topTierOnly" type="checkbox" />
+          <span>Top-tier only</span>
+        </label>
+      </div>
+    </div>
   </section>
 
   <main id="list" class="wrap list"></main>
@@ -48,11 +68,12 @@
   <template id="cardTemplate">
     <article class="venue-row">
       <div class="row-top">
-        <div>
+        <div class="title-column">
           <div class="meta-row">
             <span class="badge tier"></span>
             <span class="badge type"></span>
             <span class="badge scan-state"></span>
+            <span class="badge status-badge"></span>
           </div>
           <h2 class="title"></h2>
           <p class="domains"></p>
@@ -63,23 +84,33 @@
         </div>
       </div>
 
-      <div class="row-grid">
-        <div class="info-block">
-          <div class="label">Status</div>
-          <div class="status"></div>
+      <div class="hero-grid">
+        <div class="countdown-panel info-block">
+          <div class="label">Next deadline</div>
+          <div class="next-deadline-kind"></div>
+          <div class="countdown"></div>
+          <div class="deadline-time"></div>
+          <div class="local-time"></div>
+          <div class="calendar-links"></div>
         </div>
-        <div class="info-block">
-          <div class="label">Confidence</div>
-          <div class="confidence"></div>
-        </div>
-        <div class="info-block deadlines-block">
-          <div class="label">Deadlines</div>
-          <div class="deadlines"></div>
-        </div>
-        <div class="info-block location-block">
+
+        <div class="info-block venue-panel">
           <div class="label">Venue</div>
           <div class="location"></div>
+          <div class="venue-dates"></div>
         </div>
+
+        <div class="info-block source-panel">
+          <div class="label">Source & confidence</div>
+          <div class="source"></div>
+          <div class="confidence"></div>
+          <div class="checked-at"></div>
+        </div>
+      </div>
+
+      <div class="deadline-section info-block wide-block">
+        <div class="label">Submission timeline</div>
+        <div class="deadlines"></div>
       </div>
 
       <div class="notes"></div>

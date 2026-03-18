@@ -1,11 +1,33 @@
 :root {
   --bg: #0b1020;
+  --bg-2: #0d1427;
   --panel: #131a2c;
+  --panel-2: rgba(255, 255, 255, 0.02);
   --text: #edf2ff;
   --muted: #b8c2e0;
   --line: #2a3558;
   --accent: #8fb3ff;
   --success: #7ee0a0;
+  --warning: #ffd166;
+  --orange: #ffb067;
+  --danger: #ff7b89;
+  --shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+}
+
+:root[data-theme="light"] {
+  --bg: #f5f7fc;
+  --bg-2: #edf2fb;
+  --panel: #ffffff;
+  --panel-2: rgba(15, 23, 42, 0.03);
+  --text: #10203d;
+  --muted: #5f6d8c;
+  --line: #d9e1f2;
+  --accent: #315fda;
+  --success: #1b8f55;
+  --warning: #a86b00;
+  --orange: #b35f00;
+  --danger: #cc364f;
+  --shadow: 0 12px 32px rgba(30, 41, 59, 0.08);
 }
 
 * { box-sizing: border-box; }
@@ -13,12 +35,12 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: linear-gradient(180deg, #0b1020 0%, #0d1427 100%);
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
   color: var(--text);
 }
 
 .wrap {
-  max-width: 1180px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -31,11 +53,26 @@ body {
   padding-top: 28px;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 h1 { margin: 0; font-size: 2rem; }
 
 .sub {
   color: var(--muted);
   margin: 8px 0 0;
+}
+
+.theme-toggle {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 14px;
+  cursor: pointer;
 }
 
 .summary-box {
@@ -45,6 +82,7 @@ h1 { margin: 0; font-size: 2rem; }
   border-radius: 18px;
   padding: 14px 18px;
   text-align: right;
+  box-shadow: var(--shadow);
 }
 
 .summary-label {
@@ -58,9 +96,24 @@ h1 { margin: 0; font-size: 2rem; }
 }
 
 .controls {
-  display: grid;
-  grid-template-columns: 2.2fr repeat(4, minmax(0, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 12px;
+}
+
+.control-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.primary-row > * {
+  min-height: 46px;
+}
+
+#search {
+  flex: 1 1 360px;
 }
 
 input,
@@ -70,6 +123,54 @@ select {
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 12px 14px;
+}
+
+.control-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.quick-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.area-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip,
+.toggle-pill {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 9px 13px;
+}
+
+.chip {
+  cursor: pointer;
+}
+
+.chip.is-active {
+  color: var(--accent);
+  border-color: rgba(143, 179, 255, 0.4);
+  background: rgba(143, 179, 255, 0.14);
+}
+
+.toggle-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.toggle-pill input {
+  accent-color: var(--accent);
 }
 
 .list {
@@ -84,7 +185,7 @@ select {
   border: 1px solid var(--line);
   border-radius: 20px;
   padding: 18px 20px;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+  box-shadow: var(--shadow);
 }
 
 .row-top {
@@ -92,6 +193,10 @@ select {
   justify-content: space-between;
   gap: 20px;
   align-items: start;
+}
+
+.title-column {
+  min-width: 0;
 }
 
 .meta-row {
@@ -117,6 +222,36 @@ select {
   background: rgba(126, 224, 160, 0.10);
 }
 
+.badge.status-upcoming {
+  color: var(--success);
+  border-color: rgba(126, 224, 160, 0.35);
+  background: rgba(126, 224, 160, 0.10);
+}
+
+.badge.status-soon {
+  color: var(--warning);
+  border-color: rgba(255, 209, 102, 0.35);
+  background: rgba(255, 209, 102, 0.12);
+}
+
+.badge.status-urgent {
+  color: var(--orange);
+  border-color: rgba(255, 176, 103, 0.35);
+  background: rgba(255, 176, 103, 0.12);
+}
+
+.badge.status-passed {
+  color: var(--danger);
+  border-color: rgba(255, 123, 137, 0.35);
+  background: rgba(255, 123, 137, 0.12);
+}
+
+.badge.status-unknown {
+  color: var(--muted);
+  border-color: rgba(184, 194, 224, 0.28);
+  background: rgba(184, 194, 224, 0.08);
+}
+
 .title {
   margin: 12px 0 10px;
   font-size: 1.35rem;
@@ -126,10 +261,17 @@ select {
 .notes,
 .preview p,
 .links,
-.status,
+.location,
+.venue-dates,
+.source,
 .confidence,
-.deadlines,
-.location {
+.checked-at,
+.deadline-time,
+.local-time,
+.calendar-links,
+.next-deadline-kind,
+.timeline-row,
+.timeline-empty {
   color: var(--muted);
 }
 
@@ -151,9 +293,9 @@ select {
   font-weight: 700;
 }
 
-.row-grid {
+.hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.8fr 1.5fr 1.5fr;
+  grid-template-columns: 1.45fr 1fr 1fr;
   gap: 14px;
   margin-top: 16px;
 }
@@ -162,17 +304,61 @@ select {
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 12px 14px;
-  background: rgba(255, 255, 255, 0.02);
-  min-height: 78px;
+  background: var(--panel-2);
+  min-height: 88px;
 }
 
-.deadlines ul {
-  margin: 6px 0 0;
-  padding-left: 18px;
+.countdown {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 8px 0;
 }
 
-.deadlines li {
-  margin: 4px 0;
+.next-deadline-kind {
+  margin-top: 6px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.calendar-links {
+  margin-top: 10px;
+}
+
+.wide-block {
+  margin-top: 14px;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 160px) 1fr;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+
+.timeline-row:first-child {
+  border-top: 0;
+}
+
+.timeline-kind {
+  color: var(--text);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.timeline-date {
+  color: var(--text);
+}
+
+.timeline-extension {
+  grid-column: 2;
+  color: var(--orange);
+  font-size: 0.92rem;
+}
+
+.tz-inline {
+  color: var(--muted);
 }
 
 .notes {
@@ -208,18 +394,15 @@ a {
 }
 
 @media (max-width: 1000px) {
-  .controls {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .row-grid {
-    grid-template-columns: 1fr 1fr;
+  .hero-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 720px) {
   .hero,
-  .row-top {
+  .row-top,
+  .header-actions {
     flex-direction: column;
     align-items: stretch;
   }
@@ -228,8 +411,11 @@ a {
     text-align: left;
   }
 
-  .controls,
-  .row-grid {
+  .timeline-row {
     grid-template-columns: 1fr;
+  }
+
+  .timeline-extension {
+    grid-column: 1;
   }
 }
