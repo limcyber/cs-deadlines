@@ -1,73 +1,33 @@
 <!doctype html>
-<!--
-  Root HTML document for the CS Deadlines Hub MVP.
-  This file defines the static page structure only.
-  Dynamic content is loaded later by app.js from assets/venues.json.
--->
 <html lang="en">
 <head>
-  <!-- Character encoding for standard UTF-8 text rendering. -->
   <meta charset="utf-8" />
-
-  <!--
-    Makes the layout responsive on phones and tablets.
-    width=device-width tells the browser to match the device width,
-    and initial-scale=1 keeps the initial zoom level natural.
-  -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Browser tab title. -->
   <title>CS Deadlines Hub MVP</title>
-
-  <!-- Main stylesheet for layout, colors, spacing, and responsiveness. -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!--
-    Top hero/header area.
-    It contains the project title, a short description, and a live summary box
-    that will be updated by JavaScript with the number of visible venues.
-  -->
   <header class="wrap hero">
     <div>
       <h1>CS Deadlines Hub MVP</h1>
-      <p class="sub">Venue-first scanning, broad CS domain filters, and GitHub Pages deployment.</p>
+      <p class="sub">Venue-first scanning, four broad CS area filters, and GitHub Pages deployment.</p>
     </div>
-
-    <!--
-      Summary panel.
-      The element with id="resultCount" is updated at runtime after filtering.
-    -->
     <div class="summary-box">
       <div class="summary-label">Visible venues</div>
       <div class="summary-value" id="resultCount">0</div>
     </div>
   </header>
 
-  <!--
-    Filter controls.
-    JavaScript reads the values of these inputs and uses them to filter the
-    loaded venue records in memory.
-  -->
   <section class="wrap controls">
-    <!-- Free-text search across venue title, short name, aliases, and domains. -->
-    <input id="search" type="search" placeholder="Search by venue name, acronym, or domain" />
-
-    <!-- Domain options are generated dynamically in app.js based on the dataset. -->
+    <input id="search" type="search" placeholder="Search by venue name, acronym, or area" />
     <select id="domainFilter">
-      <option value="">All domains</option>
+      <option value="">All areas</option>
     </select>
-
-    <!-- Venue type filter. These values must match the dataset values exactly. -->
     <select id="typeFilter">
       <option value="">All types</option>
       <option value="conference">Conference</option>
-      <option value="symposium">Symposium</option>
       <option value="workshop">Workshop</option>
-      <option value="journal-track">Journal track</option>
     </select>
-
-    <!-- Tier filter. This is a simple categorical filter, not a ranking engine. -->
     <select id="tierFilter">
       <option value="">All tiers</option>
       <option value="top">Top</option>
@@ -76,12 +36,6 @@
       <option value="workshop">Workshop</option>
       <option value="fast">Fast</option>
     </select>
-
-    <!--
-      Scan-state filter.
-      "enabled" means the venue is approved for automated scanning.
-      "catalog" means it exists in the master catalog but is not scanned yet.
-    -->
     <select id="scanFilter">
       <option value="">All scan states</option>
       <option value="enabled">Scan enabled</option>
@@ -89,46 +43,26 @@
     </select>
   </section>
 
-  <!--
-    Main render target.
-    app.js empties and rebuilds this container whenever filters change.
-  -->
   <main id="list" class="wrap list"></main>
 
-  <!--
-    HTML template used for each venue row.
-    JavaScript clones this template, fills in the text fields, and appends the
-    final node into the main list container.
-  -->
   <template id="cardTemplate">
     <article class="venue-row">
       <div class="row-top">
         <div>
-          <!-- Small metadata badges shown at the top of each venue row. -->
           <div class="meta-row">
             <span class="badge tier"></span>
             <span class="badge type"></span>
             <span class="badge scan-state"></span>
           </div>
-
-          <!-- Venue short name + full title. -->
           <h2 class="title"></h2>
-
-          <!-- Human-readable domain list, e.g. "security, privacy". -->
           <p class="domains"></p>
         </div>
-
-        <!-- Display year block shown on the right side of each row. -->
         <div class="year-block">
           <div class="year-label">Year</div>
           <div class="year"></div>
         </div>
       </div>
 
-      <!--
-        Four-column detail section.
-        Each block is filled by app.js using the venue record currently being rendered.
-      -->
       <div class="row-grid">
         <div class="info-block">
           <div class="label">Status</div>
@@ -148,16 +82,12 @@
         </div>
       </div>
 
-      <!-- Free-form notes and scan preview snippets. -->
       <div class="notes"></div>
       <div class="preview"></div>
-
-      <!-- Final link area for venue and CFP/catalog URLs. -->
       <p class="links"></p>
     </article>
   </template>
 
-  <!-- Main client-side behavior file. -->
   <script src="app.js"></script>
 </body>
 </html>
