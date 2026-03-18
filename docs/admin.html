@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CS Deadlines Hub — Admin</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body class="admin-page">
+  <header class="wrap hero admin-hero">
+    <div>
+      <h1>CS Deadlines Hub — Admin</h1>
+      <p class="sub">Internal review dashboard for confirmed records, scanned previews, catalog seeds, and scan failures.</p>
+    </div>
+    <nav class="admin-nav">
+      <a href="./index.html">Open public page</a>
+    </nav>
+  </header>
+
+  <section class="wrap admin-summary" id="summaryCards"></section>
+
+  <section class="wrap controls admin-controls">
+    <input id="adminSearch" type="search" placeholder="Search by venue, alias, parser, note, or source" />
+    <div class="control-row admin-control-row">
+      <select id="bucketFilter">
+        <option value="">All buckets</option>
+        <option value="review">Review queue</option>
+        <option value="confirmed">Confirmed</option>
+        <option value="catalog">Catalog seed</option>
+        <option value="failed">Scan failures</option>
+      </select>
+      <select id="parserFilter">
+        <option value="">All parsers</option>
+        <option value="manual">manual</option>
+        <option value="generic_dates">generic_dates</option>
+        <option value="structured_dates">structured_dates</option>
+      </select>
+      <select id="statusFilter">
+        <option value="">All raw statuses</option>
+      </select>
+      <label class="toggle"><input id="scanEnabledOnly" type="checkbox" /><span>Scan enabled only</span></label>
+      <label class="toggle"><input id="activeOnly" type="checkbox" checked /><span>Active only</span></label>
+    </div>
+  </section>
+
+  <main class="wrap admin-layout">
+    <section class="admin-panel">
+      <div class="panel-head">
+        <h2>Review queue</h2>
+        <p>Scanned records, scan failures, and anything that still needs human confirmation.</p>
+      </div>
+      <div id="reviewQueue" class="admin-list"></div>
+    </section>
+
+    <section class="admin-panel">
+      <div class="panel-head">
+        <h2>Catalog seed inventory</h2>
+        <p>Tracked venues that exist in the master catalog but do not yet have confirmed public deadlines.</p>
+      </div>
+      <div id="catalogSeeds" class="admin-list"></div>
+    </section>
+
+    <section class="admin-panel">
+      <div class="panel-head">
+        <h2>Scan failures</h2>
+        <p>Fetch and parser failures that need a URL fix, parser change, or manual override.</p>
+      </div>
+      <div id="scanFailures" class="admin-list"></div>
+    </section>
+
+    <section class="admin-panel wide">
+      <div class="panel-head">
+        <h2>All tracked venues</h2>
+        <p>Full operational inventory view. Use this for audits, parser cleanup, and status triage.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="admin-table" id="adminTable">
+          <thead>
+            <tr>
+              <th>Venue</th>
+              <th>Bucket</th>
+              <th>Raw status</th>
+              <th>Parser</th>
+              <th>Scan</th>
+              <th>Confidence</th>
+              <th>Checked</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <template id="adminRowTemplate">
+    <article class="admin-row">
+      <div class="admin-row-top">
+        <div>
+          <div class="admin-title"></div>
+          <div class="admin-meta"></div>
+        </div>
+        <div class="admin-badges"></div>
+      </div>
+      <div class="admin-row-body">
+        <div class="admin-deadline"></div>
+        <div class="admin-links"></div>
+      </div>
+      <details class="admin-details">
+        <summary>Details</summary>
+        <div class="admin-details-grid">
+          <div><strong>Notes</strong><div class="detail-notes"></div></div>
+          <div><strong>Scan preview</strong><div class="detail-preview"></div></div>
+        </div>
+      </details>
+    </article>
+  </template>
+
+  <script src="admin.js"></script>
+</body>
+</html>
