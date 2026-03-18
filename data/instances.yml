@@ -1,0 +1,35 @@
+- id: neurips-2026
+  venue_id: neurips
+  year: 2026
+  status: placeholder
+  deadlines: []
+  venue_date_start: null
+  venue_date_end: null
+  location: null
+  source_url: null
+  checked_at: null
+  confidence: 0.0
+
+- id: ccs-2026
+  venue_id: ccs
+  year: 2026
+  status: placeholder
+  deadlines: []
+  venue_date_start: null
+  venue_date_end: null
+  location: null
+  source_url: null
+  checked_at: null
+  confidence: 0.0
+
+- id: icse-2026
+  venue_id: icse
+  year: 2026
+  status: placeholder
+  deadlines: []
+  venue_date_start: null
+  venue_date_end: null
+  location: null
+  source_url: null
+  checked_at: null
+  confidence: 0.0

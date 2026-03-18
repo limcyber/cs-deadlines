@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CS Deadlines Hub MVP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <h1>CS Deadlines Hub MVP</h1>
+    <p class="sub">venues.yml 중심 스캔 + 분야별 필터 + GitHub Pages 정적 배포</p>
+  </header>
+
+  <section class="wrap controls">
+    <input id="search" type="search" placeholder="학회명, short name, domain 검색" />
+    <select id="domainFilter">
+      <option value="">모든 분야</option>
+    </select>
+    <select id="typeFilter">
+      <option value="">모든 타입</option>
+      <option value="conference">conference</option>
+      <option value="symposium">symposium</option>
+      <option value="workshop">workshop</option>
+    </select>
+    <select id="tierFilter">
+      <option value="">모든 tier</option>
+      <option value="top">top</option>
+      <option value="strong">strong</option>
+      <option value="mid">mid</option>
+      <option value="workshop">workshop</option>
+      <option value="fast">fast</option>
+    </select>
+  </section>
+
+  <main id="list" class="wrap grid"></main>
+
+  <template id="cardTemplate">
+    <article class="card">
+      <div class="meta-row">
+        <span class="badge tier"></span>
+        <span class="badge type"></span>
+      </div>
+      <h2 class="title"></h2>
+      <p class="domains"></p>
+      <p class="year"></p>
+      <p class="status"></p>
+      <p class="confidence"></p>
+      <div class="preview"></div>
+      <p class="links"></p>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+[
+  {
+    "id": "neurips-2026",
+    "venue_id": "neurips",
+    "title": "Conference on Neural Information Processing Systems",
+    "short_name": "NeurIPS",
+    "domain": [
+      "ai",
+      "ml"
+    ],
+    "type": "conference",
+    "tier": "top",
+    "website": "https://neurips.cc/",
+    "cfp_url": "https://neurips.cc/",
+    "year": 2026,
+    "status": "placeholder",
+    "deadlines": [],
+    "venue_date_start": null,
+    "venue_date_end": null,
+    "location": null,
+    "source_url": null,
+    "checked_at": null,
+    "confidence": 0.0,
+    "scan_preview": [],
+    "notes": null
+  },
+  {
+    "id": "ccs-2026",
+    "venue_id": "ccs",
+    "title": "ACM Conference on Computer and Communications Security",
+    "short_name": "CCS",
+    "domain": [
+      "security",
+      "privacy"
+    ],
+    "type": "conference",
+    "tier": "top",
+    "website": "https://www.sigsac.org/ccs/",
+    "cfp_url": "https://www.sigsac.org/ccs/",
+    "year": 2026,
+    "status": "placeholder",
+    "deadlines": [],
+    "venue_date_start": null,
+    "venue_date_end": null,
+    "location": null,
+    "source_url": null,
+    "checked_at": null,
+    "confidence": 0.0,
+    "scan_preview": [],
+    "notes": null
+  },
+  {
+    "id": "icse-2026",
+    "venue_id": "icse",
+    "title": "International Conference on Software Engineering",
+    "short_name": "ICSE",
+    "domain": [
+      "software"
+    ],
+    "type": "conference",
+    "tier": "top",
+    "website": "https://conf.researchr.org/home/icse-2026",
+    "cfp_url": "https://conf.researchr.org/home/icse-2026",
+    "year": 2026,
+    "status": "placeholder",
+    "deadlines": [],
+    "venue_date_start": null,
+    "venue_date_end": null,
+    "location": null,
+    "source_url": null,
+    "checked_at": null,
+    "confidence": 0.0,
+    "scan_preview": [],
+    "notes": null
+  }
+]

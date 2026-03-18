@@ -1,0 +1,417 @@
+- id: neurips
+  title: Conference on Neural Information Processing Systems
+  short_name: NeurIPS
+  aliases: [NIPS]
+  domain: [ai, ml]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://neurips.cc/
+  cfp_url: https://neurips.cc/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: icml
+  title: International Conference on Machine Learning
+  short_name: ICML
+  domain: [ai, ml]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://icml.cc/
+  cfp_url: https://icml.cc/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: iclr
+  title: International Conference on Learning Representations
+  short_name: ICLR
+  domain: [ai, ml]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://iclr.cc/
+  cfp_url: https://iclr.cc/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: aaai
+  title: AAAI Conference on Artificial Intelligence
+  short_name: AAAI
+  domain: [ai]
+  type: conference
+  tier: strong
+  recurring: true
+  active: true
+  website: https://aaai.org/conference/aaai/
+  cfp_url: https://aaai.org/conference/aaai/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: ijcai
+  title: International Joint Conference on Artificial Intelligence
+  short_name: IJCAI
+  domain: [ai]
+  type: conference
+  tier: strong
+  recurring: true
+  active: true
+  website: https://www.ijcai.org/
+  cfp_url: https://www.ijcai.org/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: cvpr
+  title: IEEE/CVF Conference on Computer Vision and Pattern Recognition
+  short_name: CVPR
+  domain: [vision, ai]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://cvpr.thecvf.com/
+  cfp_url: https://cvpr.thecvf.com/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: iccv
+  title: IEEE/CVF International Conference on Computer Vision
+  short_name: ICCV
+  domain: [vision, ai]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://iccv.thecvf.com/
+  cfp_url: https://iccv.thecvf.com/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: eccv
+  title: European Conference on Computer Vision
+  short_name: ECCV
+  domain: [vision, ai]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://eccv.ecva.net/
+  cfp_url: https://eccv.ecva.net/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: acl
+  title: Annual Meeting of the Association for Computational Linguistics
+  short_name: ACL
+  domain: [nlp, ai]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://www.aclweb.org/
+  cfp_url: https://www.aclweb.org/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: emnlp
+  title: Conference on Empirical Methods in Natural Language Processing
+  short_name: EMNLP
+  domain: [nlp, ai]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://2025.emnlp.org/
+  cfp_url: https://2025.emnlp.org/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: naacl
+  title: North American Chapter of the ACL
+  short_name: NAACL
+  domain: [nlp, ai]
+  type: conference
+  tier: strong
+  recurring: true
+  active: true
+  website: https://naacl.org/
+  cfp_url: https://naacl.org/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: kdd
+  title: ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+  short_name: KDD
+  domain: [data-mining, ai, data]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://kdd.org/
+  cfp_url: https://kdd.org/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: www
+  title: The Web Conference
+  short_name: WWW
+  domain: [data, web]
+  type: conference
+  tier: strong
+  recurring: true
+  active: true
+  website: https://www2026.thewebconf.org/
+  cfp_url: https://www2026.thewebconf.org/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: sigmod
+  title: ACM SIGMOD/PODS International Conference on Management of Data
+  short_name: SIGMOD
+  domain: [db, data]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://sigmod.org/
+  cfp_url: https://sigmod.org/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: vldb
+  title: Very Large Data Bases Conference
+  short_name: VLDB
+  domain: [db, data]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://vldb.org/
+  cfp_url: https://vldb.org/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: icde
+  title: IEEE International Conference on Data Engineering
+  short_name: ICDE
+  domain: [db, data]
+  type: conference
+  tier: strong
+  recurring: true
+  active: true
+  website: https://icde2026.github.io/
+  cfp_url: https://icde2026.github.io/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: ccs
+  title: ACM Conference on Computer and Communications Security
+  short_name: CCS
+  domain: [security, privacy]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://www.sigsac.org/ccs/
+  cfp_url: https://www.sigsac.org/ccs/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: ieee-sp
+  title: IEEE Symposium on Security and Privacy
+  short_name: IEEE S&P
+  aliases: [Oakland]
+  domain: [security, privacy]
+  type: symposium
+  tier: top
+  recurring: true
+  active: true
+  website: https://www.ieee-security.org/TC/SP-Index.html
+  cfp_url: https://www.ieee-security.org/TC/SP-Index.html
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: usenix-sec
+  title: USENIX Security Symposium
+  short_name: USENIX Security
+  domain: [security, privacy]
+  type: symposium
+  tier: top
+  recurring: true
+  active: true
+  website: https://www.usenix.org/conference/usenixsecurity
+  cfp_url: https://www.usenix.org/conference/usenixsecurity
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: ndss
+  title: Network and Distributed System Security Symposium
+  short_name: NDSS
+  domain: [security, privacy, systems]
+  type: symposium
+  tier: top
+  recurring: true
+  active: true
+  website: https://www.ndss-symposium.org/
+  cfp_url: https://www.ndss-symposium.org/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: soups
+  title: Symposium on Usable Privacy and Security
+  short_name: SOUPS
+  domain: [security, privacy, hci]
+  type: symposium
+  tier: strong
+  recurring: true
+  active: true
+  website: https://www.usenix.org/conference/soups2026
+  cfp_url: https://www.usenix.org/conference/soups2026
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: sigcomm
+  title: ACM SIGCOMM Conference
+  short_name: SIGCOMM
+  domain: [networking, systems]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://www.sigcomm.org/
+  cfp_url: https://www.sigcomm.org/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: nsdi
+  title: USENIX Symposium on Networked Systems Design and Implementation
+  short_name: NSDI
+  domain: [systems, networking]
+  type: symposium
+  tier: top
+  recurring: true
+  active: true
+  website: https://www.usenix.org/conference/nsdi
+  cfp_url: https://www.usenix.org/conference/nsdi
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: osdi
+  title: USENIX Symposium on Operating Systems Design and Implementation
+  short_name: OSDI
+  domain: [systems]
+  type: symposium
+  tier: top
+  recurring: true
+  active: true
+  website: https://www.usenix.org/conference/osdi
+  cfp_url: https://www.usenix.org/conference/osdi
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: sosp
+  title: ACM Symposium on Operating Systems Principles
+  short_name: SOSP
+  domain: [systems]
+  type: symposium
+  tier: top
+  recurring: true
+  active: true
+  website: https://www.sigops.org/s/conferences/sosp/
+  cfp_url: https://www.sigops.org/s/conferences/sosp/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: asplos
+  title: International Conference on Architectural Support for Programming Languages and Operating Systems
+  short_name: ASPLOS
+  domain: [systems, architecture, pl]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://www.asplos-conference.org/
+  cfp_url: https://www.asplos-conference.org/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: pldi
+  title: ACM SIGPLAN Conference on Programming Language Design and Implementation
+  short_name: PLDI
+  domain: [pl, software]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://pldi.sigplan.org/
+  cfp_url: https://pldi.sigplan.org/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: popl
+  title: ACM SIGPLAN Symposium on Principles of Programming Languages
+  short_name: POPL
+  domain: [pl, theory]
+  type: symposium
+  tier: top
+  recurring: true
+  active: true
+  website: https://popl26.sigplan.org/
+  cfp_url: https://popl26.sigplan.org/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: fse
+  title: ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering
+  short_name: FSE
+  domain: [software]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://conf.researchr.org/home/fse-2026
+  cfp_url: https://conf.researchr.org/home/fse-2026
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: icse
+  title: International Conference on Software Engineering
+  short_name: ICSE
+  domain: [software]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://conf.researchr.org/home/icse-2026
+  cfp_url: https://conf.researchr.org/home/icse-2026
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: chi
+  title: ACM Conference on Human Factors in Computing Systems
+  short_name: CHI
+  domain: [hci]
+  type: conference
+  tier: top
+  recurring: true
+  active: true
+  website: https://chi2026.acm.org/
+  cfp_url: https://chi2026.acm.org/
+  default_timezone: AoE
+  parser: generic_dates
+
+- id: ubicomp
+  title: ACM International Joint Conference on Pervasive and Ubiquitous Computing
+  short_name: UbiComp
+  domain: [hci, systems]
+  type: conference
+  tier: strong
+  recurring: true
+  active: true
+  website: https://www.ubicomp.org/
+  cfp_url: https://www.ubicomp.org/
+  default_timezone: AoE
+  parser: generic_dates
