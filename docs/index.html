@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CS Deadlines Hub</title>
+  <title>CS Deadlines Hub MVP</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="wrap hero">
     <div>
       <h1>CS Deadlines Hub MVP</h1>
-      <p class="sub">Track venues, upcoming submission windows, source confidence, and deadline countdowns in venue time.</p>
+      <p class="sub">Track venues, upcoming submission windows, source confidence, and precise deadline countdowns in venue time.</p>
     </div>
     <div class="header-actions">
       <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
@@ -67,8 +67,8 @@
 
   <template id="cardTemplate">
     <article class="venue-row">
-      <div class="row-top">
-        <div class="title-column">
+      <div class="row-main">
+        <div class="identity-column">
           <div class="meta-row">
             <span class="badge tier"></span>
             <span class="badge type"></span>
@@ -76,17 +76,12 @@
             <span class="badge status-badge"></span>
           </div>
           <h2 class="title"></h2>
-          <p class="domains"></p>
+          <div class="area-badges"></div>
+          <p class="compact-summary"></p>
         </div>
-        <div class="year-block">
-          <div class="year-label">Year</div>
-          <div class="year"></div>
-        </div>
-      </div>
 
-      <div class="hero-grid">
-        <div class="countdown-panel info-block">
-          <div class="label">Next deadline</div>
+        <div class="countdown-column">
+          <div class="mini-label">Next deadline</div>
           <div class="next-deadline-kind"></div>
           <div class="countdown"></div>
           <div class="deadline-time"></div>
@@ -94,28 +89,19 @@
           <div class="calendar-links"></div>
         </div>
 
-        <div class="info-block venue-panel">
-          <div class="label">Venue</div>
-          <div class="location"></div>
-          <div class="venue-dates"></div>
-        </div>
-
-        <div class="info-block source-panel">
-          <div class="label">Source & confidence</div>
-          <div class="source"></div>
-          <div class="confidence"></div>
-          <div class="checked-at"></div>
+        <div class="info-column">
+          <div class="info-line"><span class="mini-label">Venue</span><span class="venue-inline"></span></div>
+          <div class="info-line"><span class="mini-label">Schedule</span><span class="venue-dates"></span></div>
+          <div class="info-line"><span class="mini-label">Source</span><span class="source"></span></div>
+          <div class="info-line"><span class="mini-label">Confidence</span><span class="confidence"></span></div>
+          <div class="info-line"><span class="mini-label">Checked</span><span class="checked-at"></span></div>
         </div>
       </div>
 
-      <div class="deadline-section info-block wide-block">
-        <div class="label">Submission timeline</div>
-        <div class="deadlines"></div>
+      <div class="row-footer">
+        <div class="deadline-inline"></div>
+        <div class="links"></div>
       </div>
-
-      <div class="notes"></div>
-      <div class="preview"></div>
-      <p class="links"></p>
     </article>
   </template>
 

@@ -5,7 +5,6 @@ async function loadData() {
 
 const THEME_KEY = 'cs-deadlines-theme';
 const AREA_KEY = 'cs-deadlines-area';
-
 const AREA_ORDER = ['AI+Data', 'Systems', 'Security', 'SE+Theory'];
 
 const DOMAIN_TO_AREA = {
@@ -24,7 +23,6 @@ const DOMAIN_TO_AREA = {
   statistics: 'AI+Data',
   vision: 'AI+Data',
   visualization: 'AI+Data',
-
   architecture: 'Systems',
   cloud: 'Systems',
   hardware: 'Systems',
@@ -33,11 +31,9 @@ const DOMAIN_TO_AREA = {
   storage: 'Systems',
   systems: 'Systems',
   web: 'Systems',
-
   crypto: 'Security',
   privacy: 'Security',
   security: 'Security',
-
   education: 'SE+Theory',
   hci: 'SE+Theory',
   optimization: 'SE+Theory',
@@ -154,38 +150,20 @@ function getStatusMeta(record) {
   const deadlines = record.parsedDeadlines || [];
   const futureDeadlines = deadlines.filter((deadline) => deadline.parsedDate && deadline.parsedDate > now);
 
-  if (!deadlines.length) {
-    return { label: 'Not announced', className: 'status-unknown' };
-  }
-
-  if (!futureDeadlines.length) {
-    return { label: 'Passed', className: 'status-passed' };
-  }
+  if (!deadlines.length) return { label: 'Not announced', className: 'status-unknown' };
+  if (!futureDeadlines.length) return { label: 'Passed', className: 'status-passed' };
 
   const next = futureDeadlines[0];
-  const diffMs = next.parsedDate - now;
-  const diffDays = diffMs / (1000 * 60 * 60 * 24);
-
-  if (diffDays < 3) {
-    return { label: 'Urgent', className: 'status-urgent' };
-  }
-
-  if (diffDays < 7) {
-    return { label: 'Soon', className: 'status-soon' };
-  }
-
+  const diffDays = (next.parsedDate - now) / (1000 * 60 * 60 * 24);
+  if (diffDays < 3) return { label: 'Urgent', className: 'status-urgent' };
+  if (diffDays < 7) return { label: 'Soon', className: 'status-soon' };
   return { label: 'Upcoming', className: 'status-upcoming' };
 }
 
 function formatCountdown(targetDate) {
-  if (!(targetDate instanceof Date) || Number.isNaN(targetDate.getTime())) {
-    return 'Countdown unavailable';
-  }
-
+  if (!(targetDate instanceof Date) || Number.isNaN(targetDate.getTime())) return 'Countdown unavailable';
   const diffMs = targetDate - getNow();
-  if (diffMs <= 0) {
-    return 'Deadline passed';
-  }
+  if (diffMs <= 0) return 'Deadline passed';
 
   const totalMinutes = Math.floor(diffMs / (1000 * 60));
   const days = Math.floor(totalMinutes / (60 * 24));
@@ -196,9 +174,7 @@ function formatCountdown(targetDate) {
 }
 
 function formatDateTime(date, options = {}) {
-  if (!(date instanceof Date) || Number.isNaN(date.getTime())) {
-    return 'Not available';
-  }
+  if (!(date instanceof Date) || Number.isNaN(date.getTime())) return 'Not available';
 
   return new Intl.DateTimeFormat(undefined, {
     year: 'numeric',
@@ -210,83 +186,65 @@ function formatDateTime(date, options = {}) {
   }).format(date);
 }
 
-function formatVenueDateRange(record) {
-  const parts = [];
-  if (record.location) parts.push(record.location);
-  const dateRange = [record.venue_date_start, record.venue_date_end].filter(Boolean).join(' → ');
-  if (dateRange) parts.push(dateRange);
-  return parts.length ? parts.join(' · ') : 'Venue details not added yet';
-}
-
 function formatSourceLabel(record) {
   if (record.source_url) {
     try {
       const url = new URL(record.source_url);
-      return `Source: ${url.hostname}`;
+      return url.hostname;
     } catch {
-      return 'Source: linked';
+      return 'linked';
     }
   }
-
-  if (record.parser === 'manual_review') return 'Source: manual review needed';
-  if (record.scan_enabled) return 'Source: automated scan';
-  return 'Source: catalog seed';
+  if (record.parser === 'manual_review') return 'manual review';
+  if (record.scan_enabled) return 'automated scan';
+  return 'catalog seed';
 }
 
 function formatConfidence(record) {
-  if (typeof record.confidence !== 'number' || record.confidence <= 0) {
-    return 'Confidence: pending';
-  }
+  if (typeof record.confidence !== 'number' || record.confidence <= 0) return 'pending';
   const label = record.confidence >= 0.85 ? 'high' : record.confidence >= 0.6 ? 'medium' : 'low';
-  return `Confidence: ${record.confidence.toFixed(2)} (${label})`;
+  return `${record.confidence.toFixed(2)} (${label})`;
 }
 
 function getExtendedFrom(deadline) {
   return deadline?.extended_from || deadline?.original_value || deadline?.previous_value || null;
 }
 
-function formatDeadlineLine(record, deadline) {
-  const kind = deadline.kind || 'deadline';
-  const dateLabel = deadline.parsedDate ? formatDateTime(deadline.parsedDate) : (deadline.value || 'TBA');
-  const timezoneLabel = deadline.timezoneLabel || record.default_timezone || record.timezone || 'Venue time';
-  const extendedFrom = getExtendedFrom(deadline);
+function formatDeadlineChip(record, deadline) {
+  const kind = escapeHtml(deadline.kind || 'deadline');
+  const value = deadline.parsedDate ? formatDateTime(deadline.parsedDate, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : escapeHtml(deadline.value || 'TBA');
+  const timezoneLabel = escapeHtml(deadline.timezoneLabel || record.default_timezone || record.timezone || 'Venue time');
+  const extended = getExtendedFrom(deadline);
 
-  let line = `<div class="timeline-kind">${escapeHtml(kind)}</div><div class="timeline-date">${escapeHtml(dateLabel)} <span class="tz-inline">(${escapeHtml(timezoneLabel)})</span></div>`;
-
-  if (extendedFrom) {
-    line += `<div class="timeline-extension">Extended from ${escapeHtml(extendedFrom)}</div>`;
-  }
-
-  return line;
+  return `
+    <span class="timeline-chip">
+      <span class="timeline-chip-kind">${kind}</span>
+      <span class="timeline-chip-date">${value}</span>
+      <span class="timeline-chip-tz">${timezoneLabel}</span>
+      ${extended ? `<span class="timeline-chip-extension">extended from ${escapeHtml(extended)}</span>` : ''}
+    </span>
+  `;
 }
 
-function formatDeadlines(record) {
+function formatDeadlinesInline(record) {
   const deadlines = record.parsedDeadlines || [];
-  if (!deadlines.length) {
-    return '<div class="timeline-empty">No confirmed deadlines yet.</div>';
-  }
-
-  return deadlines
-    .map((deadline) => `<div class="timeline-row">${formatDeadlineLine(record, deadline)}</div>`)
-    .join('');
+  if (!deadlines.length) return '<span class="timeline-empty">No confirmed deadlines yet.</span>';
+  return deadlines.map((deadline) => formatDeadlineChip(record, deadline)).join('');
 }
 
 function buildGoogleCalendarUrl(record, deadline) {
   if (!deadline?.parsedDate) return null;
-
   const end = deadline.parsedDate;
   const start = new Date(end.getTime() - 30 * 60 * 1000);
   const fmt = (date) => date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
   const text = encodeURIComponent(`${record.short_name} ${deadline.kind || 'deadline'}`);
   const details = encodeURIComponent(`Submission deadline for ${record.title}.`);
   const location = encodeURIComponent(record.location || 'Online / TBD');
-
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${text}&dates=${fmt(start)}/${fmt(end)}&details=${details}&location=${location}`;
 }
 
 function buildICSData(record, deadline) {
   if (!deadline?.parsedDate) return null;
-
   const end = deadline.parsedDate;
   const start = new Date(end.getTime() - 30 * 60 * 1000);
   const fmt = (date) => date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
@@ -307,7 +265,6 @@ function buildICSData(record, deadline) {
     'END:VEVENT',
     'END:VCALENDAR'
   ].join('\r\n');
-
   return URL.createObjectURL(new Blob([lines], { type: 'text/calendar' }));
 }
 
@@ -329,12 +286,7 @@ function fuzzyMatch(record, query) {
   const haystack = getSearchHaystack(record);
   const tokens = normalizeText(query).split(/\s+/).filter(Boolean);
   if (!tokens.length) return true;
-
-  return tokens.every((token) => {
-    if (haystack.includes(token)) return true;
-    const initials = normalizeText(record.short_name).replace(/\s+/g, '');
-    return initials.includes(token);
-  });
+  return tokens.every((token) => haystack.includes(token) || normalizeText(record.short_name).replace(/\s+/g, '').includes(token));
 }
 
 function sortRecords(records, mode) {
@@ -357,11 +309,9 @@ function sortRecords(records, mode) {
   copy.sort((a, b) => {
     const aDeadline = getNextActionableDeadline(a)?.parsedDate;
     const bDeadline = getNextActionableDeadline(b)?.parsedDate;
-
     if (!aDeadline && !bDeadline) return a.short_name.localeCompare(b.short_name);
     if (!aDeadline) return 1;
     if (!bDeadline) return -1;
-
     return mode === 'latest' ? bDeadline - aDeadline : aDeadline - bDeadline;
   });
 
@@ -375,6 +325,15 @@ function enrichRecords(records) {
     displayType: normalizeType(record.type),
     parsedDeadlines: enrichDeadlines(record)
   }));
+}
+
+function getAreaBadgeHtml(record) {
+  return (record.broadAreas || [])
+    .map((area) => {
+      const slug = normalizeText(area).replace(/\+/g, 'plus').replace(/\s+/g, '-');
+      return `<span class="badge area-badge area-${slug}">${escapeHtml(area)}</span>`;
+    })
+    .join('');
 }
 
 function render(records) {
@@ -410,15 +369,13 @@ function render(records) {
     statusBadge.classList.add(statusMeta.className);
 
     node.querySelector('.title').textContent = `${record.short_name} — ${record.title}`;
-    node.querySelector('.domains').textContent = `Areas: ${record.broadAreas.join(', ')}`;
-    node.querySelector('.year').textContent = `${record.year}`;
-
-    node.querySelector('.location').textContent = record.location || 'Location not added yet';
+    node.querySelector('.area-badges').innerHTML = getAreaBadgeHtml(record);
+    node.querySelector('.compact-summary').textContent = `Year ${record.year} · ${record.displayType} · ${record.broadAreas.join(', ')}`;
+    node.querySelector('.venue-inline').textContent = record.location || 'Location not added yet';
     node.querySelector('.venue-dates').textContent = [record.venue_date_start, record.venue_date_end].filter(Boolean).join(' → ') || 'Venue dates not added yet';
-
     node.querySelector('.source').textContent = formatSourceLabel(record);
     node.querySelector('.confidence').textContent = formatConfidence(record);
-    node.querySelector('.checked-at').textContent = record.checked_at ? `Last checked: ${formatDateTime(new Date(record.checked_at))}` : 'Last checked: not available';
+    node.querySelector('.checked-at').textContent = record.checked_at ? formatDateTime(new Date(record.checked_at)) : 'Not available';
 
     const nextDeadlineKind = node.querySelector('.next-deadline-kind');
     const countdown = node.querySelector('.countdown');
@@ -428,11 +385,10 @@ function render(records) {
 
     if (nextDeadline?.parsedDate) {
       const timezoneLabel = nextDeadline.timezoneLabel || 'Venue time';
-      nextDeadlineKind.textContent = `Next: ${nextDeadline.kind || 'deadline'}`;
+      nextDeadlineKind.textContent = `${nextDeadline.kind || 'deadline'}`;
       countdown.textContent = formatCountdown(nextDeadline.parsedDate);
-      deadlineTime.textContent = `Venue time: ${formatDateTime(nextDeadline.parsedDate)} (${timezoneLabel})`;
+      deadlineTime.textContent = `${formatDateTime(nextDeadline.parsedDate)} (${timezoneLabel})`;
       localTime.textContent = `Your time: ${formatDateTime(nextDeadline.parsedDate, { timeZoneName: 'short' })}`;
-
       const googleUrl = buildGoogleCalendarUrl(record, nextDeadline);
       const icsUrl = buildICSData(record, nextDeadline);
       if (googleUrl) {
@@ -443,35 +399,19 @@ function render(records) {
         calendarLinks.innerHTML += `${separator}<a href="${icsUrl}" download="${record.id}-${nextDeadline.kind || 'deadline'}.ics">ICS</a>`;
       }
     } else {
-      nextDeadlineKind.textContent = 'Next: not announced';
+      nextDeadlineKind.textContent = 'not announced';
       countdown.textContent = 'Countdown unavailable';
       deadlineTime.textContent = 'Venue time: not announced';
-      localTime.textContent = 'Your time: unavailable until a confirmed deadline exists';
+      localTime.textContent = 'Your time appears after a confirmed deadline is added';
       calendarLinks.textContent = 'Calendar links appear after a confirmed deadline is added.';
     }
 
-    node.querySelector('.deadlines').innerHTML = formatDeadlines(record);
-    node.querySelector('.notes').textContent = record.notes || 'No notes yet.';
-
-    const preview = node.querySelector('.preview');
-    const previewLines = (record.scan_preview || []).slice(0, 3);
-    if (previewLines.length) {
-      preview.innerHTML = previewLines.map((line) => `<p>${escapeHtml(line)}</p>`).join('');
-    } else {
-      preview.textContent = 'No scan preview available.';
-      preview.classList.add('notes');
-    }
+    node.querySelector('.deadline-inline').innerHTML = formatDeadlinesInline(record);
 
     const links = [];
-    if (record.website) {
-      links.push(`<a href="${escapeHtml(record.website)}" target="_blank" rel="noopener">Venue link</a>`);
-    }
-    if (record.cfp_url) {
-      links.push(`<a href="${escapeHtml(record.cfp_url)}" target="_blank" rel="noopener">Catalog / CFP link</a>`);
-    }
-    if (record.source_url) {
-      links.push(`<a href="${escapeHtml(record.source_url)}" target="_blank" rel="noopener">Source link</a>`);
-    }
+    if (record.website) links.push(`<a href="${escapeHtml(record.website)}" target="_blank" rel="noopener">Venue link</a>`);
+    if (record.cfp_url) links.push(`<a href="${escapeHtml(record.cfp_url)}" target="_blank" rel="noopener">Catalog / CFP link</a>`);
+    if (record.source_url) links.push(`<a href="${escapeHtml(record.source_url)}" target="_blank" rel="noopener">Source link</a>`);
     node.querySelector('.links').innerHTML = links.join(' · ');
 
     list.appendChild(node);
@@ -509,7 +449,6 @@ function applyTheme(theme) {
 function setupThemeToggle() {
   const savedTheme = localStorage.getItem(THEME_KEY) || 'dark';
   applyTheme(savedTheme);
-
   document.getElementById('themeToggle').addEventListener('click', () => {
     const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
     localStorage.setItem(THEME_KEY, nextTheme);
@@ -519,38 +458,40 @@ function setupThemeToggle() {
 
 function setupAreaButtons() {
   const savedArea = localStorage.getItem(AREA_KEY) || '';
-  document.querySelectorAll('#areaButtons .chip').forEach((button) => {
-    button.classList.toggle('is-active', button.dataset.area === savedArea);
+  document.querySelectorAll('.chip').forEach((button) => {
+    if (button.dataset.area === savedArea) {
+      document.querySelectorAll('.chip').forEach((chip) => chip.classList.remove('is-active'));
+      button.classList.add('is-active');
+    }
     button.addEventListener('click', () => {
-      document.querySelectorAll('#areaButtons .chip').forEach((chip) => chip.classList.remove('is-active'));
+      document.querySelectorAll('.chip').forEach((chip) => chip.classList.remove('is-active'));
       button.classList.add('is-active');
       localStorage.setItem(AREA_KEY, button.dataset.area || '');
-      window.__rerender?.();
+      window.__renderCurrent?.();
     });
   });
-
-  if (!document.querySelector('#areaButtons .chip.is-active')) {
-    document.querySelector('#areaButtons .chip[data-area=""]').classList.add('is-active');
-  }
 }
 
-function boot(records) {
-  const rerender = () => render(applyFilters(records));
-  window.__rerender = rerender;
-
-  ['search', 'typeFilter', 'scanFilter', 'sortFilter', 'topTierOnly'].forEach((id) => {
-    const element = document.getElementById(id);
-    element.addEventListener('input', rerender);
-    element.addEventListener('change', rerender);
-  });
+async function main() {
+  const raw = await loadData();
+  const records = enrichRecords(raw);
 
   setupThemeToggle();
   setupAreaButtons();
+
+  const rerender = () => render(applyFilters(records));
+  window.__renderCurrent = rerender;
+
+  ['search', 'typeFilter', 'scanFilter', 'sortFilter', 'topTierOnly'].forEach((id) => {
+    document.getElementById(id).addEventListener('input', rerender);
+    document.getElementById(id).addEventListener('change', rerender);
+  });
+
   rerender();
-  setInterval(rerender, 30000);
 }
 
-loadData().then((rawRecords) => {
-  const records = enrichRecords(rawRecords);
-  boot(records);
+main().catch((error) => {
+  console.error(error);
+  const list = document.getElementById('list');
+  list.innerHTML = '<div class="empty-state">Failed to load venue data.</div>';
 });
