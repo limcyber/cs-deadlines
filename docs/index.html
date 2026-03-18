@@ -1,96 +1,91 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CS Deadlines Hub</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CS Deadlines — Trusted Venue Tracker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="wrap hero">
     <div>
-      <h1>CS Deadlines Hub</h1>
-      <p class="sub">Compact venue-first list for scanning deadlines quickly.</p>
+      <p class="eyebrow">Final version · searchable · timezone-safe · review-aware</p>
+      <h1>CS Deadlines</h1>
+      <p class="sub">Find venues quickly by broad area, search aliases, and rely on confirmed deadlines only.</p>
     </div>
     <div class="summary-box">
       <div class="summary-label">Visible venues</div>
       <div class="summary-value" id="resultCount">0</div>
+      <div class="summary-meta" id="buildMeta">Loading build summary…</div>
     </div>
   </header>
 
-  <section class="wrap controls">
-    <input id="search" type="search" placeholder="Search by venue name, acronym, alias, or area" />
+  <main class="wrap">
+    <section class="controls panel">
+      <div class="control-grid">
+        <input id="search" type="search" placeholder="Search by venue, alias, acronym, or area">
+        <select id="typeFilter">
+          <option value="">All types</option>
+          <option value="conference">Conference</option>
+          <option value="workshop">Workshop</option>
+        </select>
+        <select id="sortFilter">
+          <option value="nearest">Nearest deadline</option>
+          <option value="latest">Latest deadline</option>
+          <option value="az">A–Z</option>
+          <option value="tier">Tier</option>
+        </select>
+        <label class="toggle"><input id="topOnly" type="checkbox"> Top-tier only</label>
+      </div>
+      <div class="quick-areas" id="areaFilters">
+        <button class="area-btn active" data-area="">All areas</button>
+        <button class="area-btn" data-area="AI+Data">AI+Data</button>
+        <button class="area-btn" data-area="Systems">Systems</button>
+        <button class="area-btn" data-area="Security">Security</button>
+        <button class="area-btn" data-area="SE+Theory">SE+Theory</button>
+      </div>
+    </section>
 
-    <div class="quick-areas" id="quickAreas">
-      <button class="area-btn active" data-area="">All areas</button>
-      <button class="area-btn" data-area="AI+Data">AI+Data</button>
-      <button class="area-btn" data-area="Systems">Systems</button>
-      <button class="area-btn" data-area="Security">Security</button>
-      <button class="area-btn" data-area="SE+Theory">SE+Theory</button>
-    </div>
-
-    <div class="control-row">
-      <select id="typeFilter">
-        <option value="">All types</option>
-        <option value="conference">Conference</option>
-        <option value="workshop">Workshop</option>
-      </select>
-
-      <select id="tierFilter">
-        <option value="">All tiers</option>
-        <option value="top">Top</option>
-        <option value="strong">Strong</option>
-        <option value="mid">Mid</option>
-        <option value="workshop">Workshop tier</option>
-        <option value="fast">Fast</option>
-      </select>
-
-      <select id="scanFilter">
-        <option value="">All scan states</option>
-        <option value="enabled">Scan enabled</option>
-        <option value="catalog">Catalog only</option>
-      </select>
-
-      <label class="toggle">
-        <input id="topOnly" type="checkbox" />
-        <span>Top tier only</span>
-      </label>
-    </div>
-  </section>
-
-  <main id="list" class="wrap list"></main>
+    <section class="list" id="list"></section>
+  </main>
 
   <template id="rowTemplate">
     <article class="venue-row">
+      <div class="meta-line">
+        <span class="badge tier-badge"></span>
+        <span class="badge type-badge"></span>
+        <span class="badge scan-badge"></span>
+        <span class="badge review-badge hidden">Review</span>
+        <span class="meta-text">
+          <span class="areas-inline"></span>
+          <span class="dot">·</span>
+          <span class="year-inline"></span>
+          <span class="dot">·</span>
+          <span class="location-inline"></span>
+        </span>
+      </div>
+
       <div class="row-main">
-        <div class="row-left">
-          <div class="meta-line">
-            <span class="badge tier"></span>
-            <span class="badge type"></span>
-            <span class="badge scan-state"></span>
-            <span class="meta-text">
-              <span class="areas"></span>
-              <span class="dot">·</span>
-              <span class="year"></span>
-              <span class="location-wrap"><span class="dot">·</span><span class="location"></span></span>
-            </span>
-          </div>
-
+        <div class="left">
           <h2 class="title"></h2>
-
-          <div class="links-line">
-            <a class="venue-link" target="_blank" rel="noopener">Venue</a>
-            <span class="dot">·</span>
-            <a class="cfp-link" target="_blank" rel="noopener">CFP</a>
+          <div class="support-line">
+            <a class="venue-link" target="_blank" rel="noreferrer">Venue</a>
+            <span class="slash">/</span>
+            <a class="cfp-link" target="_blank" rel="noreferrer">CFP</a>
+            <span class="slash">/</span>
+            <a class="source-link" target="_blank" rel="noreferrer">Source</a>
           </div>
+          <div class="timeline-line hidden"></div>
+          <div class="extension-line hidden"></div>
+          <div class="review-line hidden"></div>
         </div>
 
-        <div class="row-right">
-          <div class="status-line">
-            <span class="status-chip"></span>
-          </div>
+        <div class="right">
+          <div class="status-chip"></div>
           <div class="deadline-primary"></div>
           <div class="deadline-secondary"></div>
+          <div class="source-meta"></div>
+          <div class="actions-line"></div>
         </div>
       </div>
     </article>

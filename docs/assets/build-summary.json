@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-03-18T19:50:35.805245+00:00",
+  "record_count": 200,
+  "confirmed_public_deadlines": 12,
+  "review_required": 1,
+  "catalog_seed": 185,
+  "scanned": 1,
+  "confirmed": 14,
+  "scan_failed": 0,
+  "run_summary": {
+    "generated_at": null,
+    "counts": {}
+  }
+}

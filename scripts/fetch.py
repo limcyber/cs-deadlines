@@ -1,140 +1,277 @@
 from __future__ import annotations
 
+import json
 import re
+import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import List, Optional
+from typing import Any
 
 import requests
 import yaml
 from bs4 import BeautifulSoup
 
-ROOT = Path(__file__).resolve().parents[1]
+SCRIPT_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPT_DIR))
+from common import has_extension_language, infer_kind, parse_datetime  # noqa: E402
+
+ROOT = SCRIPT_DIR.parents[0]
 VENUES_PATH = ROOT / "data" / "venues.yml"
 INSTANCES_PATH = ROOT / "data" / "instances.yml"
-CANDIDATES_PATH = ROOT / "data" / "candidate_venues.json"
+FAILURES_PATH = ROOT / "data" / "scan_failures.json"
+SUMMARY_PATH = ROOT / "data" / "scan_run_summary.json"
+SUMMARY_MD_PATH = ROOT / "data" / "last_run_summary.md"
 
 HEADERS = {
-    "User-Agent": "cs-deadlines-mvp/0.2 (+https://github.com/your-org/cs-deadlines-mvp)"
+    "User-Agent": "cs-deadlines-final/1.0 (+https://github.com/your-org/cs-deadlines)"
 }
-DATE_PATTERNS = [
-    r"(?:deadline|abstract|paper|submission|important dates?)",
-    r"(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+\d{1,2},?\s+20\d{2}",
-]
+DATE_REGEX = re.compile(
+    r"((?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+\d{1,2},?\s+20\d{2}(?:[^\n]{0,40}?)(?:\d{1,2}:\d{2})?(?:\s*(?:am|pm))?(?:\s*(?:AoE|UTC|PDT|PST|CET|CEST|EST|EDT))?)",
+    re.IGNORECASE,
+)
 
 
 @dataclass
-class ScanResult:
-    venue_id: str
-    ok: bool
-    source_url: str
-    checked_at: str
-    matched_lines: List[str]
-    notes: Optional[str] = None
+class Candidate:
+    text: str
+    detected_kind: str
+    detected_value: str | None
+    source: str
+    confidence: str
+    extension_detected: bool = False
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "text": self.text,
+            "detected_kind": self.detected_kind,
+            "detected_value": self.detected_value,
+            "source": self.source,
+            "confidence": self.confidence,
+            "extension_detected": self.extension_detected,
+        }
 
 
 def load_yaml(path: Path):
-    with path.open("r", encoding="utf-8") as f:
-        return yaml.safe_load(f) or []
+    if not path.exists():
+        return []
+    with path.open("r", encoding="utf-8") as handle:
+        return yaml.safe_load(handle) or []
 
 
 def save_yaml(path: Path, data) -> None:
-    with path.open("w", encoding="utf-8") as f:
-        yaml.safe_dump(data, f, sort_keys=False, allow_unicode=True)
+    with path.open("w", encoding="utf-8") as handle:
+        yaml.safe_dump(data, handle, sort_keys=False, allow_unicode=True)
 
 
-def fetch_text(url: str, timeout: int = 20) -> str:
-    resp = requests.get(url, headers=HEADERS, timeout=timeout)
-    resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "html.parser")
-    for tag in soup(["script", "style", "noscript"]):
+def fetch_html(url: str, timeout: int = 20) -> tuple[str, BeautifulSoup]:
+    response = requests.get(url, headers=HEADERS, timeout=timeout)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
+    return response.text, soup
+
+
+def clean_soup_text(soup: BeautifulSoup) -> str:
+    cloned = BeautifulSoup(str(soup), "html.parser")
+    for tag in cloned(["script", "style", "noscript"]):
         tag.extract()
-    return soup.get_text("\n", strip=True)
+    return cloned.get_text("\n", strip=True)
 
 
-def extract_candidate_lines(text: str, max_lines: int = 10) -> List[str]:
-    lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
-    hits = []
+def parse_candidate_line(line: str, parser_type: str) -> Candidate | None:
+    match = DATE_REGEX.search(line)
+    if not match:
+        return None
+    date_text = match.group(1).strip()
+    dt = parse_datetime(date_text)
+    detected_value = dt.isoformat() if dt else None
+    detected_kind = infer_kind(line)
+    extension_detected = has_extension_language(line)
+    confidence = "high" if parser_type == "structured_dates" and detected_value else "medium" if detected_value else "low"
+    return Candidate(
+        text=line.strip(),
+        detected_kind=detected_kind,
+        detected_value=detected_value,
+        source="official",
+        confidence=confidence,
+        extension_detected=extension_detected,
+    )
+
+
+def generic_candidates(text: str, parser_type: str) -> list[Candidate]:
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    results: list[Candidate] = []
     for line in lines:
-        lower = line.lower()
-        if any(re.search(pat, lower) for pat in DATE_PATTERNS):
-            hits.append(line)
-        if len(hits) >= max_lines:
+        lowered = line.lower()
+        if not any(token in lowered for token in ["deadline", "abstract", "paper", "submission", "notification", "camera", "important date"]):
+            continue
+        candidate = parse_candidate_line(line, parser_type)
+        if candidate:
+            results.append(candidate)
+        if len(results) >= 8:
             break
-    return hits
+    return results
 
 
-def update_instances_with_scan(instances, result: ScanResult, year: int) -> list:
-    instance_id = f"{result.venue_id}-{year}"
-    existing = next((x for x in instances if x["id"] == instance_id), None)
-    payload = {
-        "id": instance_id,
-        "venue_id": result.venue_id,
-        "year": year,
-        "status": "scanned" if result.ok else "scan_failed",
-        "deadlines": [],
-        "venue_date_start": None,
-        "venue_date_end": None,
-        "location": None,
-        "source_url": result.source_url,
-        "checked_at": result.checked_at,
-        "confidence": 0.2 if result.ok and result.matched_lines else 0.0,
-        "scan_preview": result.matched_lines[:5],
-        "notes": result.notes,
-    }
-    if existing:
-        existing.update(payload)
+def structured_candidates(soup: BeautifulSoup, parser_type: str) -> list[Candidate]:
+    results: list[Candidate] = []
+    for block in soup.find_all(["table", "section", "div"]):
+        text = block.get_text(" ", strip=True)
+        lowered = text.lower()
+        if not text or len(text) < 20:
+            continue
+        if "important dates" not in lowered and "deadline" not in lowered:
+            continue
+        for segment in re.split(r"(?<=[.;])\s+|\n", text):
+            candidate = parse_candidate_line(segment, parser_type)
+            if candidate:
+                results.append(candidate)
+        if results:
+            break
+    return results[:8]
+
+
+def existing_confirmed_by_kind(instance: dict) -> dict[str, str]:
+    mapping = {}
+    for item in instance.get("deadlines", []) or []:
+        if item.get("confirmed"):
+            mapping[item.get("kind")] = item.get("value")
+    return mapping
+
+
+def update_instance(instances: list[dict], venue: dict, candidates: list[Candidate], checked_at: str, source_url: str, fetch_error: str | None = None):
+    year = datetime.now(timezone.utc).year
+    instance_id = f"{venue['id']}-{year}"
+    existing = next((item for item in instances if item.get("id") == instance_id), None)
+    if existing is None:
+        existing = {
+            "id": instance_id,
+            "venue_id": venue["id"],
+            "year": year,
+            "scan_status": "catalog_seed",
+            "checked_at": None,
+            "source_url": source_url,
+            "confidence": "low",
+            "review_required": False,
+            "conflict_reason": None,
+            "scan_preview": [],
+            "deadlines": [],
+            "venue_date_start": None,
+            "venue_date_end": None,
+            "location": None,
+        }
+        instances.append(existing)
+
+    existing_confirmed = existing_confirmed_by_kind(existing)
+    preview = [candidate.to_dict() for candidate in candidates]
+    review_required = False
+    conflict_reason = None
+    auto_promoted = []
+
+    for candidate in candidates:
+        if candidate.detected_kind in existing_confirmed and candidate.detected_value and existing_confirmed[candidate.detected_kind] != candidate.detected_value:
+            review_required = True
+            conflict_reason = f"Detected {candidate.detected_kind} deadline differs from the previously confirmed value."
+        if candidate.extension_detected:
+            review_required = True
+            conflict_reason = conflict_reason or "Possible extension language detected."
+        if (
+            not existing_confirmed.get(candidate.detected_kind)
+            and candidate.detected_value
+            and venue.get("parser") == "structured_dates"
+            and candidate.confidence == "high"
+            and not candidate.extension_detected
+        ):
+            auto_promoted.append(
+                {
+                    "kind": candidate.detected_kind,
+                    "value": candidate.detected_value,
+                    "timezone": venue.get("default_timezone") or "UTC",
+                    "source": "official",
+                    "confirmed": True,
+                    "confidence": "high",
+                }
+            )
+
+    existing["checked_at"] = checked_at
+    existing["source_url"] = source_url
+    existing["scan_preview"] = preview
+    existing["review_required"] = review_required
+    existing["conflict_reason"] = conflict_reason if review_required else None
+    if fetch_error:
+        existing["scan_status"] = "scan_failed"
+        existing["confidence"] = "low"
+        existing["notes"] = fetch_error
     else:
-        instances.append(payload)
-    return instances
-
-
-def discover_new_candidates() -> None:
-    if not CANDIDATES_PATH.exists():
-        CANDIDATES_PATH.write_text("[]\n", encoding="utf-8")
+        existing["scan_status"] = "confirmed" if existing.get("deadlines") else "scanned"
+        existing["confidence"] = max([candidate.confidence for candidate in candidates], key=lambda x: {"low": 0, "medium": 1, "high": 2}[x], default="low")
+        if auto_promoted:
+            existing["deadlines"] = existing.get("deadlines", []) + auto_promoted
+            existing["scan_status"] = "confirmed"
+    return existing
 
 
 def main() -> int:
-    year = datetime.now(timezone.utc).year
     venues = load_yaml(VENUES_PATH)
     instances = load_yaml(INSTANCES_PATH)
+    failures: list[dict[str, Any]] = []
+    counts = {"scanned": 0, "failed": 0, "review_required": 0, "auto_promoted": 0, "skipped": 0}
 
-    enabled = [v for v in venues if v.get("scan_enabled", False)]
-    skipped = len(venues) - len(enabled)
-
-    print(f"[INFO] scanning {len(enabled)} venues (skipping {skipped} catalog-only entries)")
+    enabled = [venue for venue in venues if venue.get("scan_enabled")]
     for venue in enabled:
-        target_url = venue.get("cfp_url") or venue.get("website")
+        parser_type = venue.get("parser", "generic_dates")
         checked_at = datetime.now(timezone.utc).isoformat()
+        source_url = venue.get("cfp_url") or venue.get("website")
+        if parser_type == "manual":
+            counts["skipped"] += 1
+            continue
         try:
-            text = fetch_text(target_url)
-            matched_lines = extract_candidate_lines(text)
-            result = ScanResult(
-                venue_id=venue["id"],
-                ok=True,
-                source_url=target_url,
-                checked_at=checked_at,
-                matched_lines=matched_lines,
-                notes="MVP scanner: extracted candidate lines only; manual confirmation is still recommended.",
-            )
-            print(f"[OK] {venue['short_name']}: {len(matched_lines)} candidate lines")
+            _, soup = fetch_html(source_url)
+            text = clean_soup_text(soup)
+            if parser_type == "structured_dates":
+                candidates = structured_candidates(soup, parser_type) or generic_candidates(text, parser_type)
+            else:
+                candidates = generic_candidates(text, parser_type)
+            before = next((item for item in instances if item.get("id") == f"{venue['id']}-{datetime.now(timezone.utc).year}"), None)
+            before_deadlines = len(before.get("deadlines", [])) if before else 0
+            updated = update_instance(instances, venue, candidates, checked_at, source_url)
+            counts["scanned"] += 1
+            counts["review_required"] += 1 if updated.get("review_required") else 0
+            counts["auto_promoted"] += max(0, len(updated.get("deadlines", [])) - before_deadlines)
         except Exception as exc:
-            result = ScanResult(
-                venue_id=venue["id"],
-                ok=False,
-                source_url=target_url,
-                checked_at=checked_at,
-                matched_lines=[],
-                notes=f"fetch failed: {exc}",
+            failures.append(
+                {
+                    "venue_id": venue.get("id"),
+                    "short_name": venue.get("short_name"),
+                    "timestamp": checked_at,
+                    "source_url": source_url,
+                    "parser": parser_type,
+                    "failure_type": type(exc).__name__,
+                    "error_message": str(exc)[:300],
+                }
             )
-            print(f"[WARN] {venue['short_name']}: {exc}")
-
-        instances = update_instances_with_scan(instances, result, year)
+            update_instance(instances, venue, [], checked_at, source_url, fetch_error=str(exc))
+            counts["failed"] += 1
 
     save_yaml(INSTANCES_PATH, instances)
-    discover_new_candidates()
-    print("[DONE] instances.yml updated")
+    FAILURES_PATH.write_text(json.dumps(failures, indent=2), encoding="utf-8")
+    summary = {"generated_at": datetime.now(timezone.utc).isoformat(), "counts": counts, "failures": failures[:20]}
+    SUMMARY_PATH.write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    SUMMARY_MD_PATH.write_text(
+        "\n".join(
+            [
+                "# Scan Run Summary",
+                f"- Generated at: {summary['generated_at']}",
+                f"- Scanned venues: {counts['scanned']}",
+                f"- Failed scans: {counts['failed']}",
+                f"- Review required: {counts['review_required']}",
+                f"- Auto-promoted deadlines: {counts['auto_promoted']}",
+                f"- Skipped manual venues: {counts['skipped']}",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    print(json.dumps(summary, indent=2))
     return 0
 
 

@@ -16,6 +16,11 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: icml
   title: International Conference on Machine Learning
   short_name: ICML
@@ -32,6 +37,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: iclr
   title: International Conference on Learning Representations
   short_name: ICLR
@@ -48,6 +59,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: aaai
   title: AAAI Conference on Artificial Intelligence
   short_name: AAAI
@@ -63,6 +80,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ijcai
   title: International Joint Conference on Artificial Intelligence
   short_name: IJCAI
@@ -78,6 +101,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: cvpr
   title: IEEE/CVF Conference on Computer Vision and Pattern Recognition
   short_name: CVPR
@@ -94,6 +123,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: iccv
   title: IEEE/CVF International Conference on Computer Vision
   short_name: ICCV
@@ -110,6 +145,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: eccv
   title: European Conference on Computer Vision
   short_name: ECCV
@@ -126,6 +167,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: acl
   title: Annual Meeting of the Association for Computational Linguistics
   short_name: ACL
@@ -142,6 +189,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: emnlp
   title: Conference on Empirical Methods in Natural Language Processing
   short_name: EMNLP
@@ -158,6 +211,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: naacl
   title: North American Chapter of the ACL
   short_name: NAACL
@@ -174,6 +233,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: kdd
   title: ACM SIGKDD Conference on Knowledge Discovery and Data Mining
   short_name: KDD
@@ -191,6 +256,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: www
   title: The Web Conference
   short_name: WWW
@@ -207,6 +278,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: sigmod
   title: ACM SIGMOD/PODS International Conference on Management of Data
   short_name: SIGMOD
@@ -223,6 +300,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: vldb
   title: Very Large Data Bases Conference
   short_name: VLDB
@@ -239,6 +322,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: icde
   title: IEEE International Conference on Data Engineering
   short_name: ICDE
@@ -255,6 +344,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ccs
   title: ACM Conference on Computer and Communications Security
   short_name: CCS
@@ -271,6 +366,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ieee-sp
   title: IEEE Symposium on Security and Privacy
   short_name: IEEE S&P
@@ -289,6 +390,11 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: usenix-sec
   title: USENIX Security Symposium
   short_name: USENIX Security
@@ -302,9 +408,15 @@
   website: https://www.usenix.org/conference/usenixsecurity
   cfp_url: https://www.usenix.org/conference/usenixsecurity
   default_timezone: AoE
-  parser: generic_dates
+  parser: structured_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ndss
   title: Network and Distributed System Security Symposium
   short_name: NDSS
@@ -322,6 +434,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: soups
   title: Symposium on Usable Privacy and Security
   short_name: SOUPS
@@ -339,6 +457,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: sigcomm
   title: ACM SIGCOMM Conference
   short_name: SIGCOMM
@@ -355,6 +479,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: nsdi
   title: USENIX Symposium on Networked Systems Design and Implementation
   short_name: NSDI
@@ -371,6 +501,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: osdi
   title: USENIX Symposium on Operating Systems Design and Implementation
   short_name: OSDI
@@ -383,9 +519,15 @@
   website: https://www.usenix.org/conference/osdi
   cfp_url: https://www.usenix.org/conference/osdi
   default_timezone: AoE
-  parser: generic_dates
+  parser: structured_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: sosp
   title: ACM Symposium on Operating Systems Principles
   short_name: SOSP
@@ -398,9 +540,15 @@
   website: https://www.sigops.org/s/conferences/sosp/
   cfp_url: https://www.sigops.org/s/conferences/sosp/
   default_timezone: AoE
-  parser: generic_dates
-  scan_enabled: true
+  parser: manual
+  scan_enabled: false
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: asplos
   title: International Conference on Architectural Support for Programming Languages
     and Operating Systems
@@ -419,6 +567,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: pldi
   title: ACM SIGPLAN Conference on Programming Language Design and Implementation
   short_name: PLDI
@@ -432,9 +586,15 @@
   website: https://pldi.sigplan.org/
   cfp_url: https://pldi.sigplan.org/
   default_timezone: AoE
-  parser: generic_dates
+  parser: structured_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: popl
   title: ACM SIGPLAN Symposium on Principles of Programming Languages
   short_name: POPL
@@ -451,6 +611,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: fse
   title: ACM Joint European Software Engineering Conference and Symposium on the Foundations
     of Software Engineering
@@ -464,9 +630,15 @@
   website: https://conf.researchr.org/home/fse-2026
   cfp_url: https://conf.researchr.org/home/fse-2026
   default_timezone: AoE
-  parser: generic_dates
+  parser: structured_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: icse
   title: International Conference on Software Engineering
   short_name: ICSE
@@ -479,9 +651,15 @@
   website: https://conf.researchr.org/home/icse-2026
   cfp_url: https://conf.researchr.org/home/icse-2026
   default_timezone: AoE
-  parser: generic_dates
+  parser: structured_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: chi
   title: ACM Conference on Human Factors in Computing Systems
   short_name: CHI
@@ -494,9 +672,15 @@
   website: https://chi2026.acm.org/
   cfp_url: https://chi2026.acm.org/
   default_timezone: AoE
-  parser: generic_dates
+  parser: structured_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ubicomp
   title: ACM International Joint Conference on Pervasive and Ubiquitous Computing
   short_name: UbiComp
@@ -513,6 +697,12 @@
   parser: generic_dates
   scan_enabled: true
   notes: Verified starter entry with scanning enabled.
+  aliases: []
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: aistats
   title: International Conference on Artificial Intelligence and Statistics
   short_name: AISTATS
@@ -528,10 +718,15 @@
   website: https://dblp.org/search?q=AISTATS+conference
   cfp_url: https://dblp.org/search?q=AISTATS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: uai
   title: Conference on Uncertainty in Artificial Intelligence
   short_name: UAI
@@ -547,10 +742,15 @@
   website: https://dblp.org/search?q=UAI+conference
   cfp_url: https://dblp.org/search?q=UAI+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: colt
   title: Conference on Learning Theory
   short_name: COLT
@@ -565,10 +765,15 @@
   website: https://dblp.org/search?q=COLT+conference
   cfp_url: https://dblp.org/search?q=COLT+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: satml
   title: IEEE Conference on Secure and Trustworthy Machine Learning
   short_name: SaTML
@@ -584,10 +789,15 @@
   website: https://dblp.org/search?q=SaTML+conference
   cfp_url: https://dblp.org/search?q=SaTML+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: icaps
   title: International Conference on Automated Planning and Scheduling
   short_name: ICAPS
@@ -601,10 +811,15 @@
   website: https://dblp.org/search?q=ICAPS+conference
   cfp_url: https://dblp.org/search?q=ICAPS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: kr
   title: International Conference on Principles of Knowledge Representation and Reasoning
   short_name: KR
@@ -619,10 +834,15 @@
   website: https://dblp.org/search?q=KR+conference
   cfp_url: https://dblp.org/search?q=KR+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: aamas
   title: International Conference on Autonomous Agents and Multiagent Systems
   short_name: AAMAS
@@ -637,10 +857,15 @@
   website: https://dblp.org/search?q=AAMAS+conference
   cfp_url: https://dblp.org/search?q=AAMAS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: cp
   title: International Conference on Principles and Practice of Constraint Programming
   short_name: CP
@@ -655,10 +880,15 @@
   website: https://dblp.org/search?q=CP+conference
   cfp_url: https://dblp.org/search?q=CP+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ecai
   title: European Conference on Artificial Intelligence
   short_name: ECAI
@@ -672,10 +902,15 @@
   website: https://dblp.org/search?q=ECAI+conference
   cfp_url: https://dblp.org/search?q=ECAI+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: rss
   title: 'Robotics: Science and Systems'
   short_name: RSS
@@ -690,10 +925,15 @@
   website: https://dblp.org/search?q=RSS+conference
   cfp_url: https://dblp.org/search?q=RSS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: icra
   title: IEEE International Conference on Robotics and Automation
   short_name: ICRA
@@ -708,10 +948,15 @@
   website: https://dblp.org/search?q=ICRA+conference
   cfp_url: https://dblp.org/search?q=ICRA+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: iros
   title: IEEE/RSJ International Conference on Intelligent Robots and Systems
   short_name: IROS
@@ -726,10 +971,15 @@
   website: https://dblp.org/search?q=IROS+conference
   cfp_url: https://dblp.org/search?q=IROS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: corl
   title: Conference on Robot Learning
   short_name: CoRL
@@ -744,10 +994,15 @@
   website: https://dblp.org/search?q=CoRL+conference
   cfp_url: https://dblp.org/search?q=CoRL+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ecml-pkdd
   title: European Conference on Machine Learning and Principles and Practice of Knowledge
     Discovery in Databases
@@ -763,10 +1018,15 @@
   website: https://dblp.org/search?q=ECML+PKDD+conference
   cfp_url: https://dblp.org/search?q=ECML+PKDD+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: wsdm
   title: ACM International Conference on Web Search and Data Mining
   short_name: WSDM
@@ -782,10 +1042,15 @@
   website: https://dblp.org/search?q=WSDM+conference
   cfp_url: https://dblp.org/search?q=WSDM+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: cikm
   title: ACM International Conference on Information and Knowledge Management
   short_name: CIKM
@@ -801,10 +1066,15 @@
   website: https://dblp.org/search?q=CIKM+conference
   cfp_url: https://dblp.org/search?q=CIKM+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: sdm
   title: SIAM International Conference on Data Mining
   short_name: SDM
@@ -819,10 +1089,15 @@
   website: https://dblp.org/search?q=SDM+conference
   cfp_url: https://dblp.org/search?q=SDM+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: pakdd
   title: Pacific-Asia Conference on Knowledge Discovery and Data Mining
   short_name: PAKDD
@@ -837,10 +1112,15 @@
   website: https://dblp.org/search?q=PAKDD+conference
   cfp_url: https://dblp.org/search?q=PAKDD+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: recsys
   title: ACM Conference on Recommender Systems
   short_name: RecSys
@@ -856,10 +1136,15 @@
   website: https://dblp.org/search?q=RecSys+conference
   cfp_url: https://dblp.org/search?q=RecSys+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: icdm
   title: IEEE International Conference on Data Mining
   short_name: ICDM
@@ -874,10 +1159,15 @@
   website: https://dblp.org/search?q=ICDM+conference
   cfp_url: https://dblp.org/search?q=ICDM+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: 3dv
   title: International Conference on 3D Vision
   short_name: 3DV
@@ -891,10 +1181,15 @@
   website: https://dblp.org/search?q=3DV+conference
   cfp_url: https://dblp.org/search?q=3DV+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: wacv
   title: IEEE Winter Conference on Applications of Computer Vision
   short_name: WACV
@@ -909,10 +1204,15 @@
   website: https://dblp.org/search?q=WACV+conference
   cfp_url: https://dblp.org/search?q=WACV+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: accv
   title: Asian Conference on Computer Vision
   short_name: ACCV
@@ -926,10 +1226,15 @@
   website: https://dblp.org/search?q=ACCV+conference
   cfp_url: https://dblp.org/search?q=ACCV+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: bmvc
   title: British Machine Vision Conference
   short_name: BMVC
@@ -943,10 +1248,15 @@
   website: https://dblp.org/search?q=BMVC+conference
   cfp_url: https://dblp.org/search?q=BMVC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: fg
   title: IEEE International Conference on Automatic Face and Gesture Recognition
   short_name: FG
@@ -960,10 +1270,15 @@
   website: https://dblp.org/search?q=FG+conference
   cfp_url: https://dblp.org/search?q=FG+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: icpr
   title: International Conference on Pattern Recognition
   short_name: ICPR
@@ -978,10 +1293,15 @@
   website: https://dblp.org/search?q=ICPR+conference
   cfp_url: https://dblp.org/search?q=ICPR+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: miccai
   title: Medical Image Computing and Computer Assisted Intervention
   short_name: MICCAI
@@ -996,10 +1316,15 @@
   website: https://dblp.org/search?q=MICCAI+conference
   cfp_url: https://dblp.org/search?q=MICCAI+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: conll
   title: Conference on Computational Natural Language Learning
   short_name: CoNLL
@@ -1014,10 +1339,15 @@
   website: https://dblp.org/search?q=CoNLL+conference
   cfp_url: https://dblp.org/search?q=CoNLL+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: eacl
   title: Conference of the European Chapter of the ACL
   short_name: EACL
@@ -1032,10 +1362,15 @@
   website: https://dblp.org/search?q=EACL+conference
   cfp_url: https://dblp.org/search?q=EACL+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: coling
   title: International Conference on Computational Linguistics
   short_name: COLING
@@ -1050,10 +1385,15 @@
   website: https://dblp.org/search?q=COLING+conference
   cfp_url: https://dblp.org/search?q=COLING+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: interspeech
   title: Interspeech
   short_name: Interspeech
@@ -1068,10 +1408,15 @@
   website: https://dblp.org/search?q=Interspeech+conference
   cfp_url: https://dblp.org/search?q=Interspeech+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: asru
   title: IEEE Automatic Speech Recognition and Understanding Workshop
   short_name: ASRU
@@ -1086,10 +1431,15 @@
   website: https://dblp.org/search?q=ASRU+conference
   cfp_url: https://dblp.org/search?q=ASRU+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: slt
   title: IEEE Spoken Language Technology Workshop
   short_name: SLT
@@ -1104,10 +1454,15 @@
   website: https://dblp.org/search?q=SLT+conference
   cfp_url: https://dblp.org/search?q=SLT+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: lrec-coling
   title: Language Resources and Evaluation Conference
   short_name: LREC-COLING
@@ -1122,10 +1477,15 @@
   website: https://dblp.org/search?q=LREC-COLING+conference
   cfp_url: https://dblp.org/search?q=LREC-COLING+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: findings-acl
   title: Findings of ACL
   short_name: Findings ACL
@@ -1140,10 +1500,15 @@
   website: https://dblp.org/search?q=Findings+ACL+conference
   cfp_url: https://dblp.org/search?q=Findings+ACL+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: tacl
   title: Transactions of the ACL
   short_name: TACL
@@ -1158,10 +1523,15 @@
   website: https://dblp.org/search?q=TACL+conference
   cfp_url: https://dblp.org/search?q=TACL+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: icfp
   title: International Conference on Functional Programming
   short_name: ICFP
@@ -1175,10 +1545,15 @@
   website: https://dblp.org/search?q=ICFP+conference
   cfp_url: https://dblp.org/search?q=ICFP+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: oopsla
   title: Object-Oriented Programming, Systems, Languages, and Applications
   short_name: OOPSLA
@@ -1193,10 +1568,15 @@
   website: https://dblp.org/search?q=OOPSLA+conference
   cfp_url: https://dblp.org/search?q=OOPSLA+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ecoop
   title: European Conference on Object-Oriented Programming
   short_name: ECOOP
@@ -1211,10 +1591,15 @@
   website: https://dblp.org/search?q=ECOOP+conference
   cfp_url: https://dblp.org/search?q=ECOOP+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: esop
   title: European Symposium on Programming
   short_name: ESOP
@@ -1228,10 +1613,15 @@
   website: https://dblp.org/search?q=ESOP+conference
   cfp_url: https://dblp.org/search?q=ESOP+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: cc
   title: Compiler Construction
   short_name: CC
@@ -1245,10 +1635,15 @@
   website: https://dblp.org/search?q=CC+conference
   cfp_url: https://dblp.org/search?q=CC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: cav
   title: Computer Aided Verification
   short_name: CAV
@@ -1264,10 +1659,15 @@
   website: https://dblp.org/search?q=CAV+conference
   cfp_url: https://dblp.org/search?q=CAV+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: lics
   title: Logic in Computer Science
   short_name: LICS
@@ -1282,10 +1682,15 @@
   website: https://dblp.org/search?q=LICS+conference
   cfp_url: https://dblp.org/search?q=LICS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: vmcai
   title: Verification, Model Checking, and Abstract Interpretation
   short_name: VMCAI
@@ -1300,10 +1705,15 @@
   website: https://dblp.org/search?q=VMCAI+conference
   cfp_url: https://dblp.org/search?q=VMCAI+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: cgo
   title: Code Generation and Optimization
   short_name: CGO
@@ -1318,10 +1728,15 @@
   website: https://dblp.org/search?q=CGO+conference
   cfp_url: https://dblp.org/search?q=CGO+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: issta
   title: International Symposium on Software Testing and Analysis
   short_name: ISSTA
@@ -1335,10 +1750,15 @@
   website: https://dblp.org/search?q=ISSTA+conference
   cfp_url: https://dblp.org/search?q=ISSTA+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ase
   title: Automated Software Engineering
   short_name: ASE
@@ -1353,10 +1773,15 @@
   website: https://dblp.org/search?q=ASE+conference
   cfp_url: https://dblp.org/search?q=ASE+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: icsme
   title: International Conference on Software Maintenance and Evolution
   short_name: ICSME
@@ -1370,10 +1795,15 @@
   website: https://dblp.org/search?q=ICSME+conference
   cfp_url: https://dblp.org/search?q=ICSME+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: saner
   title: Software Analysis, Evolution and Reengineering
   short_name: SANER
@@ -1387,10 +1817,15 @@
   website: https://dblp.org/search?q=SANER+conference
   cfp_url: https://dblp.org/search?q=SANER+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: msr
   title: Mining Software Repositories
   short_name: MSR
@@ -1405,10 +1840,15 @@
   website: https://dblp.org/search?q=MSR+conference
   cfp_url: https://dblp.org/search?q=MSR+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: issre
   title: International Symposium on Software Reliability Engineering
   short_name: ISSRE
@@ -1422,10 +1862,15 @@
   website: https://dblp.org/search?q=ISSRE+conference
   cfp_url: https://dblp.org/search?q=ISSRE+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: re
   title: Requirements Engineering Conference
   short_name: RE
@@ -1439,10 +1884,15 @@
   website: https://dblp.org/search?q=RE+conference
   cfp_url: https://dblp.org/search?q=RE+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ecsa
   title: European Conference on Software Architecture
   short_name: ECSA
@@ -1456,10 +1906,15 @@
   website: https://dblp.org/search?q=ECSA+conference
   cfp_url: https://dblp.org/search?q=ECSA+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: icpc
   title: International Conference on Program Comprehension
   short_name: ICPC
@@ -1473,10 +1928,15 @@
   website: https://dblp.org/search?q=ICPC+conference
   cfp_url: https://dblp.org/search?q=ICPC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: mobilehci
   title: International Conference on Human-Computer Interaction with Mobile Devices
     and Services
@@ -1491,10 +1951,15 @@
   website: https://dblp.org/search?q=MobileHCI+conference
   cfp_url: https://dblp.org/search?q=MobileHCI+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: uist
   title: User Interface Software and Technology
   short_name: UIST
@@ -1508,10 +1973,15 @@
   website: https://dblp.org/search?q=UIST+conference
   cfp_url: https://dblp.org/search?q=UIST+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: cscw
   title: Computer-Supported Cooperative Work and Social Computing
   short_name: CSCW
@@ -1525,10 +1995,15 @@
   website: https://dblp.org/search?q=CSCW+conference
   cfp_url: https://dblp.org/search?q=CSCW+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: iui
   title: Intelligent User Interfaces
   short_name: IUI
@@ -1543,10 +2018,15 @@
   website: https://dblp.org/search?q=IUI+conference
   cfp_url: https://dblp.org/search?q=IUI+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: assets
   title: ACM SIGACCESS Conference on Computers and Accessibility
   short_name: ASSETS
@@ -1560,10 +2040,15 @@
   website: https://dblp.org/search?q=ASSETS+conference
   cfp_url: https://dblp.org/search?q=ASSETS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: dis
   title: Designing Interactive Systems Conference
   short_name: DIS
@@ -1577,10 +2062,15 @@
   website: https://dblp.org/search?q=DIS+conference
   cfp_url: https://dblp.org/search?q=DIS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: tei
   title: Tangible, Embedded and Embodied Interaction
   short_name: TEI
@@ -1594,10 +2084,15 @@
   website: https://dblp.org/search?q=TEI+conference
   cfp_url: https://dblp.org/search?q=TEI+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: percom
   title: IEEE International Conference on Pervasive Computing and Communications
   short_name: PerCom
@@ -1612,10 +2107,15 @@
   website: https://dblp.org/search?q=PerCom+conference
   cfp_url: https://dblp.org/search?q=PerCom+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: iss
   title: Interactive Surfaces and Spaces
   short_name: ISS
@@ -1629,10 +2129,15 @@
   website: https://dblp.org/search?q=ISS+conference
   cfp_url: https://dblp.org/search?q=ISS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: vr
   title: IEEE Conference on Virtual Reality and 3D User Interfaces
   short_name: IEEE VR
@@ -1647,10 +2152,15 @@
   website: https://dblp.org/search?q=IEEE+VR+conference
   cfp_url: https://dblp.org/search?q=IEEE+VR+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: eurovis
   title: EuroVis
   short_name: EuroVis
@@ -1665,10 +2175,15 @@
   website: https://dblp.org/search?q=EuroVis+conference
   cfp_url: https://dblp.org/search?q=EuroVis+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: siggraph
   title: ACM SIGGRAPH
   short_name: SIGGRAPH
@@ -1682,10 +2197,15 @@
   website: https://dblp.org/search?q=SIGGRAPH+conference
   cfp_url: https://dblp.org/search?q=SIGGRAPH+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: siggraph-asia
   title: SIGGRAPH Asia
   short_name: SIGGRAPH Asia
@@ -1699,10 +2219,15 @@
   website: https://dblp.org/search?q=SIGGRAPH+Asia+conference
   cfp_url: https://dblp.org/search?q=SIGGRAPH+Asia+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: vis
   title: IEEE VIS
   short_name: IEEE VIS
@@ -1717,10 +2242,15 @@
   website: https://dblp.org/search?q=IEEE+VIS+conference
   cfp_url: https://dblp.org/search?q=IEEE+VIS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ismar
   title: International Symposium on Mixed and Augmented Reality
   short_name: ISMAR
@@ -1735,10 +2265,15 @@
   website: https://dblp.org/search?q=ISMAR+conference
   cfp_url: https://dblp.org/search?q=ISMAR+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: vcbm
   title: Visual Computing for Biology and Medicine
   short_name: VCBM
@@ -1753,10 +2288,15 @@
   website: https://dblp.org/search?q=VCBM+conference
   cfp_url: https://dblp.org/search?q=VCBM+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: imc
   title: ACM Internet Measurement Conference
   short_name: IMC
@@ -1771,10 +2311,15 @@
   website: https://dblp.org/search?q=IMC+conference
   cfp_url: https://dblp.org/search?q=IMC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: mobicom
   title: ACM International Conference on Mobile Computing and Networking
   short_name: MobiCom
@@ -1788,10 +2333,15 @@
   website: https://dblp.org/search?q=MobiCom+conference
   cfp_url: https://dblp.org/search?q=MobiCom+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: mobisys
   title: ACM International Conference on Mobile Systems, Applications, and Services
   short_name: MobiSys
@@ -1806,10 +2356,15 @@
   website: https://dblp.org/search?q=MobiSys+conference
   cfp_url: https://dblp.org/search?q=MobiSys+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: conext
   title: ACM CoNEXT Conference
   short_name: CoNEXT
@@ -1823,10 +2378,15 @@
   website: https://dblp.org/search?q=CoNEXT+conference
   cfp_url: https://dblp.org/search?q=CoNEXT+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: infocom
   title: IEEE INFOCOM
   short_name: INFOCOM
@@ -1840,10 +2400,15 @@
   website: https://dblp.org/search?q=INFOCOM+conference
   cfp_url: https://dblp.org/search?q=INFOCOM+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: hotnets
   title: ACM Workshop on Hot Topics in Networks
   short_name: HotNets
@@ -1857,10 +2422,15 @@
   website: https://dblp.org/search?q=HotNets+conference
   cfp_url: https://dblp.org/search?q=HotNets+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: sensys
   title: ACM Conference on Embedded Networked Sensor Systems
   short_name: SenSys
@@ -1875,10 +2445,15 @@
   website: https://dblp.org/search?q=SenSys+conference
   cfp_url: https://dblp.org/search?q=SenSys+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: sigmetrics
   title: ACM SIGMETRICS
   short_name: SIGMETRICS
@@ -1893,10 +2468,15 @@
   website: https://dblp.org/search?q=SIGMETRICS+conference
   cfp_url: https://dblp.org/search?q=SIGMETRICS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: middleware
   title: International Middleware Conference
   short_name: Middleware
@@ -1910,10 +2490,15 @@
   website: https://dblp.org/search?q=Middleware+conference
   cfp_url: https://dblp.org/search?q=Middleware+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: eurosys
   title: European Conference on Computer Systems
   short_name: EuroSys
@@ -1927,10 +2512,15 @@
   website: https://dblp.org/search?q=EuroSys+conference
   cfp_url: https://dblp.org/search?q=EuroSys+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: fast
   title: USENIX Conference on File and Storage Technologies
   short_name: FAST
@@ -1945,10 +2535,15 @@
   website: https://dblp.org/search?q=FAST+conference
   cfp_url: https://dblp.org/search?q=FAST+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: atc
   title: USENIX Annual Technical Conference
   short_name: USENIX ATC
@@ -1962,10 +2557,15 @@
   website: https://dblp.org/search?q=USENIX+ATC+conference
   cfp_url: https://dblp.org/search?q=USENIX+ATC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: hpca
   title: IEEE International Symposium on High-Performance Computer Architecture
   short_name: HPCA
@@ -1980,10 +2580,15 @@
   website: https://dblp.org/search?q=HPCA+conference
   cfp_url: https://dblp.org/search?q=HPCA+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: isca
   title: International Symposium on Computer Architecture
   short_name: ISCA
@@ -1998,10 +2603,15 @@
   website: https://dblp.org/search?q=ISCA+conference
   cfp_url: https://dblp.org/search?q=ISCA+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: micro
   title: IEEE/ACM International Symposium on Microarchitecture
   short_name: MICRO
@@ -2016,10 +2626,15 @@
   website: https://dblp.org/search?q=MICRO+conference
   cfp_url: https://dblp.org/search?q=MICRO+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: sc
   title: International Conference for High Performance Computing, Networking, Storage,
     and Analysis
@@ -2036,10 +2651,15 @@
   website: https://dblp.org/search?q=SC+conference
   cfp_url: https://dblp.org/search?q=SC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ics
   title: International Conference on Supercomputing
   short_name: ICS
@@ -2054,10 +2674,15 @@
   website: https://dblp.org/search?q=ICS+conference
   cfp_url: https://dblp.org/search?q=ICS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ppopp
   title: Principles and Practice of Parallel Programming
   short_name: PPoPP
@@ -2073,10 +2698,15 @@
   website: https://dblp.org/search?q=PPoPP+conference
   cfp_url: https://dblp.org/search?q=PPoPP+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: pods
   title: Principles of Database Systems
   short_name: PODS
@@ -2091,10 +2721,15 @@
   website: https://dblp.org/search?q=PODS+conference
   cfp_url: https://dblp.org/search?q=PODS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: edbt
   title: Extending Database Technology
   short_name: EDBT
@@ -2109,10 +2744,15 @@
   website: https://dblp.org/search?q=EDBT+conference
   cfp_url: https://dblp.org/search?q=EDBT+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: cidr
   title: Conference on Innovative Data Systems Research
   short_name: CIDR
@@ -2127,10 +2767,15 @@
   website: https://dblp.org/search?q=CIDR+conference
   cfp_url: https://dblp.org/search?q=CIDR+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ssdbm
   title: Scientific and Statistical Database Management
   short_name: SSDBM
@@ -2145,10 +2790,15 @@
   website: https://dblp.org/search?q=SSDBM+conference
   cfp_url: https://dblp.org/search?q=SSDBM+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: icdt
   title: International Conference on Database Theory
   short_name: ICDT
@@ -2163,10 +2813,15 @@
   website: https://dblp.org/search?q=ICDT+conference
   cfp_url: https://dblp.org/search?q=ICDT+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: btw
   title: Database Systems for Business, Technology, and Web
   short_name: BTW
@@ -2181,10 +2836,15 @@
   website: https://dblp.org/search?q=BTW+conference
   cfp_url: https://dblp.org/search?q=BTW+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: bigdata
   title: IEEE International Conference on Big Data
   short_name: IEEE BigData
@@ -2199,10 +2859,15 @@
   website: https://dblp.org/search?q=IEEE+BigData+conference
   cfp_url: https://dblp.org/search?q=IEEE+BigData+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ecir
   title: European Conference on Information Retrieval
   short_name: ECIR
@@ -2218,10 +2883,15 @@
   website: https://dblp.org/search?q=ECIR+conference
   cfp_url: https://dblp.org/search?q=ECIR+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: sigir
   title: ACM SIGIR Conference on Research and Development in Information Retrieval
   short_name: SIGIR
@@ -2237,10 +2907,15 @@
   website: https://dblp.org/search?q=SIGIR+conference
   cfp_url: https://dblp.org/search?q=SIGIR+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ictir
   title: International Conference on the Theory of Information Retrieval
   short_name: ICTIR
@@ -2255,10 +2930,15 @@
   website: https://dblp.org/search?q=ICTIR+conference
   cfp_url: https://dblp.org/search?q=ICTIR+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: wisdom
   title: Web Intelligence and Intelligent Agent Technology
   short_name: WI-IAT
@@ -2273,10 +2953,15 @@
   website: https://dblp.org/search?q=WI-IAT+conference
   cfp_url: https://dblp.org/search?q=WI-IAT+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: acsac
   title: Annual Computer Security Applications Conference
   short_name: ACSAC
@@ -2290,10 +2975,15 @@
   website: https://dblp.org/search?q=ACSAC+conference
   cfp_url: https://dblp.org/search?q=ACSAC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: esorics
   title: European Symposium on Research in Computer Security
   short_name: ESORICS
@@ -2308,10 +2998,15 @@
   website: https://dblp.org/search?q=ESORICS+conference
   cfp_url: https://dblp.org/search?q=ESORICS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: raid
   title: International Symposium on Research in Attacks, Intrusions and Defenses
   short_name: RAID
@@ -2325,10 +3020,15 @@
   website: https://dblp.org/search?q=RAID+conference
   cfp_url: https://dblp.org/search?q=RAID+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: pets
   title: Privacy Enhancing Technologies Symposium
   short_name: PETS
@@ -2343,10 +3043,15 @@
   website: https://dblp.org/search?q=PETS+conference
   cfp_url: https://dblp.org/search?q=PETS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: fc
   title: Financial Cryptography and Data Security
   short_name: FC
@@ -2362,10 +3067,15 @@
   website: https://dblp.org/search?q=FC+conference
   cfp_url: https://dblp.org/search?q=FC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: crypto
   title: International Cryptology Conference
   short_name: CRYPTO
@@ -2380,10 +3090,15 @@
   website: https://dblp.org/search?q=CRYPTO+conference
   cfp_url: https://dblp.org/search?q=CRYPTO+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: eurocrypt
   title: Annual International Conference on the Theory and Applications of Cryptographic
     Techniques
@@ -2399,10 +3114,15 @@
   website: https://dblp.org/search?q=EUROCRYPT+conference
   cfp_url: https://dblp.org/search?q=EUROCRYPT+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: asiacrypt
   title: International Conference on the Theory and Application of Cryptology and
     Information Security
@@ -2418,10 +3138,15 @@
   website: https://dblp.org/search?q=ASIACRYPT+conference
   cfp_url: https://dblp.org/search?q=ASIACRYPT+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: pkc
   title: International Conference on Practice and Theory of Public-Key Cryptography
   short_name: PKC
@@ -2436,10 +3161,15 @@
   website: https://dblp.org/search?q=PKC+conference
   cfp_url: https://dblp.org/search?q=PKC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ches
   title: Cryptographic Hardware and Embedded Systems
   short_name: CHES
@@ -2455,10 +3185,15 @@
   website: https://dblp.org/search?q=CHES+conference
   cfp_url: https://dblp.org/search?q=CHES+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: sacrypt
   title: Selected Areas in Cryptography
   short_name: SAC
@@ -2473,10 +3208,15 @@
   website: https://dblp.org/search?q=SAC+conference
   cfp_url: https://dblp.org/search?q=SAC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: woot
   title: USENIX Workshop on Offensive Technologies
   short_name: WOOT
@@ -2490,10 +3230,15 @@
   website: https://dblp.org/search?q=WOOT+conference
   cfp_url: https://dblp.org/search?q=WOOT+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: hotsec
   title: USENIX Workshop on Hot Topics in Security
   short_name: HotSec
@@ -2507,10 +3252,15 @@
   website: https://dblp.org/search?q=HotSec+conference
   cfp_url: https://dblp.org/search?q=HotSec+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: wisec
   title: ACM Conference on Security and Privacy in Wireless and Mobile Networks
   short_name: WiSec
@@ -2525,10 +3275,15 @@
   website: https://dblp.org/search?q=WiSec+conference
   cfp_url: https://dblp.org/search?q=WiSec+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: codaspy
   title: Conference on Data and Application Security and Privacy
   short_name: CODASPY
@@ -2544,10 +3299,15 @@
   website: https://dblp.org/search?q=CODASPY+conference
   cfp_url: https://dblp.org/search?q=CODASPY+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: enigma
   title: USENIX Enigma
   short_name: Enigma
@@ -2561,10 +3321,15 @@
   website: https://dblp.org/search?q=Enigma+conference
   cfp_url: https://dblp.org/search?q=Enigma+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: wpes
   title: Workshop on Privacy in the Electronic Society
   short_name: WPES
@@ -2579,10 +3344,15 @@
   website: https://dblp.org/search?q=WPES+conference
   cfp_url: https://dblp.org/search?q=WPES+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: asiaccs
   title: ACM AsiaCCS Conference on Computer and Communications Security
   short_name: AsiaCCS
@@ -2597,10 +3367,15 @@
   website: https://dblp.org/search?q=AsiaCCS+conference
   cfp_url: https://dblp.org/search?q=AsiaCCS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: dsn
   title: IEEE/IFIP International Conference on Dependable Systems and Networks
   short_name: DSN
@@ -2615,10 +3390,15 @@
   website: https://dblp.org/search?q=DSN+conference
   cfp_url: https://dblp.org/search?q=DSN+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: securecomm
   title: International Conference on Security and Privacy in Communication Networks
   short_name: SecureComm
@@ -2633,10 +3413,15 @@
   website: https://dblp.org/search?q=SecureComm+conference
   cfp_url: https://dblp.org/search?q=SecureComm+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: csf
   title: IEEE Computer Security Foundations Symposium
   short_name: CSF
@@ -2651,10 +3436,15 @@
   website: https://dblp.org/search?q=CSF+conference
   cfp_url: https://dblp.org/search?q=CSF+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: spw
   title: IEEE Security and Privacy Workshops
   short_name: S&P Workshops
@@ -2669,10 +3459,15 @@
   website: https://dblp.org/search?q=S%26P+Workshops+conference
   cfp_url: https://dblp.org/search?q=S%26P+Workshops+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: focs
   title: IEEE Symposium on Foundations of Computer Science
   short_name: FOCS
@@ -2686,10 +3481,15 @@
   website: https://dblp.org/search?q=FOCS+conference
   cfp_url: https://dblp.org/search?q=FOCS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: stoc
   title: ACM Symposium on Theory of Computing
   short_name: STOC
@@ -2703,10 +3503,15 @@
   website: https://dblp.org/search?q=STOC+conference
   cfp_url: https://dblp.org/search?q=STOC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: soda
   title: ACM-SIAM Symposium on Discrete Algorithms
   short_name: SODA
@@ -2720,10 +3525,15 @@
   website: https://dblp.org/search?q=SODA+conference
   cfp_url: https://dblp.org/search?q=SODA+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: socg
   title: Symposium on Computational Geometry
   short_name: SoCG
@@ -2738,10 +3548,15 @@
   website: https://dblp.org/search?q=SoCG+conference
   cfp_url: https://dblp.org/search?q=SoCG+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: icalp
   title: International Colloquium on Automata, Languages and Programming
   short_name: ICALP
@@ -2756,10 +3571,15 @@
   website: https://dblp.org/search?q=ICALP+conference
   cfp_url: https://dblp.org/search?q=ICALP+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: esa
   title: European Symposium on Algorithms
   short_name: ESA
@@ -2773,10 +3593,15 @@
   website: https://dblp.org/search?q=ESA+conference
   cfp_url: https://dblp.org/search?q=ESA+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: itcs
   title: Innovations in Theoretical Computer Science
   short_name: ITCS
@@ -2790,10 +3615,15 @@
   website: https://dblp.org/search?q=ITCS+conference
   cfp_url: https://dblp.org/search?q=ITCS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: approx-random
   title: APPROX/RANDOM
   short_name: APPROX/RANDOM
@@ -2807,10 +3637,15 @@
   website: https://dblp.org/search?q=APPROX%2FRANDOM+conference
   cfp_url: https://dblp.org/search?q=APPROX%2FRANDOM+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ccc
   title: Computational Complexity Conference
   short_name: CCC
@@ -2824,10 +3659,15 @@
   website: https://dblp.org/search?q=CCC+conference
   cfp_url: https://dblp.org/search?q=CCC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: mfcs
   title: International Symposium on Mathematical Foundations of Computer Science
   short_name: MFCS
@@ -2841,10 +3681,15 @@
   website: https://dblp.org/search?q=MFCS+conference
   cfp_url: https://dblp.org/search?q=MFCS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: latin
   title: Latin American Theoretical Informatics Symposium
   short_name: LATIN
@@ -2858,10 +3703,15 @@
   website: https://dblp.org/search?q=LATIN+conference
   cfp_url: https://dblp.org/search?q=LATIN+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: isaac
   title: International Symposium on Algorithms and Computation
   short_name: ISAAC
@@ -2875,10 +3725,15 @@
   website: https://dblp.org/search?q=ISAAC+conference
   cfp_url: https://dblp.org/search?q=ISAAC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ec
   title: ACM Conference on Economics and Computation
   short_name: EC
@@ -2893,10 +3748,15 @@
   website: https://dblp.org/search?q=EC+conference
   cfp_url: https://dblp.org/search?q=EC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: aied
   title: International Conference on Artificial Intelligence in Education
   short_name: AIED
@@ -2911,10 +3771,15 @@
   website: https://dblp.org/search?q=AIED+conference
   cfp_url: https://dblp.org/search?q=AIED+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: edm
   title: International Conference on Educational Data Mining
   short_name: EDM
@@ -2930,10 +3795,15 @@
   website: https://dblp.org/search?q=EDM+conference
   cfp_url: https://dblp.org/search?q=EDM+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: sigcse
   title: ACM Technical Symposium on Computer Science Education
   short_name: SIGCSE
@@ -2947,10 +3817,15 @@
   website: https://dblp.org/search?q=SIGCSE+conference
   cfp_url: https://dblp.org/search?q=SIGCSE+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: iticse
   title: Innovation and Technology in Computer Science Education
   short_name: ITiCSE
@@ -2964,10 +3839,15 @@
   website: https://dblp.org/search?q=ITiCSE+conference
   cfp_url: https://dblp.org/search?q=ITiCSE+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: fie
   title: Frontiers in Education
   short_name: FIE
@@ -2981,10 +3861,15 @@
   website: https://dblp.org/search?q=FIE+conference
   cfp_url: https://dblp.org/search?q=FIE+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ecml
   title: European Conference on Machine Learning
   short_name: ECML
@@ -2998,10 +3883,15 @@
   website: https://dblp.org/search?q=ECML+conference
   cfp_url: https://dblp.org/search?q=ECML+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: acml
   title: Asian Conference on Machine Learning
   short_name: ACML
@@ -3015,10 +3905,15 @@
   website: https://dblp.org/search?q=ACML+conference
   cfp_url: https://dblp.org/search?q=ACML+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: icann
   title: International Conference on Artificial Neural Networks
   short_name: ICANN
@@ -3033,10 +3928,15 @@
   website: https://dblp.org/search?q=ICANN+conference
   cfp_url: https://dblp.org/search?q=ICANN+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: gecco
   title: Genetic and Evolutionary Computation Conference
   short_name: GECCO
@@ -3050,10 +3950,15 @@
   website: https://dblp.org/search?q=GECCO+conference
   cfp_url: https://dblp.org/search?q=GECCO+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: cec
   title: IEEE Congress on Evolutionary Computation
   short_name: CEC
@@ -3067,10 +3972,15 @@
   website: https://dblp.org/search?q=CEC+conference
   cfp_url: https://dblp.org/search?q=CEC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: nca
   title: IEEE International Symposium on Network Computing and Applications
   short_name: NCA
@@ -3085,10 +3995,15 @@
   website: https://dblp.org/search?q=NCA+conference
   cfp_url: https://dblp.org/search?q=NCA+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: trustcom
   title: IEEE TrustCom
   short_name: TrustCom
@@ -3103,10 +4018,15 @@
   website: https://dblp.org/search?q=TrustCom+conference
   cfp_url: https://dblp.org/search?q=TrustCom+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: cloud
   title: IEEE International Conference on Cloud Computing
   short_name: IEEE CLOUD
@@ -3121,10 +4041,15 @@
   website: https://dblp.org/search?q=IEEE+CLOUD+conference
   cfp_url: https://dblp.org/search?q=IEEE+CLOUD+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ic2e
   title: IEEE International Conference on Cloud Engineering
   short_name: IC2E
@@ -3139,10 +4064,15 @@
   website: https://dblp.org/search?q=IC2E+conference
   cfp_url: https://dblp.org/search?q=IC2E+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: icac
   title: International Conference on Autonomic Computing
   short_name: ICAC
@@ -3156,10 +4086,15 @@
   website: https://dblp.org/search?q=ICAC+conference
   cfp_url: https://dblp.org/search?q=ICAC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: hpdc
   title: International Symposium on High-Performance Distributed Computing
   short_name: HPDC
@@ -3174,10 +4109,15 @@
   website: https://dblp.org/search?q=HPDC+conference
   cfp_url: https://dblp.org/search?q=HPDC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: debs
   title: International Conference on Distributed and Event-based Systems
   short_name: DEBS
@@ -3192,10 +4132,15 @@
   website: https://dblp.org/search?q=DEBS+conference
   cfp_url: https://dblp.org/search?q=DEBS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ppsn
   title: Parallel Problem Solving from Nature
   short_name: PPSN
@@ -3210,10 +4155,15 @@
   website: https://dblp.org/search?q=PPSN+conference
   cfp_url: https://dblp.org/search?q=PPSN+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: cpaior
   title: Integration of Constraint Programming, Artificial Intelligence, and Operations
     Research
@@ -3229,10 +4179,15 @@
   website: https://dblp.org/search?q=CPAIOR+conference
   cfp_url: https://dblp.org/search?q=CPAIOR+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: sat
   title: International Conference on Theory and Applications of Satisfiability Testing
   short_name: SAT
@@ -3247,10 +4202,15 @@
   website: https://dblp.org/search?q=SAT+conference
   cfp_url: https://dblp.org/search?q=SAT+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ijcar
   title: International Joint Conference on Automated Reasoning
   short_name: IJCAR
@@ -3265,10 +4225,15 @@
   website: https://dblp.org/search?q=IJCAR+conference
   cfp_url: https://dblp.org/search?q=IJCAR+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: cade
   title: Conference on Automated Deduction
   short_name: CADE
@@ -3283,10 +4248,15 @@
   website: https://dblp.org/search?q=CADE+conference
   cfp_url: https://dblp.org/search?q=CADE+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: socs
   title: Symposium on Combinatorial Search
   short_name: SoCS
@@ -3300,10 +4270,15 @@
   website: https://dblp.org/search?q=SoCS+conference
   cfp_url: https://dblp.org/search?q=SoCS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: ismb
   title: Intelligent Systems for Molecular Biology
   short_name: ISMB
@@ -3318,10 +4293,15 @@
   website: https://dblp.org/search?q=ISMB+conference
   cfp_url: https://dblp.org/search?q=ISMB+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: recomb
   title: Research in Computational Molecular Biology
   short_name: RECOMB
@@ -3335,10 +4315,15 @@
   website: https://dblp.org/search?q=RECOMB+conference
   cfp_url: https://dblp.org/search?q=RECOMB+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: psb
   title: Pacific Symposium on Biocomputing
   short_name: PSB
@@ -3352,10 +4337,15 @@
   website: https://dblp.org/search?q=PSB+conference
   cfp_url: https://dblp.org/search?q=PSB+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: bcb
   title: ACM Conference on Bioinformatics, Computational Biology, and Health Informatics
   short_name: BCB
@@ -3370,10 +4360,15 @@
   website: https://dblp.org/search?q=BCB+conference
   cfp_url: https://dblp.org/search?q=BCB+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: iccad
   title: International Conference on Computer-Aided Design
   short_name: ICCAD
@@ -3388,10 +4383,15 @@
   website: https://dblp.org/search?q=ICCAD+conference
   cfp_url: https://dblp.org/search?q=ICCAD+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: dac
   title: Design Automation Conference
   short_name: DAC
@@ -3406,10 +4406,15 @@
   website: https://dblp.org/search?q=DAC+conference
   cfp_url: https://dblp.org/search?q=DAC+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: date
   title: Design, Automation and Test in Europe Conference
   short_name: DATE
@@ -3424,10 +4429,15 @@
   website: https://dblp.org/search?q=DATE+conference
   cfp_url: https://dblp.org/search?q=DATE+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: fpga
   title: ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
   short_name: FPGA
@@ -3442,10 +4452,15 @@
   website: https://dblp.org/search?q=FPGA+conference
   cfp_url: https://dblp.org/search?q=FPGA+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: rtss
   title: IEEE Real-Time Systems Symposium
   short_name: RTSS
@@ -3459,10 +4474,15 @@
   website: https://dblp.org/search?q=RTSS+conference
   cfp_url: https://dblp.org/search?q=RTSS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: rtas
   title: IEEE Real-Time and Embedded Technology and Applications Symposium
   short_name: RTAS
@@ -3476,10 +4496,15 @@
   website: https://dblp.org/search?q=RTAS+conference
   cfp_url: https://dblp.org/search?q=RTAS+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
 - id: emsoft
   title: International Conference on Embedded Software
   short_name: EMSOFT
@@ -3494,7 +4519,12 @@
   website: https://dblp.org/search?q=EMSOFT+conference
   cfp_url: https://dblp.org/search?q=EMSOFT+conference
   default_timezone: AoE
-  parser: manual_review
+  parser: manual
   scan_enabled: false
   notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
     scans.
+  source_priority:
+  - official
+  - openreview
+  - secondary
+  last_seen_year: 2026
