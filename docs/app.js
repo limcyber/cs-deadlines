@@ -1,346 +1,186 @@
 async function loadData() {
-  const res = await fetch('./assets/venues.json');
-  return await res.json();
+  const paths = ['./assets/venues.json', './venues.json'];
+  for (const path of paths) {
+    try {
+      const res = await fetch(path);
+      if (res.ok) return await res.json();
+    } catch (err) {}
+  }
+  return [];
 }
-
-const THEME_KEY = 'cs-deadlines-theme';
-const AREA_KEY = 'cs-deadlines-area';
-const AREA_ORDER = ['AI+Data', 'Systems', 'Security', 'SE+Theory'];
-
-const DOMAIN_TO_AREA = {
-  agents: 'AI+Data',
-  ai: 'AI+Data',
-  bioinformatics: 'AI+Data',
-  data: 'AI+Data',
-  'data-mining': 'AI+Data',
-  db: 'AI+Data',
-  graphics: 'AI+Data',
-  ir: 'AI+Data',
-  ml: 'AI+Data',
-  nlp: 'AI+Data',
-  robotics: 'AI+Data',
-  speech: 'AI+Data',
-  statistics: 'AI+Data',
-  vision: 'AI+Data',
-  visualization: 'AI+Data',
-  architecture: 'Systems',
-  cloud: 'Systems',
-  hardware: 'Systems',
-  hpc: 'Systems',
-  networking: 'Systems',
-  storage: 'Systems',
-  systems: 'Systems',
-  web: 'Systems',
-  crypto: 'Security',
-  privacy: 'Security',
-  security: 'Security',
-  education: 'SE+Theory',
-  hci: 'SE+Theory',
-  optimization: 'SE+Theory',
-  pl: 'SE+Theory',
-  software: 'SE+Theory',
-  theory: 'SE+Theory'
-};
-
-const TIER_RANK = {
-  top: 0,
-  strong: 1,
-  mid: 2,
-  workshop: 3,
-  fast: 4
-};
 
 function normalizeType(type) {
-  return type === 'workshop' ? 'workshop' : 'conference';
+  if (!type) return '';
+  const t = String(type).toLowerCase();
+  if (t === 'symposium' || t === 'journal-track') return 'conference';
+  return t;
 }
 
-function getBroadAreas(record) {
-  const rawDomains = Array.isArray(record.domain) ? record.domain : [];
-  const mapped = rawDomains.map((domain) => DOMAIN_TO_AREA[domain] || 'Systems');
-  return Array.from(new Set(mapped));
+function titleCase(s) {
+  if (!s) return '';
+  return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
-function escapeHtml(value) {
-  return String(value ?? '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
+function parseDate(value) {
+  if (!value) return null;
+  const d = new Date(value);
+  return Number.isNaN(d.getTime()) ? null : d;
 }
 
-function normalizeText(value) {
-  return String(value ?? '')
-    .toLowerCase()
-    .replace(/[^a-z0-9+]+/g, ' ')
-    .trim();
-}
+function broadAreas(record) {
+  const raw = (record.domain || []).map(x => String(x).toLowerCase());
+  const out = new Set();
 
-function parseDeadlineValue(rawValue) {
-  if (!rawValue) return null;
-  if (rawValue instanceof Date) return Number.isNaN(rawValue.getTime()) ? null : rawValue;
+  raw.forEach(d => {
+    if ([
+      'ai', 'machine-learning', 'ml', 'nlp', 'vision', 'computer-vision',
+      'data-mining', 'databases', 'db', 'ir', 'information-retrieval',
+      'data', 'kdd'
+    ].includes(d)) out.add('AI+Data');
 
-  const original = String(rawValue).trim();
-  const tzMatch = original.match(/\b(AOE|UTC|GMT|EST|EDT|CST|CDT|MST|MDT|PST|PDT)\b/i);
-  const timezoneLabel = tzMatch ? tzMatch[1].toUpperCase() : null;
+    if ([
+      'systems', 'networking', 'cloud', 'distributed-systems', 'architecture',
+      'computer-architecture', 'operating-systems'
+    ].includes(d)) out.add('Systems');
 
-  let cleaned = original
-    .replace(/\b(AOE|UTC|GMT|EST|EDT|CST|CDT|MST|MDT|PST|PDT)\b/ig, '')
-    .replace(/\s+/g, ' ')
-    .trim();
+    if (['security', 'privacy', 'cryptography', 'crypto'].includes(d)) out.add('Security');
 
-  if (/^\d{4}-\d{2}-\d{2}$/.test(cleaned)) {
-    cleaned += 'T23:59:00';
+    if ([
+      'software-engineering', 'se', 'programming-languages', 'pl',
+      'theory', 'formal-methods', 'verification', 'compilers'
+    ].includes(d)) out.add('SE+Theory');
+  });
+
+  if (!out.size) {
+    if (raw.some(d => d.includes('security') || d.includes('privacy'))) out.add('Security');
+    else if (raw.some(d => d.includes('system') || d.includes('network') || d.includes('architecture'))) out.add('Systems');
+    else if (raw.some(d => d.includes('software') || d.includes('theory') || d.includes('language') || d.includes('formal'))) out.add('SE+Theory');
+    else out.add('AI+Data');
   }
 
-  const date = new Date(cleaned);
-  if (Number.isNaN(date.getTime())) return null;
-
-  return { date, timezoneLabel };
+  return Array.from(out);
 }
 
-function getDeadlineTimezoneLabel(record, parsedItem) {
-  return parsedItem?.timezoneLabel || record.default_timezone || record.timezone || 'Venue time';
+function areaHtml(areas) {
+  return areas.map(a => `<span class="area-text area-${a.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">${a}</span>`).join(' <span class="slash">/</span> ');
 }
 
-function enrichDeadlines(record) {
-  const rawDeadlines = Array.isArray(record.deadlines) ? record.deadlines : [];
+function findNextDeadline(record) {
+  const items = (record.deadlines || [])
+    .map(d => ({ ...d, date: parseDate(d.value) }))
+    .filter(d => d.date)
+    .sort((a, b) => a.date - b.date);
 
-  return rawDeadlines
-    .map((deadline, index) => {
-      const parsed = parseDeadlineValue(deadline?.value);
-      if (!parsed) {
-        return {
-          ...deadline,
-          parsedDate: null,
-          timezoneLabel: deadline?.timezone || record.default_timezone || record.timezone || 'Venue time',
-          order: index
-        };
-      }
-
-      return {
-        ...deadline,
-        parsedDate: parsed.date,
-        timezoneLabel: getDeadlineTimezoneLabel(record, parsed),
-        order: index
-      };
-    })
-    .sort((a, b) => {
-      if (!a.parsedDate && !b.parsedDate) return a.order - b.order;
-      if (!a.parsedDate) return 1;
-      if (!b.parsedDate) return -1;
-      return a.parsedDate - b.parsedDate;
-    });
+  const now = new Date();
+  const upcoming = items.find(d => d.date > now);
+  return upcoming || items[0] || null;
 }
 
-function getNow() {
-  return new Date();
+function formatCountdown(date) {
+  if (!date) return '';
+  const now = new Date();
+  let diff = date.getTime() - now.getTime();
+  const passed = diff <= 0;
+  diff = Math.abs(diff);
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  diff -= days * (1000 * 60 * 60 * 24);
+  const hours = Math.floor(diff / (1000 * 60 * 60));
+  diff -= hours * (1000 * 60 * 60);
+  const mins = Math.floor(diff / (1000 * 60));
+
+  return passed ? `${days}d ${hours}h ago` : `${days}d ${hours}h ${mins}m left`;
 }
 
-function getNextActionableDeadline(record) {
-  const now = getNow();
-  const parsedDeadlines = record.parsedDeadlines || [];
-  const future = parsedDeadlines.find((deadline) => deadline.parsedDate && deadline.parsedDate > now);
-  if (future) return future;
-  return parsedDeadlines[parsedDeadlines.length - 1] || null;
+function computeStatus(record, nextDeadline) {
+  if (!nextDeadline || !nextDeadline.date) return { label: 'Not announced', cls: 'not-announced' };
+  const diff = nextDeadline.date.getTime() - Date.now();
+  if (diff <= 0) return { label: 'Passed', cls: 'passed' };
+  const days = diff / (1000 * 60 * 60 * 24);
+  if (days < 3) return { label: 'Urgent', cls: 'urgent' };
+  if (days < 7) return { label: 'Soon', cls: 'soon' };
+  return { label: 'Upcoming', cls: 'upcoming' };
 }
 
-function getStatusMeta(record) {
-  const now = getNow();
-  const deadlines = record.parsedDeadlines || [];
-  const futureDeadlines = deadlines.filter((deadline) => deadline.parsedDate && deadline.parsedDate > now);
-
-  if (!deadlines.length) return { label: 'Not announced', className: 'status-unknown' };
-  if (!futureDeadlines.length) return { label: 'Passed', className: 'status-passed' };
-
-  const next = futureDeadlines[0];
-  const diffDays = (next.parsedDate - now) / (1000 * 60 * 60 * 24);
-  if (diffDays < 3) return { label: 'Urgent', className: 'status-urgent' };
-  if (diffDays < 7) return { label: 'Soon', className: 'status-soon' };
-  return { label: 'Upcoming', className: 'status-upcoming' };
+function formatDeadlinePrimary(record, nextDeadline) {
+  if (!nextDeadline || !nextDeadline.date) return 'Deadline not announced';
+  const kind = titleCase(nextDeadline.kind || 'Deadline');
+  return `${kind}: ${nextDeadline.date.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}`;
 }
 
-function formatCountdown(targetDate) {
-  if (!(targetDate instanceof Date) || Number.isNaN(targetDate.getTime())) return 'Countdown unavailable';
-  const diffMs = targetDate - getNow();
-  if (diffMs <= 0) return 'Deadline passed';
-
-  const totalMinutes = Math.floor(diffMs / (1000 * 60));
-  const days = Math.floor(totalMinutes / (60 * 24));
-  const hours = Math.floor((totalMinutes % (60 * 24)) / 60);
-  const minutes = totalMinutes % 60;
-
-  return `${days}d ${hours}h ${minutes}m left`;
+function formatDeadlineSecondary(record, nextDeadline) {
+  if (!nextDeadline || !nextDeadline.date) return sourceLine(record);
+  const countdown = formatCountdown(nextDeadline.date);
+  const src = sourceLine(record);
+  return `${countdown}${src ? ' · ' + src : ''}`;
 }
 
-function formatDateTime(date, options = {}) {
-  if (!(date instanceof Date) || Number.isNaN(date.getTime())) return 'Not available';
-
-  return new Intl.DateTimeFormat(undefined, {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    ...options
-  }).format(date);
+function sourceLine(record) {
+  const bits = [];
+  if (record.source_type) bits.push(record.source_type);
+  if (typeof record.confidence === 'number') bits.push(`confidence ${record.confidence.toFixed(2)}`);
+  return bits.join(' · ');
 }
 
-function formatSourceLabel(record) {
-  if (record.source_url) {
-    try {
-      const url = new URL(record.source_url);
-      return url.hostname;
-    } catch {
-      return 'linked';
-    }
-  }
-  if (record.parser === 'manual_review') return 'manual review';
-  if (record.scan_enabled) return 'automated scan';
-  return 'catalog seed';
+function locationText(record) {
+  if (record.location) return record.location;
+  if (record.place) return record.place;
+  return 'Location TBD';
 }
 
-function formatConfidence(record) {
-  if (typeof record.confidence !== 'number' || record.confidence <= 0) return 'pending';
-  const label = record.confidence >= 0.85 ? 'high' : record.confidence >= 0.6 ? 'medium' : 'low';
-  return `${record.confidence.toFixed(2)} (${label})`;
-}
-
-function getExtendedFrom(deadline) {
-  return deadline?.extended_from || deadline?.original_value || deadline?.previous_value || null;
-}
-
-function formatDeadlineChip(record, deadline) {
-  const kind = escapeHtml(deadline.kind || 'deadline');
-  const value = deadline.parsedDate ? formatDateTime(deadline.parsedDate, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : escapeHtml(deadline.value || 'TBA');
-  const timezoneLabel = escapeHtml(deadline.timezoneLabel || record.default_timezone || record.timezone || 'Venue time');
-  const extended = getExtendedFrom(deadline);
-
-  return `
-    <span class="timeline-chip">
-      <span class="timeline-chip-kind">${kind}</span>
-      <span class="timeline-chip-date">${value}</span>
-      <span class="timeline-chip-tz">${timezoneLabel}</span>
-      ${extended ? `<span class="timeline-chip-extension">extended from ${escapeHtml(extended)}</span>` : ''}
-    </span>
-  `;
-}
-
-function formatDeadlinesInline(record) {
-  const deadlines = record.parsedDeadlines || [];
-  if (!deadlines.length) return '<span class="timeline-empty">No confirmed deadlines yet.</span>';
-  return deadlines.map((deadline) => formatDeadlineChip(record, deadline)).join('');
-}
-
-function buildGoogleCalendarUrl(record, deadline) {
-  if (!deadline?.parsedDate) return null;
-  const end = deadline.parsedDate;
-  const start = new Date(end.getTime() - 30 * 60 * 1000);
-  const fmt = (date) => date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
-  const text = encodeURIComponent(`${record.short_name} ${deadline.kind || 'deadline'}`);
-  const details = encodeURIComponent(`Submission deadline for ${record.title}.`);
-  const location = encodeURIComponent(record.location || 'Online / TBD');
-  return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${text}&dates=${fmt(start)}/${fmt(end)}&details=${details}&location=${location}`;
-}
-
-function buildICSData(record, deadline) {
-  if (!deadline?.parsedDate) return null;
-  const end = deadline.parsedDate;
-  const start = new Date(end.getTime() - 30 * 60 * 1000);
-  const fmt = (date) => date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
-  const uid = `${record.id}-${deadline.kind || 'deadline'}@csdeadlineshub`;
-  const safeTitle = `${record.short_name} ${deadline.kind || 'deadline'}`;
-  const lines = [
-    'BEGIN:VCALENDAR',
-    'VERSION:2.0',
-    'PRODID:-//CS Deadlines Hub//EN',
-    'BEGIN:VEVENT',
-    `UID:${uid}`,
-    `DTSTAMP:${fmt(new Date())}`,
-    `DTSTART:${fmt(start)}`,
-    `DTEND:${fmt(end)}`,
-    `SUMMARY:${safeTitle}`,
-    `DESCRIPTION:Submission deadline for ${record.title}.`,
-    `LOCATION:${record.location || 'Online / TBD'}`,
-    'END:VEVENT',
-    'END:VCALENDAR'
-  ].join('\r\n');
-  return URL.createObjectURL(new Blob([lines], { type: 'text/calendar' }));
-}
-
-function getSearchHaystack(record) {
-  return normalizeText([
+function searchHaystack(record, areas) {
+  return [
     record.title,
     record.short_name,
     ...(record.aliases || []),
     ...(record.domain || []),
-    ...(record.broadAreas || []),
-    record.location,
-    record.type,
-    record.tier
-  ].join(' '));
+    ...areas
+  ].join(' ').toLowerCase();
 }
 
-function fuzzyMatch(record, query) {
-  if (!query) return true;
-  const haystack = getSearchHaystack(record);
-  const tokens = normalizeText(query).split(/\s+/).filter(Boolean);
-  if (!tokens.length) return true;
-  return tokens.every((token) => haystack.includes(token) || normalizeText(record.short_name).replace(/\s+/g, '').includes(token));
+function compareRecords(mode) {
+  return (a, b) => {
+    const aNext = findNextDeadline(a);
+    const bNext = findNextDeadline(b);
+    const aTime = aNext?.date ? aNext.date.getTime() : Infinity;
+    const bTime = bNext?.date ? bNext.date.getTime() : Infinity;
+
+    if (mode === 'latest') return bTime - aTime;
+    if (mode === 'az') return `${a.short_name} ${a.title}`.localeCompare(`${b.short_name} ${b.title}`);
+    if (mode === 'tier') {
+      const order = { top: 0, strong: 1, mid: 2, workshop: 3, fast: 4 };
+      return (order[a.tier] ?? 99) - (order[b.tier] ?? 99) || aTime - bTime;
+    }
+    return aTime - bTime;
+  };
 }
 
-function sortRecords(records, mode) {
-  const copy = [...records];
+function applyFilters(records) {
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  const selectedArea = document.querySelector('.area-btn.active')?.dataset.area || '';
+  const type = document.getElementById('typeFilter').value;
+  const tier = document.getElementById('tierFilter').value;
+  const scan = document.getElementById('scanFilter').value;
+  const topOnly = document.getElementById('topOnly').checked;
 
-  if (mode === 'alphabetical') {
-    copy.sort((a, b) => a.short_name.localeCompare(b.short_name));
-    return copy;
-  }
-
-  if (mode === 'tier') {
-    copy.sort((a, b) => {
-      const tierDiff = (TIER_RANK[a.tier] ?? 99) - (TIER_RANK[b.tier] ?? 99);
-      if (tierDiff !== 0) return tierDiff;
-      return a.short_name.localeCompare(b.short_name);
-    });
-    return copy;
-  }
-
-  copy.sort((a, b) => {
-    const aDeadline = getNextActionableDeadline(a)?.parsedDate;
-    const bDeadline = getNextActionableDeadline(b)?.parsedDate;
-    if (!aDeadline && !bDeadline) return a.short_name.localeCompare(b.short_name);
-    if (!aDeadline) return 1;
-    if (!bDeadline) return -1;
-    return mode === 'latest' ? bDeadline - aDeadline : aDeadline - bDeadline;
+  return records.filter(r => {
+    const areas = broadAreas(r);
+    const hay = searchHaystack(r, areas);
+    if (q && !hay.includes(q)) return false;
+    if (selectedArea && !areas.includes(selectedArea)) return false;
+    if (type && normalizeType(r.type) !== type) return false;
+    if (tier && r.tier !== tier) return false;
+    if (scan === 'enabled' && !r.scan_enabled) return false;
+    if (scan === 'catalog' && r.scan_enabled) return false;
+    if (topOnly && r.tier !== 'top') return false;
+    return true;
   });
-
-  return copy;
-}
-
-function enrichRecords(records) {
-  return records.map((record) => ({
-    ...record,
-    broadAreas: getBroadAreas(record),
-    displayType: normalizeType(record.type),
-    parsedDeadlines: enrichDeadlines(record)
-  }));
-}
-
-function getAreaBadgeHtml(record) {
-  return (record.broadAreas || [])
-    .map((area) => {
-      const slug = normalizeText(area).replace(/\+/g, 'plus').replace(/\s+/g, '-');
-      return `<span class="badge area-badge area-${slug}">${escapeHtml(area)}</span>`;
-    })
-    .join('');
 }
 
 function render(records) {
   const list = document.getElementById('list');
-  const template = document.getElementById('cardTemplate');
+  const tpl = document.getElementById('rowTemplate');
   const resultCount = document.getElementById('resultCount');
-
   list.innerHTML = '';
   resultCount.textContent = records.length;
 
@@ -352,146 +192,62 @@ function render(records) {
     return;
   }
 
-  records.forEach((record) => {
-    const node = template.content.cloneNode(true);
-    const statusMeta = getStatusMeta(record);
-    const nextDeadline = getNextActionableDeadline(record);
+  records.forEach(r => {
+    const node = tpl.content.cloneNode(true);
+    const areas = broadAreas(r);
+    const nextDeadline = findNextDeadline(r);
+    const status = computeStatus(r, nextDeadline);
 
-    node.querySelector('.tier').textContent = record.tier;
-    node.querySelector('.type').textContent = record.displayType;
+    node.querySelector('.tier').textContent = titleCase(r.tier || 'Catalog');
+    node.querySelector('.type').textContent = titleCase(normalizeType(r.type) || 'Venue');
 
-    const scanState = node.querySelector('.scan-state');
-    scanState.textContent = record.scan_enabled ? 'scan enabled' : 'catalog only';
-    if (record.scan_enabled) scanState.classList.add('scan-on');
+    const scanEl = node.querySelector('.scan-state');
+    scanEl.textContent = r.scan_enabled ? 'Scan enabled' : 'Catalog only';
+    scanEl.classList.toggle('scan-on', !!r.scan_enabled);
 
-    const statusBadge = node.querySelector('.status-badge');
-    statusBadge.textContent = statusMeta.label;
-    statusBadge.classList.add(statusMeta.className);
+    node.querySelector('.areas').innerHTML = areaHtml(areas);
+    node.querySelector('.year').textContent = `Year ${r.year || 'TBD'}`;
+    node.querySelector('.location').textContent = locationText(r);
 
-    node.querySelector('.title').textContent = `${record.short_name} — ${record.title}`;
-    node.querySelector('.area-badges').innerHTML = getAreaBadgeHtml(record);
-    node.querySelector('.compact-summary').textContent = `Year ${record.year} · ${record.displayType} · ${record.broadAreas.join(', ')}`;
-    node.querySelector('.venue-inline').textContent = record.location || 'Location not added yet';
-    node.querySelector('.venue-dates').textContent = [record.venue_date_start, record.venue_date_end].filter(Boolean).join(' → ') || 'Venue dates not added yet';
-    node.querySelector('.source').textContent = formatSourceLabel(record);
-    node.querySelector('.confidence').textContent = formatConfidence(record);
-    node.querySelector('.checked-at').textContent = record.checked_at ? formatDateTime(new Date(record.checked_at)) : 'Not available';
+    node.querySelector('.title').textContent = `${r.short_name || ''}${r.short_name && r.title ? ' — ' : ''}${r.title || ''}`;
 
-    const nextDeadlineKind = node.querySelector('.next-deadline-kind');
-    const countdown = node.querySelector('.countdown');
-    const deadlineTime = node.querySelector('.deadline-time');
-    const localTime = node.querySelector('.local-time');
-    const calendarLinks = node.querySelector('.calendar-links');
+    const venueLink = node.querySelector('.venue-link');
+    venueLink.href = r.website || '#';
+    const cfpLink = node.querySelector('.cfp-link');
+    cfpLink.href = r.cfp_url || r.website || '#';
 
-    if (nextDeadline?.parsedDate) {
-      const timezoneLabel = nextDeadline.timezoneLabel || 'Venue time';
-      nextDeadlineKind.textContent = `${nextDeadline.kind || 'deadline'}`;
-      countdown.textContent = formatCountdown(nextDeadline.parsedDate);
-      deadlineTime.textContent = `${formatDateTime(nextDeadline.parsedDate)} (${timezoneLabel})`;
-      localTime.textContent = `Your time: ${formatDateTime(nextDeadline.parsedDate, { timeZoneName: 'short' })}`;
-      const googleUrl = buildGoogleCalendarUrl(record, nextDeadline);
-      const icsUrl = buildICSData(record, nextDeadline);
-      if (googleUrl) {
-        calendarLinks.innerHTML = `<a href="${googleUrl}" target="_blank" rel="noopener">Google Calendar</a>`;
-      }
-      if (icsUrl) {
-        const separator = googleUrl ? ' · ' : '';
-        calendarLinks.innerHTML += `${separator}<a href="${icsUrl}" download="${record.id}-${nextDeadline.kind || 'deadline'}.ics">ICS</a>`;
-      }
-    } else {
-      nextDeadlineKind.textContent = 'not announced';
-      countdown.textContent = 'Countdown unavailable';
-      deadlineTime.textContent = 'Venue time: not announced';
-      localTime.textContent = 'Your time appears after a confirmed deadline is added';
-      calendarLinks.textContent = 'Calendar links appear after a confirmed deadline is added.';
-    }
+    const statusChip = node.querySelector('.status-chip');
+    statusChip.textContent = status.label;
+    statusChip.classList.add(status.cls);
 
-    node.querySelector('.deadline-inline').innerHTML = formatDeadlinesInline(record);
-
-    const links = [];
-    if (record.website) links.push(`<a href="${escapeHtml(record.website)}" target="_blank" rel="noopener">Venue link</a>`);
-    if (record.cfp_url) links.push(`<a href="${escapeHtml(record.cfp_url)}" target="_blank" rel="noopener">Catalog / CFP link</a>`);
-    if (record.source_url) links.push(`<a href="${escapeHtml(record.source_url)}" target="_blank" rel="noopener">Source link</a>`);
-    node.querySelector('.links').innerHTML = links.join(' · ');
+    node.querySelector('.deadline-primary').textContent = formatDeadlinePrimary(r, nextDeadline);
+    node.querySelector('.deadline-secondary').textContent = formatDeadlineSecondary(r, nextDeadline);
 
     list.appendChild(node);
   });
 }
 
-function applyFilters(records) {
-  const query = document.getElementById('search').value.trim();
-  const type = document.getElementById('typeFilter').value;
-  const scan = document.getElementById('scanFilter').value;
-  const sort = document.getElementById('sortFilter').value;
-  const topTierOnly = document.getElementById('topTierOnly').checked;
-  const activeArea = document.querySelector('.chip.is-active')?.dataset.area || '';
+loadData().then(records => {
+  const sortMode = 'nearest';
 
-  const filtered = records.filter((record) => {
-    if (!fuzzyMatch(record, query)) return false;
-    if (activeArea && !(record.broadAreas || []).includes(activeArea)) return false;
-    if (type && record.displayType !== type) return false;
-    if (scan === 'enabled' && !record.scan_enabled) return false;
-    if (scan === 'catalog' && record.scan_enabled) return false;
-    if (topTierOnly && record.tier !== 'top') return false;
-    return true;
+  function rerender() {
+    const filtered = applyFilters(records).sort(compareRecords(sortMode));
+    render(filtered);
+  }
+
+  ['search', 'typeFilter', 'tierFilter', 'scanFilter', 'topOnly'].forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener('input', rerender);
+    el.addEventListener('change', rerender);
   });
 
-  return sortRecords(filtered, sort);
-}
-
-function applyTheme(theme) {
-  document.documentElement.dataset.theme = theme;
-  const button = document.getElementById('themeToggle');
-  if (!button) return;
-  button.textContent = theme === 'dark' ? '🌙 Dark' : '☀️ Light';
-}
-
-function setupThemeToggle() {
-  const savedTheme = localStorage.getItem(THEME_KEY) || 'dark';
-  applyTheme(savedTheme);
-  document.getElementById('themeToggle').addEventListener('click', () => {
-    const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-    localStorage.setItem(THEME_KEY, nextTheme);
-    applyTheme(nextTheme);
-  });
-}
-
-function setupAreaButtons() {
-  const savedArea = localStorage.getItem(AREA_KEY) || '';
-  document.querySelectorAll('.chip').forEach((button) => {
-    if (button.dataset.area === savedArea) {
-      document.querySelectorAll('.chip').forEach((chip) => chip.classList.remove('is-active'));
-      button.classList.add('is-active');
-    }
-    button.addEventListener('click', () => {
-      document.querySelectorAll('.chip').forEach((chip) => chip.classList.remove('is-active'));
-      button.classList.add('is-active');
-      localStorage.setItem(AREA_KEY, button.dataset.area || '');
-      window.__renderCurrent?.();
+  document.querySelectorAll('.area-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.area-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      rerender();
     });
-  });
-}
-
-async function main() {
-  const raw = await loadData();
-  const records = enrichRecords(raw);
-
-  setupThemeToggle();
-  setupAreaButtons();
-
-  const rerender = () => render(applyFilters(records));
-  window.__renderCurrent = rerender;
-
-  ['search', 'typeFilter', 'scanFilter', 'sortFilter', 'topTierOnly'].forEach((id) => {
-    document.getElementById(id).addEventListener('input', rerender);
-    document.getElementById(id).addEventListener('change', rerender);
   });
 
   rerender();
-}
-
-main().catch((error) => {
-  console.error(error);
-  const list = document.getElementById('list');
-  list.innerHTML = '<div class="empty-state">Failed to load venue data.</div>';
 });

@@ -3,104 +3,95 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CS Deadlines Hub MVP</title>
+  <title>CS Deadlines Hub</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="wrap hero">
     <div>
-      <h1>CS Deadlines Hub MVP</h1>
-      <p class="sub">Track venues, upcoming submission windows, source confidence, and precise deadline countdowns in venue time.</p>
+      <h1>CS Deadlines Hub</h1>
+      <p class="sub">Compact venue-first list for scanning deadlines quickly.</p>
     </div>
-    <div class="header-actions">
-      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
-      <div class="summary-box">
-        <div class="summary-label">Visible venues</div>
-        <div class="summary-value" id="resultCount">0</div>
-      </div>
+    <div class="summary-box">
+      <div class="summary-label">Visible venues</div>
+      <div class="summary-value" id="resultCount">0</div>
     </div>
   </header>
 
   <section class="wrap controls">
-    <div class="control-row primary-row">
-      <input id="search" type="search" placeholder="Search venue name, acronym, alias, domain, or area" />
+    <input id="search" type="search" placeholder="Search by venue name, acronym, alias, or area" />
+
+    <div class="quick-areas" id="quickAreas">
+      <button class="area-btn active" data-area="">All areas</button>
+      <button class="area-btn" data-area="AI+Data">AI+Data</button>
+      <button class="area-btn" data-area="Systems">Systems</button>
+      <button class="area-btn" data-area="Security">Security</button>
+      <button class="area-btn" data-area="SE+Theory">SE+Theory</button>
+    </div>
+
+    <div class="control-row">
       <select id="typeFilter">
         <option value="">All types</option>
         <option value="conference">Conference</option>
         <option value="workshop">Workshop</option>
       </select>
+
+      <select id="tierFilter">
+        <option value="">All tiers</option>
+        <option value="top">Top</option>
+        <option value="strong">Strong</option>
+        <option value="mid">Mid</option>
+        <option value="workshop">Workshop tier</option>
+        <option value="fast">Fast</option>
+      </select>
+
       <select id="scanFilter">
         <option value="">All scan states</option>
         <option value="enabled">Scan enabled</option>
         <option value="catalog">Catalog only</option>
       </select>
-      <select id="sortFilter">
-        <option value="nearest">Sort: nearest deadline</option>
-        <option value="latest">Sort: latest deadline</option>
-        <option value="alphabetical">Sort: A–Z</option>
-        <option value="tier">Sort: tier</option>
-      </select>
-    </div>
 
-    <div class="control-row secondary-row">
-      <div class="quick-filter-group">
-        <span class="control-label">Areas</span>
-        <div id="areaButtons" class="area-buttons">
-          <button type="button" class="chip is-active" data-area="">All</button>
-          <button type="button" class="chip" data-area="AI+Data">AI+Data</button>
-          <button type="button" class="chip" data-area="Systems">Systems</button>
-          <button type="button" class="chip" data-area="Security">Security</button>
-          <button type="button" class="chip" data-area="SE+Theory">SE+Theory</button>
-        </div>
-      </div>
-
-      <div class="toggle-group">
-        <label class="toggle-pill">
-          <input id="topTierOnly" type="checkbox" />
-          <span>Top-tier only</span>
-        </label>
-      </div>
+      <label class="toggle">
+        <input id="topOnly" type="checkbox" />
+        <span>Top tier only</span>
+      </label>
     </div>
   </section>
 
   <main id="list" class="wrap list"></main>
 
-  <template id="cardTemplate">
+  <template id="rowTemplate">
     <article class="venue-row">
       <div class="row-main">
-        <div class="identity-column">
-          <div class="meta-row">
+        <div class="row-left">
+          <div class="meta-line">
             <span class="badge tier"></span>
             <span class="badge type"></span>
             <span class="badge scan-state"></span>
-            <span class="badge status-badge"></span>
+            <span class="meta-text">
+              <span class="areas"></span>
+              <span class="dot">·</span>
+              <span class="year"></span>
+              <span class="location-wrap"><span class="dot">·</span><span class="location"></span></span>
+            </span>
           </div>
+
           <h2 class="title"></h2>
-          <div class="area-badges"></div>
-          <p class="compact-summary"></p>
+
+          <div class="links-line">
+            <a class="venue-link" target="_blank" rel="noopener">Venue</a>
+            <span class="dot">·</span>
+            <a class="cfp-link" target="_blank" rel="noopener">CFP</a>
+          </div>
         </div>
 
-        <div class="countdown-column">
-          <div class="mini-label">Next deadline</div>
-          <div class="next-deadline-kind"></div>
-          <div class="countdown"></div>
-          <div class="deadline-time"></div>
-          <div class="local-time"></div>
-          <div class="calendar-links"></div>
+        <div class="row-right">
+          <div class="status-line">
+            <span class="status-chip"></span>
+          </div>
+          <div class="deadline-primary"></div>
+          <div class="deadline-secondary"></div>
         </div>
-
-        <div class="info-column">
-          <div class="info-line"><span class="mini-label">Venue</span><span class="venue-inline"></span></div>
-          <div class="info-line"><span class="mini-label">Schedule</span><span class="venue-dates"></span></div>
-          <div class="info-line"><span class="mini-label">Source</span><span class="source"></span></div>
-          <div class="info-line"><span class="mini-label">Confidence</span><span class="confidence"></span></div>
-          <div class="info-line"><span class="mini-label">Checked</span><span class="checked-at"></span></div>
-        </div>
-      </div>
-
-      <div class="row-footer">
-        <div class="deadline-inline"></div>
-        <div class="links"></div>
       </div>
     </article>
   </template>
