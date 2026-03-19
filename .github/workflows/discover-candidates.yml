@@ -1,0 +1,41 @@
+name: Discover Candidate Venues
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 3 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Discover candidates
+        run: python scripts/discover_candidates.py
+
+      - name: Commit candidate updates
+        run: |
+          if git diff --quiet -- data/candidate_venues.json; then
+            echo "No candidate changes detected."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/candidate_venues.json
+          git commit -m "chore: refresh discovered candidate venues"
+          git push

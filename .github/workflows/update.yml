@@ -35,6 +35,9 @@ jobs:
       - name: Fetch data
         run: python scripts/fetch.py
 
+      - name: Auto review (phase 3)
+        run: python scripts/auto_review.py --phase 3
+
       - name: Build site
         run: python scripts/build_site.py
 
