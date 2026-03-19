@@ -47,7 +47,7 @@ function applyLayoutMode(isMobile) {
   const mode = isMobile ? 'mobile' : 'desktop';
   document.body.dataset.layout = mode;
   const chip = document.getElementById('layoutChip');
-  if (chip) chip.textContent = isMobile ? 'Mobile layout' : 'Desktop layout';
+  if (chip) chip.textContent = isMobile ? 'Premium mobile layout' : 'Desktop layout';
 }
 
 function initLayoutMode() {
