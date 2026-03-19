@@ -1,7 +1,5 @@
 const REVIEW_STORAGE_KEY = 'cs-deadlines-admin-review-draft-v1';
 const THEME_STORAGE_KEY = 'cs-deadlines-theme-v1';
-const ADMIN_AUTH_STORAGE_KEY = 'cs-deadlines-admin-auth-ok-v1';
-const ADMIN_PASSWORD_SHA256 = 'f1f5175cac7219d5274210b1b36acd6e2693a84fe41be92d5810cca2dd7104ff';
 const LAYOUT_MQ = window.matchMedia('(max-width: 860px)');
 
 let baseRecords = [];
@@ -49,40 +47,6 @@ function safeStorageSet(key, value) {
   try {
     localStorage.setItem(key, value);
   } catch (err) {}
-}
-
-function safeSessionGet(key) {
-  try {
-    return sessionStorage.getItem(key);
-  } catch (err) {
-    return null;
-  }
-}
-
-function safeSessionSet(key, value) {
-  try {
-    sessionStorage.setItem(key, value);
-  } catch (err) {}
-}
-
-async function sha256Hex(text) {
-  if (!window.crypto?.subtle || typeof TextEncoder === 'undefined') return '';
-  const bytes = new TextEncoder().encode(text);
-  const digest = await window.crypto.subtle.digest('SHA-256', bytes);
-  return Array.from(new Uint8Array(digest))
-    .map(b => b.toString(16).padStart(2, '0'))
-    .join('');
-}
-
-async function verifyAdminPassword() {
-  // This is a lightweight client-side gate for casual protection, not real authentication.
-  if (safeSessionGet(ADMIN_AUTH_STORAGE_KEY) === '1') return true;
-  const input = window.prompt('Admin password');
-  if (input === null) return false;
-  const hashed = await sha256Hex(input);
-  const ok = hashed === ADMIN_PASSWORD_SHA256;
-  if (ok) safeSessionSet(ADMIN_AUTH_STORAGE_KEY, '1');
-  return ok;
 }
 
 function applyTheme(theme) {
@@ -739,12 +703,6 @@ function bindTopLevelActions() {
 async function bootAdminPage() {
   initThemeToggle();
   initLayoutMode();
-  const ok = await verifyAdminPassword();
-  if (!ok) {
-    window.location.replace('./index.html');
-    return;
-  }
-
   const records = await loadAdminData();
   baseRecords = records;
   const statusFilter = document.getElementById('statusFilter');
