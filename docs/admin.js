@@ -2,6 +2,7 @@ const REVIEW_STORAGE_KEY = 'cs-deadlines-admin-review-draft-v1';
 const THEME_STORAGE_KEY = 'cs-deadlines-theme-v1';
 const ADMIN_AUTH_STORAGE_KEY = 'cs-deadlines-admin-auth-ok-v1';
 const ADMIN_PASSWORD_SHA256 = 'f1f5175cac7219d5274210b1b36acd6e2693a84fe41be92d5810cca2dd7104ff';
+const LAYOUT_MQ = window.matchMedia('(max-width: 860px)');
 
 let baseRecords = [];
 let reviewDraft = loadDraft();
@@ -98,6 +99,20 @@ function applyTheme(theme) {
     toggle.setAttribute('title', nextLabel);
     const label = toggle.querySelector('.theme-label');
     if (label) label.textContent = isLight ? 'WHITE' : 'BLACK';
+  }
+}
+
+function applyLayoutMode(isMobile) {
+  document.body.dataset.layout = isMobile ? 'mobile' : 'desktop';
+}
+
+function initLayoutMode() {
+  applyLayoutMode(!!LAYOUT_MQ.matches);
+  const onChange = event => applyLayoutMode(!!event.matches);
+  if (typeof LAYOUT_MQ.addEventListener === 'function') {
+    LAYOUT_MQ.addEventListener('change', onChange);
+  } else if (typeof LAYOUT_MQ.addListener === 'function') {
+    LAYOUT_MQ.addListener(onChange);
   }
 }
 
@@ -723,6 +738,7 @@ function bindTopLevelActions() {
 
 async function bootAdminPage() {
   initThemeToggle();
+  initLayoutMode();
   const ok = await verifyAdminPassword();
   if (!ok) {
     window.location.replace('./index.html');

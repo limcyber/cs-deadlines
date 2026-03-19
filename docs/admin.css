@@ -1,42 +1,92 @@
 .admin-page {
-  /* Admin reuses public tokens, then layers denser workspace-specific layout rules on top. */
+  /* Admin reuses the public page tokens, then adds denser workspace-specific surfaces. */
   background: linear-gradient(180deg, var(--bg-grad-start) 0%, var(--bg-grad-end) 100%);
+}
+
+.admin-page .wrap {
+  position: relative;
+  z-index: 1;
 }
 
 .admin-hero {
   align-items: center;
+  padding-top: 28px;
+}
+
+.admin-hero .sub {
+  max-width: 64ch;
 }
 
 .admin-nav {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .admin-nav a {
   display: inline-flex;
   align-items: center;
-  padding: 8px 12px;
-  border: 1px solid var(--line);
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 184, 107, 0.25);
   border-radius: 999px;
   color: var(--text);
-  background: rgba(255,255,255,0.03);
+  background: linear-gradient(135deg, rgba(255, 184, 107, 0.14), rgba(255,255,255,0.03));
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.admin-nav a:hover {
+  text-decoration: none;
+  border-color: rgba(255, 184, 107, 0.38);
 }
 
 .admin-summary {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 12px;
   margin-top: 18px;
 }
 
 .summary-card,
 .toolbar-card {
-  /* Summary and toolbar cards share the same surface treatment for visual consistency. */
   padding: 14px 16px;
   border: 1px solid var(--line);
-  border-radius: 16px;
-  background: rgba(255,255,255,0.03);
+  border-radius: 22px;
+  background: linear-gradient(180deg, var(--row-grad-start) 0%, var(--row-grad-end) 100%);
+  box-shadow: var(--shadow);
+}
+
+.summary-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.summary-card::before,
+.toolbar-card::before,
+.admin-panel::before,
+.admin-row::before,
+.edit-box::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255,184,107,0), rgba(255,184,107,0.55), rgba(143,179,255,0));
+  opacity: 0.7;
+}
+
+.summary-card .summary-label {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.summary-card .summary-value {
+  font-size: 1.55rem;
+  font-weight: 700;
 }
 
 .admin-toolbar {
@@ -45,15 +95,23 @@
   margin-top: 16px;
 }
 
-.toolbar-actions {
+.toolbar-card {
   display: grid;
   gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.toolbar-card strong {
+  display: inline-block;
+  margin-bottom: 2px;
 }
 
 .toolbar-actions p {
   margin: 6px 0 0;
   color: var(--muted);
   font-size: 0.9rem;
+  line-height: 1.45;
 }
 
 .toolbar-buttons {
@@ -72,39 +130,49 @@
 }
 
 .btn {
-  /* Buttons are intentionally neutral so status color remains on badges and data chips. */
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(120, 150, 255, 0.35);
-  background: rgba(120, 150, 255, 0.16);
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 184, 107, 0.32);
+  background: linear-gradient(135deg, rgba(255, 184, 107, 0.18), rgba(143,179,255,0.08));
   color: var(--text);
   cursor: pointer;
   text-decoration: none;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.12s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 184, 107, 0.45);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 .btn.secondary,
 .file-label {
   border-color: var(--line);
-  background: rgba(255,255,255,0.04);
+  background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
 }
 
 .btn.ghost {
   background: transparent;
+  box-shadow: none;
 }
 
 .btn.danger {
-  border-color: rgba(255, 107, 107, 0.4);
-  background: rgba(255, 107, 107, 0.12);
+  border-color: rgba(255, 123, 123, 0.4);
+  background: linear-gradient(135deg, rgba(255, 123, 123, 0.14), rgba(255,255,255,0.03));
 }
 
 .btn.tiny {
-  padding: 7px 10px;
-  border-radius: 10px;
-  font-size: 0.83rem;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
 }
 
 .admin-controls {
@@ -113,6 +181,30 @@
 
 .admin-control-row {
   flex-wrap: wrap;
+  gap: 10px;
+}
+
+.admin-control-row select {
+  flex: 1 1 180px;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+  color: var(--text);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+}
+
+.toggle input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
 }
 
 .admin-layout {
@@ -123,11 +215,13 @@
 }
 
 .admin-panel {
-  /* Panels segment the workflow into review buckets plus one audit table. */
+  position: relative;
   border: 1px solid var(--line);
-  border-radius: 18px;
-  background: rgba(255,255,255,0.025);
+  border-radius: 24px;
+  background: linear-gradient(180deg, var(--row-grad-start) 0%, var(--row-grad-end) 100%);
   padding: 16px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .panel-head {
@@ -136,13 +230,14 @@
 
 .panel-head h2 {
   margin: 0 0 6px;
-  font-size: 1rem;
+  font-size: 1.02rem;
 }
 
 .panel-head p {
   margin: 0;
   color: var(--muted);
   font-size: 0.88rem;
+  line-height: 1.45;
 }
 
 .admin-list {
@@ -151,21 +246,27 @@
 }
 
 .admin-row {
+  position: relative;
+  overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 12px;
-  background: rgba(255,255,255,0.02);
+  border-radius: 20px;
+  padding: 14px;
+  background: linear-gradient(180deg, var(--row-grad-start) 0%, var(--row-grad-end) 100%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
 .admin-row-top {
   display: flex;
   justify-content: space-between;
   gap: 12px;
+  align-items: flex-start;
 }
 
 .admin-title {
   font-weight: 700;
   margin-bottom: 4px;
+  font-size: 0.98rem;
+  line-height: 1.28;
 }
 
 .admin-meta,
@@ -207,11 +308,12 @@
 }
 
 .edit-box {
-  /* Inline editing avoids navigation jumps while reviewing many venues in sequence. */
+  position: relative;
+  overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: 18px;
   padding: 12px;
-  background: rgba(255,255,255,0.03);
+  background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
 }
 
 .edit-box summary {
@@ -246,11 +348,16 @@
 .edit-form select,
 .edit-form textarea {
   width: 100%;
-  padding: 10px 12px;
-  border-radius: 10px;
+  padding: 12px 14px;
+  border-radius: 14px;
   border: 1px solid var(--line);
-  background: rgba(11, 16, 32, 0.8);
+  background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
   color: var(--text);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+}
+
+.edit-form textarea {
+  resize: vertical;
 }
 
 .deadline-list {
@@ -260,13 +367,14 @@
 
 .deadline-row {
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
   gap: 8px;
 }
 
 .admin-deadline {
   font-size: 0.9rem;
   color: var(--text);
+  line-height: 1.35;
 }
 
 .admin-details {
@@ -284,23 +392,53 @@
   margin-top: 10px;
 }
 
+.admin-details-grid > div {
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+}
+
+.detail-notes,
+.detail-preview {
+  margin-top: 6px;
+  color: var(--muted);
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.detail-preview ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
 .table-wrap {
   overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
 }
 
 .admin-table {
-  /* The table is the high-density fallback when cards are too verbose for audits. */
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
+  min-width: 980px;
 }
 
 .admin-table th,
 .admin-table td {
   text-align: left;
-  padding: 10px 8px;
+  padding: 11px 10px;
   border-bottom: 1px solid var(--line);
   vertical-align: top;
+}
+
+.admin-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--panel);
 }
 
 .badge.review { border-color: rgba(255, 209, 102, 0.4); color: #ffd166; }
@@ -310,18 +448,212 @@
 .badge.edited { border-color: rgba(194, 153, 255, 0.4); color: #d5b3ff; }
 .badge.raw-status, .badge.parser, .badge.scan { color: var(--muted); }
 
-@media (max-width: 860px) {
-  /* Mobile stacks every dense admin grid into a single column for touch readability. */
+@media (max-width: 980px) {
   .form-grid,
   .deadline-row,
-  .admin-row-top,
-  .admin-row-body,
   .admin-details-grid {
     grid-template-columns: 1fr;
-    display: grid;
+  }
+
+  .admin-row-top,
+  .admin-row-body {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .admin-badges {
     justify-content: flex-start;
   }
+}
+
+@media (max-width: 860px) {
+  .admin-hero {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .admin-nav {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .admin-nav .theme-toggle,
+  .admin-nav a {
+    flex: 1 1 100%;
+  }
+
+  .admin-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-toolbar,
+  .admin-layout {
+    gap: 14px;
+  }
+
+  .toolbar-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbar-buttons .btn {
+    width: 100%;
+  }
+
+  .admin-control-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-control-row select,
+  .toggle {
+    width: 100%;
+  }
+
+  .admin-panel {
+    padding: 14px;
+    border-radius: 22px;
+  }
+
+  .admin-row {
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .admin-table {
+    min-width: 920px;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-page .wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .admin-hero {
+    padding-top: 20px;
+  }
+
+  .admin-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .admin-hero .sub {
+    font-size: 0.92rem;
+  }
+
+  .admin-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-card,
+  .toolbar-card,
+  .admin-panel,
+  .admin-row,
+  .edit-box {
+    border-radius: 18px;
+  }
+
+  .btn,
+  .toggle,
+  .admin-nav a,
+  .theme-toggle {
+    min-height: 42px;
+  }
+
+  .admin-controls {
+    margin-top: 14px;
+  }
+
+  .admin-control-row {
+    gap: 8px;
+  }
+
+  .admin-row-top,
+  .admin-row-body,
+  .admin-details-grid {
+    gap: 10px;
+  }
+
+  .admin-table {
+    min-width: 860px;
+    font-size: 0.86rem;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 10px 8px;
+  }
+}
+
+body[data-layout="mobile"] .admin-summary {
+  grid-template-columns: 1fr;
+}
+
+body[data-layout="mobile"] .admin-nav {
+  width: 100%;
+}
+
+body[data-layout="mobile"] .toolbar-buttons {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+body[data-layout="mobile"] .toolbar-buttons .btn,
+body[data-layout="mobile"] .admin-nav .theme-toggle,
+body[data-layout="mobile"] .admin-nav a {
+  width: 100%;
+}
+
+body[data-layout="mobile"] .admin-control-row {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+body[data-layout="mobile"] .admin-control-row select,
+body[data-layout="mobile"] .toggle {
+  width: 100%;
+}
+
+body[data-layout="mobile"] .admin-panel {
+  padding: 14px;
+  border-radius: 20px;
+}
+
+body[data-layout="mobile"] .admin-row {
+  padding: 12px;
+  border-radius: 18px;
+}
+
+body[data-layout="mobile"] .admin-row-top,
+body[data-layout="mobile"] .admin-row-body {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+body[data-layout="mobile"] .admin-badges {
+  justify-content: flex-start;
+}
+
+body[data-layout="mobile"] .form-grid,
+body[data-layout="mobile"] .deadline-row,
+body[data-layout="mobile"] .admin-details-grid {
+  grid-template-columns: 1fr;
+}
+
+body[data-layout="mobile"] .table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+body[data-layout="mobile"] .admin-table {
+  min-width: 860px;
+  font-size: 0.86rem;
 }

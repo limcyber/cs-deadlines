@@ -122,24 +122,6 @@ h1 {
   justify-content: flex-end;
 }
 
-.layout-chip {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 40px;
-  min-width: 118px;
-  padding: 0 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 184, 107, 0.28);
-  background: linear-gradient(135deg, var(--accent-warm-soft), rgba(255,255,255,0.04));
-  color: var(--text);
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
 .theme-toggle {
   /* The toggle is styled like a compact switch so theme state reads at a glance. */
   display: inline-flex;
@@ -536,8 +518,7 @@ body[data-layout="mobile"] .hero-right {
 }
 
 body[data-layout="mobile"] .theme-toggle,
-body[data-layout="mobile"] .summary-box,
-body[data-layout="mobile"] .layout-chip {
+body[data-layout="mobile"] .summary-box {
   width: 100%;
 }
 
