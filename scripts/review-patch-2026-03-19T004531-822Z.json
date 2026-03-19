@@ -1,0 +1,110 @@
+{
+  "exported_at": "2026-03-19T00:45:31.821Z",
+  "source": "admin-page-local-review",
+  "records": [
+    {
+      "id": "asiacrypt-2026",
+      "venue_id": "asiacrypt",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": null,
+      "source_url": "https://dblp.org/search?q=ASIACRYPT+conference",
+      "confidence": 0.2,
+      "checked_at": "2026-03-18T22:12:35.261Z",
+      "notes": "MVP scanner: extracted candidate lines only; manual confirmation is still recommended.",
+      "scan_preview": [
+        "Update May 7, 2017: Please note that we had to disable the"
+      ]
+    },
+    {
+      "id": "aaai-2026",
+      "venue_id": "aaai",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": null,
+      "source_url": "https://aaai.org/conference/aaai/",
+      "confidence": 0.2,
+      "checked_at": "2026-03-18T22:12:41.979Z",
+      "notes": "MVP scanner: extracted candidate lines only; manual confirmation is still recommended.",
+      "scan_preview": [
+        "Classic Paper Award",
+        "Outstanding Paper Award",
+        "January 29, 2023"
+      ]
+    },
+    {
+      "id": "acsac-2026",
+      "venue_id": "acsac",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": null,
+      "source_url": "https://dblp.org/search?q=ACSAC+conference",
+      "confidence": 0.2,
+      "checked_at": "2026-03-18T22:12:43.340Z",
+      "notes": "MVP scanner: extracted candidate lines only; manual confirmation is still recommended.",
+      "scan_preview": [
+        "Update May 7, 2017: Please note that we had to disable the"
+      ]
+    },
+    {
+      "id": "ecoop-2026",
+      "venue_id": "ecoop",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": null,
+      "source_url": "https://dblp.org/search?q=ECOOP+conference",
+      "confidence": 0.2,
+      "checked_at": "2026-03-18T22:13:08.628Z",
+      "notes": "MVP scanner: extracted candidate lines only; manual confirmation is still recommended.",
+      "scan_preview": [
+        "Update May 7, 2017: Please note that we had to disable the",
+        "Scaling Up: Revisiting Mining Android Sandboxes at Scale for Malware Classification (Replication Paper).",
+        "RacerF: Lightweight Static Data Race Detection for C Code (Experience Paper).",
+        "Type-Safe and Portable Support for Packed Data (Experience Paper).",
+        "Quantifying Cache Side-Channel Leakage by Refining Set-Based Abstractions."
+      ]
+    },
+    {
+      "id": "eccv-2026",
+      "venue_id": "eccv",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": null,
+      "source_url": "https://eccv.ecva.net/",
+      "confidence": 0.2,
+      "checked_at": "2026-03-18T22:13:09.414Z",
+      "notes": "MVP scanner: extracted candidate lines only; manual confirmation is still recommended.",
+      "scan_preview": [
+        "Call for Papers",
+        "Submission Guide",
+        "Submission Policies & Paper Kit",
+        ". It is held on even years and gathers the scientific and industrial communities on these areas. The first ECCV was held in 1990 in Antibes, France, and subsequently organized all over Europe. Paper proceedings are published",
+        ": We have extended the deadline for completing OpenReview profiles and author/reviewer/AC/SAC enrollments to"
+      ]
+    },
+    {
+      "id": "iccv-2026",
+      "venue_id": "iccv",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": null,
+      "source_url": "https://iccv.thecvf.com/",
+      "confidence": 0.2,
+      "checked_at": "2026-03-18T22:13:11.259Z",
+      "notes": "MVP scanner: extracted candidate lines only; manual confirmation is still recommended.",
+      "scan_preview": [
+        "Call for Papers",
+        "Papers",
+        "Paper Visualizer",
+        "Call for Doctoral Consortium submissions is posted",
+        "Accepted Papers"
+      ]
+    }
+  ]
+}

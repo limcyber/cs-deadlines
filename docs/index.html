@@ -3,22 +3,32 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CS Deadlines Hub</title>
+  <title>Computer Science Conferences Tracker</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Hero doubles as the project intro and a lightweight global control area. -->
   <header class="wrap hero">
     <div>
-      <h1>CS Deadlines Hub</h1>
-      <p class="sub">Compact venue-first list for scanning deadlines quickly.</p>
+      <h1>Computer Science Conferences Tracker</h1>
+      <p class="sub">A clean, venue-first view of CS conference deadlines, timelines, and CFP links.</p>
     </div>
-    <div class="summary-box">
-      <div class="summary-label">Visible venues</div>
-      <div class="summary-value" id="resultCount">0</div>
+    <div class="hero-right">
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle black and white theme" aria-pressed="false" title="Switch to white theme">
+        <span class="theme-track" aria-hidden="true">
+          <span class="theme-knob"></span>
+        </span>
+        <span class="theme-label">BLACK</span>
+      </button>
+      <div class="summary-box">
+        <div class="summary-label">Visible venues</div>
+        <div class="summary-value" id="resultCount">0</div>
+      </div>
     </div>
   </header>
 
   <section class="wrap controls">
+    <!-- Filters are intentionally compact so the page stays scan-first for deadline browsing. -->
     <input id="search" type="search" placeholder="Search by venue name, acronym, alias, or area" />
 
     <div class="quick-areas" id="quickAreas">
@@ -51,16 +61,23 @@
         <option value="catalog">Catalog only</option>
       </select>
 
-      <label class="toggle">
-        <input id="topOnly" type="checkbox" />
-        <span>Top tier only</span>
-      </label>
+      <select id="sortFilter">
+        <option value="nearest">Soonest deadline</option>
+        <option value="latest">Latest deadline</option>
+        <option value="az">A to Z</option>
+        <option value="tier">Tier</option>
+      </select>
     </div>
+  </section>
+
+  <section class="wrap disclaimer-wrap">
+    <p class="disclaimer">Disclaimer: Deadlines are collected automatically and may be inaccurate. Please use the Venue/CFP links to confirm details on the official conference page.</p>
   </section>
 
   <main id="list" class="wrap list"></main>
 
   <template id="rowTemplate">
+    <!-- Cards are rendered client-side from generated JSON assets. -->
     <article class="venue-row">
       <div class="row-main">
         <div class="row-left">

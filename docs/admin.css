@@ -1,10 +1,16 @@
-
 .admin-page {
-  background: #0b1020;
+  /* Admin reuses public tokens, then layers denser workspace-specific layout rules on top. */
+  background: linear-gradient(180deg, var(--bg-grad-start) 0%, var(--bg-grad-end) 100%);
 }
 
 .admin-hero {
   align-items: center;
+}
+
+.admin-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .admin-nav a {
@@ -24,11 +30,81 @@
   margin-top: 18px;
 }
 
-.summary-card {
+.summary-card,
+.toolbar-card {
+  /* Summary and toolbar cards share the same surface treatment for visual consistency. */
   padding: 14px 16px;
   border: 1px solid var(--line);
   border-radius: 16px;
   background: rgba(255,255,255,0.03);
+}
+
+.admin-toolbar {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.toolbar-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.toolbar-actions p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.toolbar-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.toolbar-buttons.compact {
+  justify-content: flex-start;
+}
+
+.toolbar-status {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.btn {
+  /* Buttons are intentionally neutral so status color remains on badges and data chips. */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(120, 150, 255, 0.35);
+  background: rgba(120, 150, 255, 0.16);
+  color: var(--text);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn.secondary,
+.file-label {
+  border-color: var(--line);
+  background: rgba(255,255,255,0.04);
+}
+
+.btn.ghost {
+  background: transparent;
+}
+
+.btn.danger {
+  border-color: rgba(255, 107, 107, 0.4);
+  background: rgba(255, 107, 107, 0.12);
+}
+
+.btn.tiny {
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-size: 0.83rem;
 }
 
 .admin-controls {
@@ -47,6 +123,7 @@
 }
 
 .admin-panel {
+  /* Panels segment the workflow into review buckets plus one audit table. */
   border: 1px solid var(--line);
   border-radius: 18px;
   background: rgba(255,255,255,0.025);
@@ -94,15 +171,22 @@
 .admin-meta,
 .table-sub,
 .admin-details,
-.admin-links {
+.admin-links,
+.table-draft {
   color: var(--muted);
   font-size: 0.84rem;
 }
 
-.admin-badges {
+.admin-badges,
+.admin-actions,
+.edit-actions,
+.inline-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+}
+
+.admin-badges {
   justify-content: flex-end;
 }
 
@@ -112,6 +196,72 @@
   gap: 10px;
   margin-top: 10px;
   align-items: center;
+}
+
+.admin-actions {
+  margin-top: 12px;
+}
+
+.admin-edit-panel {
+  margin-top: 12px;
+}
+
+.edit-box {
+  /* Inline editing avoids navigation jumps while reviewing many venues in sequence. */
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(255,255,255,0.03);
+}
+
+.edit-box summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.edit-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.edit-form label {
+  display: grid;
+  gap: 6px;
+}
+
+.edit-form label span,
+.field-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.edit-form input,
+.edit-form select,
+.edit-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: rgba(11, 16, 32, 0.8);
+  color: var(--text);
+}
+
+.deadline-list {
+  display: grid;
+  gap: 8px;
+}
+
+.deadline-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 8px;
 }
 
 .admin-deadline {
@@ -139,6 +289,7 @@
 }
 
 .admin-table {
+  /* The table is the high-density fallback when cards are too verbose for audits. */
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
@@ -156,14 +307,21 @@
 .badge.failed { border-color: rgba(255, 107, 107, 0.4); color: #ff8f8f; }
 .badge.confirmed { border-color: rgba(126, 224, 160, 0.35); color: #7ee0a0; }
 .badge.catalog { border-color: rgba(120, 150, 255, 0.35); color: #9fb3ff; }
+.badge.edited { border-color: rgba(194, 153, 255, 0.4); color: #d5b3ff; }
 .badge.raw-status, .badge.parser, .badge.scan { color: var(--muted); }
 
-@media (max-width: 760px) {
+@media (max-width: 860px) {
+  /* Mobile stacks every dense admin grid into a single column for touch readability. */
+  .form-grid,
+  .deadline-row,
   .admin-row-top,
   .admin-row-body,
   .admin-details-grid {
     grid-template-columns: 1fr;
     display: grid;
   }
-  .admin-badges { justify-content: flex-start; }
+
+  .admin-badges {
+    justify-content: flex-start;
+  }
 }

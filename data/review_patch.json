@@ -1,0 +1,54 @@
+{
+  "exported_at": "2026-03-18T23:55:01.295752+00:00",
+  "source": "batch_confirm_from_parsed",
+  "records": [
+    {
+      "id": "cav-2026",
+      "venue_id": "cav",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [
+        {
+          "kind": "paper",
+          "value": "2026-01-28"
+        }
+      ],
+      "source_url": "https://conferences.i-cav.org/2026/cfp/",
+      "checked_at": "2026-03-18T23:53:42.449149+00:00",
+      "confidence": 0.45,
+      "scan_preview": [
+        "Call for Papers | CAV 2026",
+        "CAV 2026",
+        "Call for Papers",
+        "✕",
+        "Call for Papers",
+        "IMPORTANT DATES"
+      ],
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates. | Batch confirmed from parsed_deadlines (confidence>=0.40, year-match=True) at 2026-03-18T23:55:01.295752+00:00."
+    },
+    {
+      "id": "neurips-2026",
+      "venue_id": "neurips",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [
+        {
+          "kind": "paper",
+          "value": "2026-05-06"
+        }
+      ],
+      "source_url": "https://neurips.cc/Conferences/2026/CallForPapers",
+      "checked_at": "2026-03-18T23:53:12.672587+00:00",
+      "confidence": 0.9,
+      "scan_preview": [
+        "Call for Papers 2026",
+        "Submit",
+        "Call for Papers",
+        "NeurIPS Foundation",
+        "Call For Papers 2026",
+        "The Fortieth Annual Conference on Neural Information Processing Systems (NeurIPS 2026) is an interdisciplinary conference that brings together researchers in deep learning, generative AI, core machine learning, neuroscience, statistics, optimization, computer vision, natural language processing, life sciences, natural sciences, social sciences, and other adjacent fields. We invite submissions presenting new and original research on topics including but not limited to the following:"
+      ],
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates. | Batch confirmed from parsed_deadlines (confidence>=0.40, year-match=True) at 2026-03-18T23:55:01.295752+00:00."
+    }
+  ]
+}

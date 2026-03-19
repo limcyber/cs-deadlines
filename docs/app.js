@@ -9,6 +9,81 @@ async function loadData() {
   return [];
 }
 
+const THEME_STORAGE_KEY = 'cs-deadlines-theme-v1';
+
+function safeStorageGet(key) {
+  try {
+    return localStorage.getItem(key);
+  } catch (err) {
+    return null;
+  }
+}
+
+function safeStorageSet(key, value) {
+  try {
+    localStorage.setItem(key, value);
+  } catch (err) {}
+}
+
+function applyTheme(theme) {
+  // The public page supports two curated themes without changing the data model.
+  const next = theme === 'light' ? 'light' : 'dark';
+  document.body.dataset.theme = next;
+  const toggle = document.getElementById('themeToggle');
+  if (toggle) {
+    const isLight = next === 'light';
+    const nextLabel = isLight ? 'Switch to black theme' : 'Switch to white theme';
+    toggle.classList.toggle('is-light', isLight);
+    toggle.setAttribute('aria-pressed', isLight ? 'true' : 'false');
+    toggle.setAttribute('aria-label', nextLabel);
+    toggle.setAttribute('title', nextLabel);
+    const label = toggle.querySelector('.theme-label');
+    if (label) label.textContent = isLight ? 'WHITE' : 'BLACK';
+  }
+}
+
+function initThemeToggle() {
+  const saved = safeStorageGet(THEME_STORAGE_KEY);
+  applyTheme(saved === 'light' ? 'light' : 'dark');
+  const toggle = document.getElementById('themeToggle');
+  if (!toggle) return;
+  toggle.addEventListener('click', () => {
+    const current = document.body.dataset.theme === 'light' ? 'light' : 'dark';
+    const next = current === 'light' ? 'dark' : 'light';
+    applyTheme(next);
+    safeStorageSet(THEME_STORAGE_KEY, next);
+  });
+}
+
+function sanitizeHttpUrl(value) {
+  if (!value) return null;
+  try {
+    const u = new URL(String(value), window.location.href);
+    // Only allow explicit web links to prevent javascript: style injections.
+    if (u.protocol === 'http:' || u.protocol === 'https:') return u.href;
+    return null;
+  } catch (err) {
+    return null;
+  }
+}
+
+function setSafeAnchor(anchor, candidateUrl) {
+  const safe = sanitizeHttpUrl(candidateUrl);
+  if (safe) {
+    anchor.href = safe;
+    anchor.target = '_blank';
+    anchor.rel = 'noopener';
+    anchor.removeAttribute('aria-disabled');
+    anchor.classList.remove('disabled-link');
+    return;
+  }
+  anchor.removeAttribute('href');
+  anchor.removeAttribute('target');
+  anchor.removeAttribute('rel');
+  anchor.setAttribute('aria-disabled', 'true');
+  anchor.classList.add('disabled-link');
+}
+
 function normalizeType(type) {
   if (!type) return '';
   const t = String(type).toLowerCase();
@@ -28,6 +103,7 @@ function parseDate(value) {
 }
 
 function broadAreas(record) {
+  // Convert many venue-specific domain labels into a smaller set of browsing buckets.
   const raw = (record.domain || []).map(x => String(x).toLowerCase());
   const out = new Set();
 
@@ -65,10 +141,58 @@ function areaHtml(areas) {
   return areas.map(a => `<span class="area-text area-${a.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">${a}</span>`).join(' <span class="slash">/</span> ');
 }
 
-function findNextDeadline(record) {
-  const items = (record.deadlines || [])
-    .map(d => ({ ...d, date: parseDate(d.value) }))
+function isPlausibleYear(date, conferenceYear, allowFullPrevYear = false) {
+  if (!conferenceYear) return true;
+  const y = date.getUTCFullYear();
+  const m = date.getUTCMonth() + 1;
+  if (y === conferenceYear) return true;
+  // Many CFP deadlines for year N happen in late year N-1.
+  if (y === conferenceYear - 1 && m >= 8) return true;
+  if (allowFullPrevYear && y === conferenceYear - 1) return true;
+  return false;
+}
+
+function looksLikeNoiseLine(text) {
+  const t = String(text || '').toLowerCase();
+  return [
+    'retrieved on',
+    'curated by',
+    'update ',
+    'copyright',
+  ].some(x => t.includes(x));
+}
+
+function parsedPreviewSource(record) {
+  if (!record.scan_enabled) return [];
+  if (!['scanned', 'review_required'].includes(String(record.status || '').toLowerCase())) return [];
+
+  const conferenceYear = Number(record.year || 0);
+  // Scanner previews stay behind confidence/noise filters so public cards remain readable.
+  return (record.parsed_deadlines || [])
+    .map(d => ({
+      kind: d.kind,
+      value: d.value,
+      raw_text: d.raw_text,
+      confidence: Number(d.confidence || 0),
+      date: parseDate(d.value),
+      year_fallback: !!d.year_fallback,
+      isPreview: true
+    }))
     .filter(d => d.date)
+    .filter(d => d.confidence >= 0.45)
+    .filter(d => !looksLikeNoiseLine(d.raw_text))
+    .filter(d => isPlausibleYear(d.date, conferenceYear, d.year_fallback));
+}
+
+function findNextDeadline(record) {
+  // Prefer confirmed deadlines, then fall back to parsed preview candidates for visibility.
+  const source = (record.deadlines && record.deadlines.length)
+    ? record.deadlines.map(d => ({ ...d, isPreview: false }))
+    : parsedPreviewSource(record);
+
+  const items = source
+    .map(d => ({ ...d, date: d.date || parseDate(d.value) }))
+    .filter(d => d.date instanceof Date)
     .sort((a, b) => a.date - b.date);
 
   const now = new Date();
@@ -105,14 +229,15 @@ function computeStatus(record, nextDeadline) {
 function formatDeadlinePrimary(record, nextDeadline) {
   if (!nextDeadline || !nextDeadline.date) return 'Deadline not announced';
   const kind = titleCase(nextDeadline.kind || 'Deadline');
-  return `${kind}: ${nextDeadline.date.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}`;
+  return `${kind}: ${nextDeadline.date.toLocaleString(undefined, { year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}`;
 }
 
 function formatDeadlineSecondary(record, nextDeadline) {
   if (!nextDeadline || !nextDeadline.date) return sourceLine(record);
   const countdown = formatCountdown(nextDeadline.date);
+  const preview = nextDeadline.isPreview ? 'unconfirmed preview' : '';
   const src = sourceLine(record);
-  return `${countdown}${src ? ' · ' + src : ''}`;
+  return `${countdown}${preview ? ' · ' + preview : ''}${src ? ' · ' + src : ''}`;
 }
 
 function sourceLine(record) {
@@ -122,8 +247,22 @@ function sourceLine(record) {
   return bits.join(' · ');
 }
 
+function isPlausibleLocation(value) {
+  const text = String(value || '').trim();
+  if (!text) return false;
+  const lower = text.toLowerCase();
+  if (text.length < 4 || text.length > 48) return false;
+  if (/[0-9]/.test(text)) return false;
+  if (text.split(',').length > 3) return false;
+  if (['tbd', 'online', 'virtual', 'conference', 'symposium', 'heart of'].some(x => lower.includes(x))) return false;
+  if (lower === 'person' || lower.startsWith('person ')) return false;
+  if (lower.startsWith('person in ') || lower.startsWith('person at ')) return false;
+  if (/^the\s+st\.?$/i.test(text)) return false;
+  return true;
+}
+
 function locationText(record) {
-  if (record.location) return record.location;
+  if (isPlausibleLocation(record.location)) return record.location;
   if (record.place) return record.place;
   return 'Location TBD';
 }
@@ -142,8 +281,29 @@ function compareRecords(mode) {
   return (a, b) => {
     const aNext = findNextDeadline(a);
     const bNext = findNextDeadline(b);
-    const aTime = aNext?.date ? aNext.date.getTime() : Infinity;
-    const bTime = bNext?.date ? bNext.date.getTime() : Infinity;
+    const aHasDeadline = !!aNext?.date;
+    const bHasDeadline = !!bNext?.date;
+
+    const aTime = aHasDeadline ? aNext.date.getTime() : Infinity;
+    const bTime = bHasDeadline ? bNext.date.getTime() : Infinity;
+    const now = Date.now();
+
+    if (mode === 'nearest') {
+      const aUpcoming = aHasDeadline && aTime > now;
+      const bUpcoming = bHasDeadline && bTime > now;
+
+      // "Nearest" is tuned for deadline triage rather than strict chronological sorting.
+      if (aUpcoming !== bUpcoming) return aUpcoming ? -1 : 1;
+      if (aUpcoming && bUpcoming) return aTime - bTime;
+
+      // After upcoming items, keep passed deadlines above "not announced".
+      if (aHasDeadline !== bHasDeadline) return aHasDeadline ? -1 : 1;
+      if (aHasDeadline && bHasDeadline) return bTime - aTime;
+      return `${a.short_name} ${a.title}`.localeCompare(`${b.short_name} ${b.title}`);
+    }
+
+    // Non-nearest modes: always keep "Deadline not announced" at the bottom.
+    if (aHasDeadline !== bHasDeadline) return aHasDeadline ? -1 : 1;
 
     if (mode === 'latest') return bTime - aTime;
     if (mode === 'az') return `${a.short_name} ${a.title}`.localeCompare(`${b.short_name} ${b.title}`);
@@ -161,7 +321,6 @@ function applyFilters(records) {
   const type = document.getElementById('typeFilter').value;
   const tier = document.getElementById('tierFilter').value;
   const scan = document.getElementById('scanFilter').value;
-  const topOnly = document.getElementById('topOnly').checked;
 
   return records.filter(r => {
     const areas = broadAreas(r);
@@ -172,7 +331,6 @@ function applyFilters(records) {
     if (tier && r.tier !== tier) return false;
     if (scan === 'enabled' && !r.scan_enabled) return false;
     if (scan === 'catalog' && r.scan_enabled) return false;
-    if (topOnly && r.tier !== 'top') return false;
     return true;
   });
 }
@@ -212,9 +370,9 @@ function render(records) {
     node.querySelector('.title').textContent = `${r.short_name || ''}${r.short_name && r.title ? ' — ' : ''}${r.title || ''}`;
 
     const venueLink = node.querySelector('.venue-link');
-    venueLink.href = r.website || '#';
+    setSafeAnchor(venueLink, r.website);
     const cfpLink = node.querySelector('.cfp-link');
-    cfpLink.href = r.cfp_url || r.website || '#';
+    setSafeAnchor(cfpLink, r.cfp_url || r.website);
 
     const statusChip = node.querySelector('.status-chip');
     statusChip.textContent = status.label;
@@ -227,15 +385,16 @@ function render(records) {
   });
 }
 
-loadData().then(records => {
-  const sortMode = 'nearest';
+initThemeToggle();
 
+loadData().then(records => {
   function rerender() {
+    const sortMode = document.getElementById('sortFilter').value || 'nearest';
     const filtered = applyFilters(records).sort(compareRecords(sortMode));
     render(filtered);
   }
 
-  ['search', 'typeFilter', 'tierFilter', 'scanFilter', 'topOnly'].forEach(id => {
+  ['sortFilter', 'search', 'typeFilter', 'tierFilter', 'scanFilter'].forEach(id => {
     const el = document.getElementById(id);
     el.addEventListener('input', rerender);
     el.addEventListener('change', rerender);

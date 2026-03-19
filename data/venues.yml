@@ -10,12 +10,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://neurips.cc/
-  cfp_url: https://neurips.cc/
+  website: https://neurips.cc/Conferences/2026
+  cfp_url: https://neurips.cc/Conferences/2026/CallForPapers
   default_timezone: AoE
-  parser: generic_dates
+  parser: neurips_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official NeurIPS 2026 page and CFP verified in precision pass.
 - id: icml
   title: International Conference on Machine Learning
   short_name: ICML
@@ -26,12 +26,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://icml.cc/
-  cfp_url: https://icml.cc/
+  website: https://icml.cc/Conferences/2026
+  cfp_url: https://icml.cc/Conferences/2026/CallForPapers
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official ICML 2026 page and CFP verified in precision pass.
 - id: iclr
   title: International Conference on Learning Representations
   short_name: ICLR
@@ -42,12 +42,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://iclr.cc/
-  cfp_url: https://iclr.cc/
+  website: https://iclr.cc/Conferences/2026
+  cfp_url: https://iclr.cc/Conferences/2026/CallForPapers
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official ICLR 2026 page and CFP verified in precision pass.
 - id: aaai
   title: AAAI Conference on Artificial Intelligence
   short_name: AAAI
@@ -57,12 +57,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://aaai.org/conference/aaai/
-  cfp_url: https://aaai.org/conference/aaai/
+  website: https://aaai.org/conference/aaai/aaai-26/
+  cfp_url: https://aaai.org/conference/aaai/aaai-26/
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official AAAI-26 site verified in precision pass.
 - id: ijcai
   title: International Joint Conference on Artificial Intelligence
   short_name: IJCAI
@@ -72,12 +72,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://www.ijcai.org/
-  cfp_url: https://www.ijcai.org/
+  website: https://2026.ijcai.org/
+  cfp_url: https://2026.ijcai.org/ijcai-ecai-2026-call-for-papers-main-track/
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official IJCAI-ECAI 2026 site and main-track CFP verified in precision pass.
 - id: cvpr
   title: IEEE/CVF Conference on Computer Vision and Pattern Recognition
   short_name: CVPR
@@ -89,11 +89,11 @@
   recurring: true
   active: true
   website: https://cvpr.thecvf.com/
-  cfp_url: https://cvpr.thecvf.com/
+  cfp_url: https://cvpr.thecvf.com/Conferences/2026/CallForPapers
   default_timezone: AoE
-  parser: generic_dates
+  parser: cvf_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official CVPR 2026 site and CFP verified in precision pass.
 - id: iccv
   title: IEEE/CVF International Conference on Computer Vision
   short_name: ICCV
@@ -107,9 +107,10 @@
   website: https://iccv.thecvf.com/
   cfp_url: https://iccv.thecvf.com/
   default_timezone: AoE
-  parser: generic_dates
-  scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  parser: manual_review
+  scan_enabled: false
+  notes: ICCV is a CVF odd-year conference; the official site currently points to ICCV 2025, so automated scanning is disabled for this precision pass.
+  aliases: []
 - id: eccv
   title: European Conference on Computer Vision
   short_name: ECCV
@@ -121,11 +122,12 @@
   recurring: true
   active: true
   website: https://eccv.ecva.net/
-  cfp_url: https://eccv.ecva.net/
+  cfp_url: https://eccv.ecva.net/Conferences/2026/CallForPapers
   default_timezone: AoE
-  parser: generic_dates
+  parser: cvf_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official ECCV 2026 site and CFP verified in precision pass.
+  aliases: []
 - id: acl
   title: Annual Meeting of the Association for Computational Linguistics
   short_name: ACL
@@ -136,12 +138,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://www.aclweb.org/
-  cfp_url: https://www.aclweb.org/
+  website: https://2026.aclweb.org/
+  cfp_url: https://2026.aclweb.org/calls/main_conference_papers/
   default_timezone: AoE
-  parser: generic_dates
+  parser: acl_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official ACL 2026 site and main-conference CFP verified in precision pass.
 - id: emnlp
   title: Conference on Empirical Methods in Natural Language Processing
   short_name: EMNLP
@@ -152,12 +154,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://2025.emnlp.org/
-  cfp_url: https://2025.emnlp.org/
+  website: https://2026.emnlp.org/
+  cfp_url: https://2026.emnlp.org/calls/main_conference_papers/
   default_timezone: AoE
-  parser: generic_dates
+  parser: acl_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official EMNLP 2026 site and main-conference CFP verified in precision pass.
 - id: naacl
   title: North American Chapter of the ACL
   short_name: NAACL
@@ -171,9 +173,9 @@
   website: https://naacl.org/
   cfp_url: https://naacl.org/
   default_timezone: AoE
-  parser: generic_dates
-  scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  parser: manual_review
+  scan_enabled: false
+  notes: No official NAACL 2026 conference site was identified in this precision pass; automated scanning is disabled.
 - id: kdd
   title: ACM SIGKDD Conference on Knowledge Discovery and Data Mining
   short_name: KDD
@@ -185,12 +187,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://kdd.org/
-  cfp_url: https://kdd.org/
+  website: https://kdd2026.kdd.org/
+  cfp_url: https://kdd2026.kdd.org/research-track-call-for-papers/
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official KDD 2026 site and research-track CFP verified in precision pass.
 - id: www
   title: The Web Conference
   short_name: WWW
@@ -202,11 +204,11 @@
   recurring: true
   active: true
   website: https://www2026.thewebconf.org/
-  cfp_url: https://www2026.thewebconf.org/
+  cfp_url: https://www2026.thewebconf.org/calls/research-tracks.html
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official The Web Conference 2026 site and research-track CFP verified in precision pass.
 - id: sigmod
   title: ACM SIGMOD/PODS International Conference on Management of Data
   short_name: SIGMOD
@@ -217,12 +219,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://sigmod.org/
-  cfp_url: https://sigmod.org/
+  website: https://2026.sigmod.org/
+  cfp_url: https://2026.sigmod.org/calls_papers_sigmod_research.shtml
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official SIGMOD/PODS 2026 site and SIGMOD research CFP verified in precision pass.
 - id: vldb
   title: Very Large Data Bases Conference
   short_name: VLDB
@@ -233,12 +235,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://vldb.org/
-  cfp_url: https://vldb.org/
+  website: https://vldb.org/2026/
+  cfp_url: https://www.vldb.org/2026/call-for-research-track.html
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official VLDB 2026 site and research-track call verified in precision pass.
 - id: icde
   title: IEEE International Conference on Data Engineering
   short_name: ICDE
@@ -250,11 +252,11 @@
   recurring: true
   active: true
   website: https://icde2026.github.io/
-  cfp_url: https://icde2026.github.io/
+  cfp_url: https://icde2026.github.io/cf-research-papers.html
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official ICDE 2026 site and research-paper call verified in precision pass.
 - id: ccs
   title: ACM Conference on Computer and Communications Security
   short_name: CCS
@@ -265,12 +267,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://www.sigsac.org/ccs/
-  cfp_url: https://www.sigsac.org/ccs/
+  website: https://www.sigsac.org/ccs/CCS2026/
+  cfp_url: https://www.sigsac.org/ccs/CCS2026/call-for/call-for-papers.html
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official ACM CCS 2026 site and CFP verified in precision pass.
 - id: ieee-sp
   title: IEEE Symposium on Security and Privacy
   short_name: IEEE S&P
@@ -283,12 +285,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://www.ieee-security.org/TC/SP-Index.html
-  cfp_url: https://www.ieee-security.org/TC/SP-Index.html
+  website: https://sp2026.ieee-security.org/
+  cfp_url: https://sp2026.ieee-security.org/cfpapers.html
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official IEEE S&P 2026 site and CFP verified in precision pass.
 - id: usenix-sec
   title: USENIX Security Symposium
   short_name: USENIX Security
@@ -299,12 +301,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://www.usenix.org/conference/usenixsecurity
-  cfp_url: https://www.usenix.org/conference/usenixsecurity
+  website: https://www.usenix.org/conference/usenixsecurity26
+  cfp_url: https://www.usenix.org/conference/usenixsecurity26/call-for-papers
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official USENIX Security 2026 site and CFP verified in precision pass.
 - id: ndss
   title: Network and Distributed System Security Symposium
   short_name: NDSS
@@ -316,12 +318,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://www.ndss-symposium.org/
-  cfp_url: https://www.ndss-symposium.org/
+  website: https://www.ndss-symposium.org/ndss2026/
+  cfp_url: https://www.ndss-symposium.org/ndss2026/submissions/call-for-papers/
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official NDSS 2026 site and CFP verified in precision pass.
 - id: soups
   title: Symposium on Usable Privacy and Security
   short_name: SOUPS
@@ -333,12 +335,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://www.usenix.org/conference/soups2026
-  cfp_url: https://www.usenix.org/conference/soups2026
+  website: https://soups.page/
+  cfp_url: https://soups.page/
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official SOUPS 2026 page verified in precision pass.
 - id: sigcomm
   title: ACM SIGCOMM Conference
   short_name: SIGCOMM
@@ -349,12 +351,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://www.sigcomm.org/
-  cfp_url: https://www.sigcomm.org/
+  website: https://conferences.sigcomm.org/sigcomm/2026/
+  cfp_url: https://conferences.sigcomm.org/sigcomm/2026/cfp/
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official SIGCOMM 2026 site and CFP verified in precision pass.
 - id: nsdi
   title: USENIX Symposium on Networked Systems Design and Implementation
   short_name: NSDI
@@ -365,12 +367,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://www.usenix.org/conference/nsdi
-  cfp_url: https://www.usenix.org/conference/nsdi
+  website: https://www.usenix.org/conference/nsdi26
+  cfp_url: https://www.usenix.org/conference/nsdi26/call-for-papers
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official NSDI 2026 site and CFP verified in precision pass.
 - id: osdi
   title: USENIX Symposium on Operating Systems Design and Implementation
   short_name: OSDI
@@ -380,12 +382,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://www.usenix.org/conference/osdi
-  cfp_url: https://www.usenix.org/conference/osdi
+  website: https://www.usenix.org/conference/osdi26
+  cfp_url: https://www.usenix.org/conference/osdi26/call-for-papers
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official OSDI 2026 site and CFP verified in precision pass.
 - id: sosp
   title: ACM Symposium on Operating Systems Principles
   short_name: SOSP
@@ -395,15 +397,14 @@
   tier: top
   recurring: true
   active: true
-  website: https://www.sigops.org/s/conferences/sosp/
-  cfp_url: https://www.sigops.org/s/conferences/sosp/
+  website: https://sigops.org/s/conferences/sosp/2026/
+  cfp_url: https://sigops.org/s/conferences/sosp/2026/cfp.html
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official SOSP 2026 site and CFP verified in precision pass.
 - id: asplos
-  title: International Conference on Architectural Support for Programming Languages
-    and Operating Systems
+  title: International Conference on Architectural Support for Programming Languages and Operating Systems
   short_name: ASPLOS
   domain:
   - systems
@@ -413,12 +414,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://www.asplos-conference.org/
-  cfp_url: https://www.asplos-conference.org/
+  website: https://www.asplos-conference.org/asplos2026/
+  cfp_url: https://www.asplos-conference.org/asplos2026/cfp/
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official ASPLOS 2026 site and CFP verified in precision pass.
 - id: pldi
   title: ACM SIGPLAN Conference on Programming Language Design and Implementation
   short_name: PLDI
@@ -429,12 +430,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://pldi.sigplan.org/
-  cfp_url: https://pldi.sigplan.org/
+  website: https://pldi26.sigplan.org/
+  cfp_url: https://pldi26.sigplan.org/
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official PLDI 2026 site verified in precision pass; direct CFP path left at site root because the site exposes deadlines and track pages dynamically.
 - id: popl
   title: ACM SIGPLAN Symposium on Principles of Programming Languages
   short_name: POPL
@@ -445,15 +446,14 @@
   tier: top
   recurring: true
   active: true
-  website: https://popl26.sigplan.org/
-  cfp_url: https://popl26.sigplan.org/
+  website: https://conf.researchr.org/home/POPL-2026
+  cfp_url: https://conf.researchr.org/track/POPL-2026/POPL-2026-popl-research-papers
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official POPL 2026 site and research-papers track verified in precision pass.
 - id: fse
-  title: ACM Joint European Software Engineering Conference and Symposium on the Foundations
-    of Software Engineering
+  title: ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering
   short_name: FSE
   domain:
   - software
@@ -462,11 +462,11 @@
   recurring: true
   active: true
   website: https://conf.researchr.org/home/fse-2026
-  cfp_url: https://conf.researchr.org/home/fse-2026
+  cfp_url: https://conf.researchr.org/track/fse-2026/fse-2026-research-papers
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official FSE 2026 site and research-papers track verified in precision pass.
 - id: icse
   title: International Conference on Software Engineering
   short_name: ICSE
@@ -477,11 +477,11 @@
   recurring: true
   active: true
   website: https://conf.researchr.org/home/icse-2026
-  cfp_url: https://conf.researchr.org/home/icse-2026
+  cfp_url: https://conf.researchr.org/track/icse-2026/icse-2026-research-track
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official ICSE 2026 site and research-track CFP verified in precision pass.
 - id: chi
   title: ACM Conference on Human Factors in Computing Systems
   short_name: CHI
@@ -492,11 +492,11 @@
   recurring: true
   active: true
   website: https://chi2026.acm.org/
-  cfp_url: https://chi2026.acm.org/
+  cfp_url: https://chi2026.acm.org/authors/papers/
   default_timezone: AoE
   parser: generic_dates
   scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  notes: Official CHI 2026 site and papers page verified in precision pass.
 - id: ubicomp
   title: ACM International Joint Conference on Pervasive and Ubiquitous Computing
   short_name: UbiComp
@@ -507,12 +507,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://www.ubicomp.org/
-  cfp_url: https://www.ubicomp.org/
+  website: https://sigchi.org/events/ubicomp-iswc-2026/
+  cfp_url: https://sigchi.org/events/ubicomp-iswc-2026/
   default_timezone: AoE
-  parser: generic_dates
-  scan_enabled: true
-  notes: Verified starter entry with scanning enabled.
+  parser: manual_review
+  scan_enabled: false
+  notes: 'Updated in 4th pass to official SIGCHI UbiComp/ISWC 2026 event page; keep manual review because a dedicated CFP page was not identified. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: aistats
   title: International Conference on Artificial Intelligence and Statistics
   short_name: AISTATS
@@ -525,13 +525,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=AISTATS+conference
-  cfp_url: https://dblp.org/search?q=AISTATS+conference
+  website: https://aistats.org/aistats2026//
+  cfp_url: https://virtual.aistats.org/Conferences/2026/CallForPapers
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official AISTATS 2026 site and CFP verified in precision pass.
 - id: uai
   title: Conference on Uncertainty in Artificial Intelligence
   short_name: UAI
@@ -544,13 +543,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=UAI+conference
-  cfp_url: https://dblp.org/search?q=UAI+conference
+  website: https://www.auai.org/uai2026/
+  cfp_url: https://www.auai.org/uai2026/call_for_papers
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official UAI 2026 site and CFP verified in precision pass.
 - id: colt
   title: Conference on Learning Theory
   short_name: COLT
@@ -562,13 +560,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=COLT+conference
-  cfp_url: https://dblp.org/search?q=COLT+conference
+  website: https://learningtheory.org/colt2026/
+  cfp_url: https://learningtheory.org/colt2026/cfp.html
   default_timezone: AoE
   parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  scan_enabled: true
+  notes: 'Verified official 2026 site and CFP page. Final QA pass: retained as manual-review active due to strong official 2026 page/CFP signals.'
 - id: satml
   title: IEEE Conference on Secure and Trustworthy Machine Learning
   short_name: SaTML
@@ -581,13 +578,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=SaTML+conference
-  cfp_url: https://dblp.org/search?q=SaTML+conference
+  website: https://satml.org/
+  cfp_url: https://satml.org/call-for-papers/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Verified official 2026 site and CFP page. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: icaps
   title: International Conference on Automated Planning and Scheduling
   short_name: ICAPS
@@ -598,13 +594,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ICAPS+conference
-  cfp_url: https://dblp.org/search?q=ICAPS+conference
+  website: https://icaps26.icaps-conference.org/
+  cfp_url: https://icaps26.icaps-conference.org/calls/cfp/
   default_timezone: AoE
   parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  scan_enabled: true
+  notes: 'Verified official 2026 site and CFP page. Final QA pass: retained as manual-review active due to strong official 2026 page/CFP signals.'
 - id: kr
   title: International Conference on Principles of Knowledge Representation and Reasoning
   short_name: KR
@@ -616,13 +611,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=KR+conference
-  cfp_url: https://dblp.org/search?q=KR+conference
+  website: https://kr.org/KR2026/
+  cfp_url: https://kr.org/KR2026/call_main_track.html
   default_timezone: AoE
   parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  scan_enabled: true
+  notes: 'Verified official 2026 site and main-track CFP page. Final QA pass: retained as manual-review active due to strong official 2026 page/CFP signals.'
 - id: aamas
   title: International Conference on Autonomous Agents and Multiagent Systems
   short_name: AAMAS
@@ -634,13 +628,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=AAMAS+conference
-  cfp_url: https://dblp.org/search?q=AAMAS+conference
+  website: https://cyprusconferences.org/aamas2026/
+  cfp_url: https://cyprusconferences.org/aamas2026/call-for-papers-main-track/
   default_timezone: AoE
   parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  scan_enabled: true
+  notes: 'Verified official 2026 site and main-track CFP page. Final QA pass: retained as manual-review active due to strong official 2026 page/CFP signals.'
 - id: cp
   title: International Conference on Principles and Practice of Constraint Programming
   short_name: CP
@@ -652,13 +645,12 @@
   tier: mid
   recurring: true
   active: true
-  website: https://dblp.org/search?q=CP+conference
-  cfp_url: https://dblp.org/search?q=CP+conference
+  website: https://cp2026.a4cp.org/
+  cfp_url: https://cp2026.a4cp.org/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Verified official 2026 site; CFP should be tracked from conference site/dates. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: ecai
   title: European Conference on Artificial Intelligence
   short_name: ECAI
@@ -669,13 +661,12 @@
   tier: mid
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ECAI+conference
-  cfp_url: https://dblp.org/search?q=ECAI+conference
+  website: https://2026.ijcai.org/
+  cfp_url: https://2026.ijcai.org/ijcai-ecai-2026-call-for-papers-main-track/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Using official IJCAI-ECAI 2026 site and main-track CFP page. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: rss
   title: 'Robotics: Science and Systems'
   short_name: RSS
@@ -687,13 +678,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=RSS+conference
-  cfp_url: https://dblp.org/search?q=RSS+conference
+  website: https://roboticsconference.org/
+  cfp_url: https://roboticsconference.org/information/cfp/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official RSS 2026 site and CFP verified in precision pass.
 - id: icra
   title: IEEE International Conference on Robotics and Automation
   short_name: ICRA
@@ -705,13 +695,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ICRA+conference
-  cfp_url: https://dblp.org/search?q=ICRA+conference
+  website: https://2026.ieee-icra.org/
+  cfp_url: https://2026.ieee-icra.org/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official ICRA 2026 site verified in precision pass.
 - id: iros
   title: IEEE/RSJ International Conference on Intelligent Robots and Systems
   short_name: IROS
@@ -723,13 +712,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=IROS+conference
-  cfp_url: https://dblp.org/search?q=IROS+conference
+  website: https://2026.ieee-iros.org/
+  cfp_url: https://2026.ieee-iros.org/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: The official IROS 2026 domain is referenced consistently by secondary sources, but the official page did not resolve reliably in this verification pass; automated scanning is disabled pending direct confirmation.
 - id: corl
   title: Conference on Robot Learning
   short_name: CoRL
@@ -741,16 +729,14 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=CoRL+conference
-  cfp_url: https://dblp.org/search?q=CoRL+conference
+  website: https://www.corl.org/
+  cfp_url: https://www.corl.org/contributions/call-for-papers
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Verified official CoRL 2026 site and CFP page. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: ecml-pkdd
-  title: European Conference on Machine Learning and Principles and Practice of Knowledge
-    Discovery in Databases
+  title: European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases
   short_name: ECML PKDD
   aliases: []
   domain:
@@ -760,13 +746,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ECML+PKDD+conference
-  cfp_url: https://dblp.org/search?q=ECML+PKDD+conference
+  website: https://ecmlpkdd.org/2026/
+  cfp_url: https://ecmlpkdd.org/2026/submissions-research-track/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official ECML PKDD 2026 site and research-track CFP.
 - id: wsdm
   title: ACM International Conference on Web Search and Data Mining
   short_name: WSDM
@@ -779,13 +764,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=WSDM+conference
-  cfp_url: https://dblp.org/search?q=WSDM+conference
+  website: https://wsdm-conference.org/2026/
+  cfp_url: https://wsdm-conference.org/2026/index.php/call-for-papers/
   default_timezone: AoE
   parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  scan_enabled: true
+  notes: 'Verified official 2026 site and CFP page. Final QA pass: retained as manual-review active due to strong official 2026 page/CFP signals.'
 - id: cikm
   title: ACM International Conference on Information and Knowledge Management
   short_name: CIKM
@@ -798,13 +782,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=CIKM+conference
-  cfp_url: https://dblp.org/search?q=CIKM+conference
+  website: https://cikm2026.diag.uniroma1.it/
+  cfp_url: https://cikm2026.diag.uniroma1.it/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Verified official 2026 site; CFP not yet clearly separated, using official site root. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: sdm
   title: SIAM International Conference on Data Mining
   short_name: SDM
@@ -816,13 +799,12 @@
   tier: mid
   recurring: true
   active: true
-  website: https://dblp.org/search?q=SDM+conference
-  cfp_url: https://dblp.org/search?q=SDM+conference
+  website: https://www.siam.org/conferences-events/siam-conferences/sdm26/
+  cfp_url: https://www.siam.org/conferences-events/siam-conferences/sdm26/submissions/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official SIAM SDM26 site and submissions page.
 - id: pakdd
   title: Pacific-Asia Conference on Knowledge Discovery and Data Mining
   short_name: PAKDD
@@ -834,13 +816,12 @@
   tier: mid
   recurring: true
   active: true
-  website: https://dblp.org/search?q=PAKDD+conference
-  cfp_url: https://dblp.org/search?q=PAKDD+conference
+  website: https://www.pakdd2026.org/
+  cfp_url: https://www.pakdd2026.org/important-dates
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official PAKDD 2026 site and important-dates page.
 - id: recsys
   title: ACM Conference on Recommender Systems
   short_name: RecSys
@@ -853,13 +834,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=RecSys+conference
-  cfp_url: https://dblp.org/search?q=RecSys+conference
+  website: https://recsys.acm.org/recsys26/
+  cfp_url: https://recsys.acm.org/recsys26/call/
   default_timezone: AoE
   parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  scan_enabled: true
+  notes: 'Verified official 2026 site and calls page. Final QA pass: retained as manual-review active due to strong official 2026 page/CFP signals.'
 - id: icdm
   title: IEEE International Conference on Data Mining
   short_name: ICDM
@@ -871,13 +851,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ICDM+conference
-  cfp_url: https://dblp.org/search?q=ICDM+conference
+  website: https://www3.cs.stonybrook.edu/~icdm2026/
+  cfp_url: https://www3.cs.stonybrook.edu/~icdm2026/CallforAppliedTrackPapers/list.htm
   default_timezone: AoE
   parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  scan_enabled: true
+  notes: 'Verified official 2026 site and calls page path. Final QA pass: retained as manual-review active due to strong official 2026 page/CFP signals.'
 - id: 3dv
   title: International Conference on 3D Vision
   short_name: 3DV
@@ -888,13 +867,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=3DV+conference
-  cfp_url: https://dblp.org/search?q=3DV+conference
+  website: https://3dvconf.github.io/2026/
+  cfp_url: https://3dvconf.github.io/2026/call-for-papers/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official 3DV 2026 site and CFP.
 - id: wacv
   title: IEEE Winter Conference on Applications of Computer Vision
   short_name: WACV
@@ -906,13 +884,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=WACV+conference
-  cfp_url: https://dblp.org/search?q=WACV+conference
+  website: https://wacv.thecvf.com/
+  cfp_url: https://wacv.thecvf.com/Conferences/2026/CallForPapers
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: cvf_dates
+  scan_enabled: true
+  notes: Official WACV 2026 site and CFP verified in precision pass.
 - id: accv
   title: Asian Conference on Computer Vision
   short_name: ACCV
@@ -923,13 +900,12 @@
   tier: mid
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ACCV+conference
-  cfp_url: https://dblp.org/search?q=ACCV+conference
+  website: https://accv2026.org/
+  cfp_url: https://accv2026.org/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Verified official 2026 site; no separate CFP page confidently parsed yet. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: bmvc
   title: British Machine Vision Conference
   short_name: BMVC
@@ -940,13 +916,12 @@
   tier: mid
   recurring: true
   active: true
-  website: https://dblp.org/search?q=BMVC+conference
-  cfp_url: https://dblp.org/search?q=BMVC+conference
+  website: https://bmvc2026.bmva.org/
+  cfp_url: https://bmvc2026.bmva.org/calls/call-for-papers/
   default_timezone: AoE
   parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  scan_enabled: true
+  notes: 'Verified official 2026 site and CFP page. Final QA pass: retained as manual-review active due to strong official 2026 page/CFP signals.'
 - id: fg
   title: IEEE International Conference on Automatic Face and Gesture Recognition
   short_name: FG
@@ -957,13 +932,12 @@
   tier: mid
   recurring: true
   active: true
-  website: https://dblp.org/search?q=FG+conference
-  cfp_url: https://dblp.org/search?q=FG+conference
+  website: https://fg2024.ieee-biometrics.org/fg26/
+  cfp_url: https://fg2024.ieee-biometrics.org/fg26/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Verified official FG26 page from IEEE FG site family. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: icpr
   title: International Conference on Pattern Recognition
   short_name: ICPR
@@ -975,13 +949,12 @@
   tier: mid
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ICPR+conference
-  cfp_url: https://dblp.org/search?q=ICPR+conference
+  website: https://icpr2026.org/
+  cfp_url: https://icpr2026.org/calls.html
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official ICPR 2026 site and main CFP page.
 - id: miccai
   title: Medical Image Computing and Computer Assisted Intervention
   short_name: MICCAI
@@ -993,13 +966,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=MICCAI+conference
-  cfp_url: https://dblp.org/search?q=MICCAI+conference
+  website: https://conferences.miccai.org/2026/
+  cfp_url: https://conferences.miccai.org/2026/en/IMPORTANT-DATES.html
   default_timezone: AoE
   parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  scan_enabled: true
+  notes: 'Verified official 2026 site and important dates page. Final QA pass: retained as manual-review active due to strong official 2026 page/CFP signals.'
 - id: conll
   title: Conference on Computational Natural Language Learning
   short_name: CoNLL
@@ -1011,13 +983,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=CoNLL+conference
-  cfp_url: https://dblp.org/search?q=CoNLL+conference
+  website: https://www.conll.org/
+  cfp_url: https://www.conll.org/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Verified official CoNLL site showing 2026 edition details. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: eacl
   title: Conference of the European Chapter of the ACL
   short_name: EACL
@@ -1029,13 +1000,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=EACL+conference
-  cfp_url: https://dblp.org/search?q=EACL+conference
+  website: https://2026.eacl.org/
+  cfp_url: https://2026.eacl.org/calls/papers/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: acl_dates
+  scan_enabled: true
+  notes: Official EACL 2026 site and papers call verified in precision pass.
 - id: coling
   title: International Conference on Computational Linguistics
   short_name: COLING
@@ -1052,8 +1022,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: interspeech
   title: Interspeech
   short_name: Interspeech
@@ -1065,13 +1034,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=Interspeech+conference
-  cfp_url: https://dblp.org/search?q=Interspeech+conference
+  website: https://interspeech2026.org/
+  cfp_url: https://interspeech2026.org/en-AU/pages/calls/call-for-papers
   default_timezone: AoE
   parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  scan_enabled: true
+  notes: 'Verified official 2026 site and CFP page. Final QA pass: retained as manual-review active due to strong official 2026 page/CFP signals.'
 - id: asru
   title: IEEE Automatic Speech Recognition and Understanding Workshop
   short_name: ASRU
@@ -1088,8 +1056,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: slt
   title: IEEE Spoken Language Technology Workshop
   short_name: SLT
@@ -1106,8 +1073,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: lrec-coling
   title: Language Resources and Evaluation Conference
   short_name: LREC-COLING
@@ -1124,8 +1090,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: findings-acl
   title: Findings of ACL
   short_name: Findings ACL
@@ -1142,8 +1107,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: tacl
   title: Transactions of the ACL
   short_name: TACL
@@ -1160,8 +1124,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: icfp
   title: International Conference on Functional Programming
   short_name: ICFP
@@ -1172,13 +1135,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ICFP+conference
-  cfp_url: https://dblp.org/search?q=ICFP+conference
+  website: https://icfp26.sigplan.org/
+  cfp_url: https://icfp26.sigplan.org/track/icfp-2026-icfp-papers
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official ICFP 2026 site and papers track verified in precision pass.
 - id: oopsla
   title: Object-Oriented Programming, Systems, Languages, and Applications
   short_name: OOPSLA
@@ -1190,13 +1152,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=OOPSLA+conference
-  cfp_url: https://dblp.org/search?q=OOPSLA+conference
+  website: https://2026.splashcon.org/track/oopsla-2026
+  cfp_url: https://2026.splashcon.org/track/oopsla-2026
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official OOPSLA 2026 track page verified in precision pass.
 - id: ecoop
   title: European Conference on Object-Oriented Programming
   short_name: ECOOP
@@ -1208,13 +1169,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ECOOP+conference
-  cfp_url: https://dblp.org/search?q=ECOOP+conference
+  website: https://2026.ecoop.org/
+  cfp_url: https://2026.ecoop.org/track/ecoop-2026-technical-papers
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official ECOOP 2026 site and technical-papers track verified in precision pass.
 - id: esop
   title: European Symposium on Programming
   short_name: ESOP
@@ -1225,13 +1185,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ESOP+conference
-  cfp_url: https://dblp.org/search?q=ESOP+conference
+  website: https://etaps.org/2026/conferences/esop/
+  cfp_url: https://etaps.org/2026/conferences/esop/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Verified official ETAPS 2026 ESOP page. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: cc
   title: Compiler Construction
   short_name: CC
@@ -1247,8 +1206,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: cav
   title: Computer Aided Verification
   short_name: CAV
@@ -1261,13 +1219,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=CAV+conference
-  cfp_url: https://dblp.org/search?q=CAV+conference
+  website: https://conferences.i-cav.org/2026/
+  cfp_url: https://conferences.i-cav.org/2026/cfp/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official CAV 2026 site and CFP verified in precision pass.
 - id: lics
   title: Logic in Computer Science
   short_name: LICS
@@ -1279,13 +1236,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=LICS+conference
-  cfp_url: https://dblp.org/search?q=LICS+conference
+  website: https://lics.siglog.org/lics26/
+  cfp_url: https://lics.siglog.org/lics26/cfp.php
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official LICS 2026 site and CFP verified in precision pass.
 - id: vmcai
   title: Verification, Model Checking, and Abstract Interpretation
   short_name: VMCAI
@@ -1302,8 +1258,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: cgo
   title: Code Generation and Optimization
   short_name: CGO
@@ -1315,13 +1270,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=CGO+conference
-  cfp_url: https://dblp.org/search?q=CGO+conference
+  website: https://2026.cgo.org/
+  cfp_url: https://2026.cgo.org/track/cgo-2026-papers
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Verified official 2026 site and papers track page. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: issta
   title: International Symposium on Software Testing and Analysis
   short_name: ISSTA
@@ -1332,13 +1286,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ISSTA+conference
-  cfp_url: https://dblp.org/search?q=ISSTA+conference
+  website: https://conf.researchr.org/home/issta-2026
+  cfp_url: https://conf.researchr.org/track/issta-2026/issta-2026-research-papers
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Verified official 2026 site and research papers track page. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: ase
   title: Automated Software Engineering
   short_name: ASE
@@ -1350,13 +1303,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ASE+conference
-  cfp_url: https://dblp.org/search?q=ASE+conference
+  website: https://conf.researchr.org/home/ase-2026
+  cfp_url: https://conf.researchr.org/home/ase-2026
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official ASE 2026 site verified in precision pass.
 - id: icsme
   title: International Conference on Software Maintenance and Evolution
   short_name: ICSME
@@ -1367,13 +1319,12 @@
   tier: mid
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ICSME+conference
-  cfp_url: https://dblp.org/search?q=ICSME+conference
+  website: https://conf.researchr.org/home/icsme-2026
+  cfp_url: https://conf.researchr.org/track/icsme-2026/icsme-2026-papers
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Verified official 2026 site and research papers track page. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: saner
   title: Software Analysis, Evolution and Reengineering
   short_name: SANER
@@ -1384,13 +1335,12 @@
   tier: mid
   recurring: true
   active: true
-  website: https://dblp.org/search?q=SANER+conference
-  cfp_url: https://dblp.org/search?q=SANER+conference
+  website: https://conf.researchr.org/home/saner-2026
+  cfp_url: https://conf.researchr.org/track/saner-2026/saner-2026-papers
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official SANER 2026 site and research-track CFP.
 - id: msr
   title: Mining Software Repositories
   short_name: MSR
@@ -1402,13 +1352,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=MSR+conference
-  cfp_url: https://dblp.org/search?q=MSR+conference
+  website: https://2026.msrconf.org/
+  cfp_url: https://2026.msrconf.org/dates
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official MSR 2026 site and dates page.
 - id: issre
   title: International Symposium on Software Reliability Engineering
   short_name: ISSRE
@@ -1419,13 +1368,12 @@
   tier: mid
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ISSRE+conference
-  cfp_url: https://dblp.org/search?q=ISSRE+conference
+  website: https://cyprusconferences.org/issre2026/
+  cfp_url: https://cyprusconferences.org/issre2026/dates/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official ISSRE 2026 site and dates/CFP navigation.
 - id: re
   title: Requirements Engineering Conference
   short_name: RE
@@ -1436,13 +1384,12 @@
   tier: mid
   recurring: true
   active: true
-  website: https://dblp.org/search?q=RE+conference
-  cfp_url: https://dblp.org/search?q=RE+conference
+  website: https://conf.researchr.org/home/RE-2026
+  cfp_url: https://conf.researchr.org/home/RE-2026
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official RE 2026 conference site; dates are exposed on the main site.
 - id: ecsa
   title: European Conference on Software Architecture
   short_name: ECSA
@@ -1453,13 +1400,12 @@
   tier: mid
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ECSA+conference
-  cfp_url: https://dblp.org/search?q=ECSA+conference
+  website: https://conf.researchr.org/home/ecsa-2026
+  cfp_url: https://conf.researchr.org/dates/ecsa-2026
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official ECSA 2026 software-architecture site and dates page.
 - id: icpc
   title: International Conference on Program Comprehension
   short_name: ICPC
@@ -1470,16 +1416,14 @@
   tier: mid
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ICPC+conference
-  cfp_url: https://dblp.org/search?q=ICPC+conference
+  website: https://conf.researchr.org/home/icpc-2026
+  cfp_url: https://conf.researchr.org/track/icpc-2026/icpc-2026-research
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official ICPC 2026 site and research-track CFP.
 - id: mobilehci
-  title: International Conference on Human-Computer Interaction with Mobile Devices
-    and Services
+  title: International Conference on Human-Computer Interaction with Mobile Devices and Services
   short_name: MobileHCI
   aliases: []
   domain:
@@ -1488,13 +1432,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=MobileHCI+conference
-  cfp_url: https://dblp.org/search?q=MobileHCI+conference
+  website: https://mobilehci.acm.org/2026/
+  cfp_url: https://mobilehci.acm.org/2026/submit/papers.html
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Verified official 2026 site and papers page. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: uist
   title: User Interface Software and Technology
   short_name: UIST
@@ -1505,13 +1448,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=UIST+conference
-  cfp_url: https://dblp.org/search?q=UIST+conference
+  website: https://uist.acm.org/2026/
+  cfp_url: https://uist.acm.org/2026/cfp/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official UIST 2026 site and CFP page verified in precision pass.
 - id: cscw
   title: Computer-Supported Cooperative Work and Social Computing
   short_name: CSCW
@@ -1522,13 +1464,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=CSCW+conference
-  cfp_url: https://dblp.org/search?q=CSCW+conference
+  website: https://cscw.acm.org/2026/
+  cfp_url: https://cscw.acm.org/2026/papers.html
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official CSCW 2026 site and papers page verified in precision pass.
 - id: iui
   title: Intelligent User Interfaces
   short_name: IUI
@@ -1540,13 +1481,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=IUI+conference
-  cfp_url: https://dblp.org/search?q=IUI+conference
+  website: https://iui.acm.org/2026/
+  cfp_url: https://iui.acm.org/2026/call-for-papers/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official ACM IUI 2026 site and CFP.
 - id: assets
   title: ACM SIGACCESS Conference on Computers and Accessibility
   short_name: ASSETS
@@ -1562,8 +1502,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: dis
   title: Designing Interactive Systems Conference
   short_name: DIS
@@ -1574,13 +1513,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=DIS+conference
-  cfp_url: https://dblp.org/search?q=DIS+conference
+  website: https://dis.acm.org/2026/
+  cfp_url: https://dis.acm.org/2026/papers/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official DIS 2026 site and papers call.
 - id: tei
   title: Tangible, Embedded and Embodied Interaction
   short_name: TEI
@@ -1591,13 +1529,12 @@
   tier: mid
   recurring: true
   active: true
-  website: https://dblp.org/search?q=TEI+conference
-  cfp_url: https://dblp.org/search?q=TEI+conference
+  website: https://tei2026.tei-c.org/
+  cfp_url: https://tei.acm.org/2026/participate/papers/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official TEI 2026 site and papers call.
 - id: percom
   title: IEEE International Conference on Pervasive Computing and Communications
   short_name: PerCom
@@ -1609,13 +1546,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=PerCom+conference
-  cfp_url: https://dblp.org/search?q=PerCom+conference
+  website: https://percom.org/
+  cfp_url: https://percom.org/call-for-papers/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official PerCom 2026 site and CFP.
 - id: iss
   title: Interactive Surfaces and Spaces
   short_name: ISS
@@ -1631,8 +1567,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: vr
   title: IEEE Conference on Virtual Reality and 3D User Interfaces
   short_name: IEEE VR
@@ -1644,13 +1579,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=IEEE+VR+conference
-  cfp_url: https://dblp.org/search?q=IEEE+VR+conference
+  website: https://ieeevr.org/2026/
+  cfp_url: https://ieeevr.org/2026/contribute/papers/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Verified official 2026 site and papers page. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: eurovis
   title: EuroVis
   short_name: EuroVis
@@ -1662,13 +1596,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=EuroVis+conference
-  cfp_url: https://dblp.org/search?q=EuroVis+conference
+  website: https://eurovis.org.uk/
+  cfp_url: https://eurovis.org.uk/full-papers/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official EuroVis 2026 site and full-papers call.
 - id: siggraph
   title: ACM SIGGRAPH
   short_name: SIGGRAPH
@@ -1679,13 +1612,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=SIGGRAPH+conference
-  cfp_url: https://dblp.org/search?q=SIGGRAPH+conference
+  website: https://s2026.siggraph.org/
+  cfp_url: https://s2026.siggraph.org/program/technical-papers/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official SIGGRAPH 2026 site and technical-papers page verified in precision pass.
 - id: siggraph-asia
   title: SIGGRAPH Asia
   short_name: SIGGRAPH Asia
@@ -1696,13 +1628,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=SIGGRAPH+Asia+conference
-  cfp_url: https://dblp.org/search?q=SIGGRAPH+Asia+conference
+  website: https://asia.siggraph.org/2026/
+  cfp_url: https://asia.siggraph.org/2026/submissions/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Updated in 4th pass to official SIGGRAPH Asia 2026 site and submissions page; keep manual review because the page currently points to submission portal timing rather than full dated CFP text. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: vis
   title: IEEE VIS
   short_name: IEEE VIS
@@ -1714,13 +1645,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=IEEE+VIS+conference
-  cfp_url: https://dblp.org/search?q=IEEE+VIS+conference
+  website: https://ieeevis.org/
+  cfp_url: https://ieeevis.org/year/2026/info/call-participation/call-for-participation/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official IEEE VIS 2026 site and call-for-participation page verified in precision pass.
 - id: ismar
   title: International Symposium on Mixed and Augmented Reality
   short_name: ISMAR
@@ -1732,13 +1662,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ISMAR+conference
-  cfp_url: https://dblp.org/search?q=ISMAR+conference
+  website: https://www.ieeeismar.net/2026/
+  cfp_url: https://www.ieeeismar.net/2026/call-for-papers/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Verified official 2026 site and CFP page. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: vcbm
   title: Visual Computing for Biology and Medicine
   short_name: VCBM
@@ -1755,8 +1684,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: imc
   title: ACM Internet Measurement Conference
   short_name: IMC
@@ -1768,13 +1696,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=IMC+conference
-  cfp_url: https://dblp.org/search?q=IMC+conference
+  website: https://conferences.sigcomm.org/imc/2026/
+  cfp_url: https://conferences.sigcomm.org/imc/2026/cfp/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official ACM IMC 2026 site and CFP verified in precision pass.
 - id: mobicom
   title: ACM International Conference on Mobile Computing and Networking
   short_name: MobiCom
@@ -1785,13 +1712,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=MobiCom+conference
-  cfp_url: https://dblp.org/search?q=MobiCom+conference
+  website: https://www.sigmobile.org/mobicom/2026/
+  cfp_url: https://www.sigmobile.org/mobicom/2026/cfp.html
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official MobiCom 2026 site and CFP verified in precision pass.
 - id: mobisys
   title: ACM International Conference on Mobile Systems, Applications, and Services
   short_name: MobiSys
@@ -1803,13 +1729,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=MobiSys+conference
-  cfp_url: https://dblp.org/search?q=MobiSys+conference
+  website: https://www.sigmobile.org/mobisys/2026/
+  cfp_url: https://www.sigmobile.org/mobisys/2026/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official MobiSys 2026 site verified in precision pass.
 - id: conext
   title: ACM CoNEXT Conference
   short_name: CoNEXT
@@ -1820,13 +1745,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=CoNEXT+conference
-  cfp_url: https://dblp.org/search?q=CoNEXT+conference
+  website: https://conferences.sigcomm.org/co-next/2026/
+  cfp_url: https://conferences.sigcomm.org/co-next/2026/#!/cfp
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: 'Verified official 2026 site; CFP anchor may require JS, using official conference site for crawl. Final QA pass: disabled for production candidate to reduce manual review load and keep only high-confidence active venues.'
 - id: infocom
   title: IEEE INFOCOM
   short_name: INFOCOM
@@ -1837,13 +1761,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=INFOCOM+conference
-  cfp_url: https://dblp.org/search?q=INFOCOM+conference
+  website: https://infocom2026.ieee-infocom.org/
+  cfp_url: https://infocom2026.ieee-infocom.org/call-papers
   default_timezone: AoE
   parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  scan_enabled: true
+  notes: 'Verified official 2026 site and call-for-papers page. Final QA pass: retained as manual-review active due to strong official 2026 page/CFP signals.'
 - id: hotnets
   title: ACM Workshop on Hot Topics in Networks
   short_name: HotNets
@@ -1859,8 +1782,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: sensys
   title: ACM Conference on Embedded Networked Sensor Systems
   short_name: SenSys
@@ -1872,13 +1794,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=SenSys+conference
-  cfp_url: https://dblp.org/search?q=SenSys+conference
+  website: https://sensys.acm.org/2026/
+  cfp_url: https://sensys.acm.org/2026/cfp.html
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official SenSys 2026 site and CFP.
 - id: sigmetrics
   title: ACM SIGMETRICS
   short_name: SIGMETRICS
@@ -1890,13 +1811,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=SIGMETRICS+conference
-  cfp_url: https://dblp.org/search?q=SIGMETRICS+conference
+  website: https://www.sigmetrics.org/sigmetrics2026/
+  cfp_url: https://www.sigmetrics.org/sigmetrics2026/call_for_papers.html
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official SIGMETRICS 2026 site and CFP.
 - id: middleware
   title: International Middleware Conference
   short_name: Middleware
@@ -1907,13 +1827,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=Middleware+conference
-  cfp_url: https://dblp.org/search?q=Middleware+conference
+  website: https://middleware-conf.github.io/2026/
+  cfp_url: https://middleware-conf.github.io/2026/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official Middleware 2026 site; the main page exposes the research-paper call.
 - id: eurosys
   title: European Conference on Computer Systems
   short_name: EuroSys
@@ -1924,13 +1843,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=EuroSys+conference
-  cfp_url: https://dblp.org/search?q=EuroSys+conference
+  website: https://2026.eurosys.org/
+  cfp_url: https://2026.eurosys.org/cfp.html
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official EuroSys 2026 site and CFP verified in precision pass.
 - id: fast
   title: USENIX Conference on File and Storage Technologies
   short_name: FAST
@@ -1942,13 +1860,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=FAST+conference
-  cfp_url: https://dblp.org/search?q=FAST+conference
+  website: https://www.usenix.org/conference/fast26
+  cfp_url: https://www.usenix.org/conference/fast26/call-for-papers
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official FAST 2026 site and CFP.
 - id: atc
   title: USENIX Annual Technical Conference
   short_name: USENIX ATC
@@ -1964,8 +1881,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: hpca
   title: IEEE International Symposium on High-Performance Computer Architecture
   short_name: HPCA
@@ -1977,13 +1893,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=HPCA+conference
-  cfp_url: https://dblp.org/search?q=HPCA+conference
+  website: https://conf.researchr.org/home/hpca-2026
+  cfp_url: https://2026.hpca-conf.org/track/hpca-2026-main-conference
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official HPCA 2026 site and main-conference track page.
 - id: isca
   title: International Symposium on Computer Architecture
   short_name: ISCA
@@ -1995,13 +1910,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ISCA+conference
-  cfp_url: https://dblp.org/search?q=ISCA+conference
+  website: https://iscaconf.org/isca2026/
+  cfp_url: https://www.iscaconf.org/isca2026/submit/guidelines.php
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official ISCA 2026 site and submission-guidelines page.
 - id: micro
   title: IEEE/ACM International Symposium on Microarchitecture
   short_name: MICRO
@@ -2013,16 +1927,14 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=MICRO+conference
-  cfp_url: https://dblp.org/search?q=MICRO+conference
+  website: https://www.microarch.org/micro59/
+  cfp_url: https://www.microarch.org/micro59/submit/papers.php
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official MICRO 2026 site and papers call.
 - id: sc
-  title: International Conference for High Performance Computing, Networking, Storage,
-    and Analysis
+  title: International Conference for High Performance Computing, Networking, Storage, and Analysis
   short_name: SC
   aliases: []
   domain:
@@ -2033,13 +1945,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=SC+conference
-  cfp_url: https://dblp.org/search?q=SC+conference
+  website: https://sc26.supercomputing.org/
+  cfp_url: https://sc26.supercomputing.org/all-dates-deadlines/
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official SC26 site and consolidated deadlines page verified in precision pass.
 - id: ics
   title: International Conference on Supercomputing
   short_name: ICS
@@ -2056,8 +1967,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: ppopp
   title: Principles and Practice of Parallel Programming
   short_name: PPoPP
@@ -2070,13 +1980,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=PPoPP+conference
-  cfp_url: https://dblp.org/search?q=PPoPP+conference
+  website: https://ppopp26.sigplan.org/
+  cfp_url: https://ppopp26.sigplan.org/track/PPoPP-2026-papers
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official PPoPP 2026 site and main CFP.
 - id: pods
   title: Principles of Database Systems
   short_name: PODS
@@ -2088,13 +1997,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=PODS+conference
-  cfp_url: https://dblp.org/search?q=PODS+conference
+  website: https://2026.sigmod.org/
+  cfp_url: https://2026.sigmod.org/calls_papers_pods_research.shtml
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official SIGMOD/PODS 2026 site and PODS research CFP verified in precision pass.
 - id: edbt
   title: Extending Database Technology
   short_name: EDBT
@@ -2106,13 +2014,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=EDBT+conference
-  cfp_url: https://dblp.org/search?q=EDBT+conference
+  website: https://edbticdt2026.github.io/
+  cfp_url: https://edbticdt2026.github.io/?contents=EDBT_CFP.html
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official EDBT/ICDT 2026 site and EDBT research-track CFP.
 - id: cidr
   title: Conference on Innovative Data Systems Research
   short_name: CIDR
@@ -2124,13 +2031,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=CIDR+conference
-  cfp_url: https://dblp.org/search?q=CIDR+conference
+  website: https://www.cidrdb.org/cidr2026/
+  cfp_url: https://www.cidrdb.org/cidr2026/cfp.html
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official CIDR 2026 site and CFP.
 - id: ssdbm
   title: Scientific and Statistical Database Management
   short_name: SSDBM
@@ -2147,8 +2053,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: icdt
   title: International Conference on Database Theory
   short_name: ICDT
@@ -2160,13 +2065,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ICDT+conference
-  cfp_url: https://dblp.org/search?q=ICDT+conference
+  website: https://edbticdt2026.github.io/
+  cfp_url: https://databasetheory.org/node/152
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Updated in 4th pass to official ICDT 2026 joint-conference site and theory-track CFP.
 - id: btw
   title: Database Systems for Business, Technology, and Web
   short_name: BTW
@@ -2183,8 +2087,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: bigdata
   title: IEEE International Conference on Big Data
   short_name: IEEE BigData
@@ -2201,8 +2104,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: ecir
   title: European Conference on Information Retrieval
   short_name: ECIR
@@ -2220,8 +2122,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: sigir
   title: ACM SIGIR Conference on Research and Development in Information Retrieval
   short_name: SIGIR
@@ -2234,13 +2135,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=SIGIR+conference
-  cfp_url: https://dblp.org/search?q=SIGIR+conference
+  website: https://sigir2026.org/
+  cfp_url: https://sigir2026.org/en-AU/pages/submissions/full-papers-track
   default_timezone: AoE
-  parser: manual_review
-  scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  parser: generic_dates
+  scan_enabled: true
+  notes: Official SIGIR 2026 site and full-papers track verified in precision pass.
 - id: ictir
   title: International Conference on the Theory of Information Retrieval
   short_name: ICTIR
@@ -2257,8 +2157,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: wisdom
   title: Web Intelligence and Intelligent Agent Technology
   short_name: WI-IAT
@@ -2275,8 +2174,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: acsac
   title: Annual Computer Security Applications Conference
   short_name: ACSAC
@@ -2287,13 +2185,12 @@
   tier: strong
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ACSAC+conference
-  cfp_url: https://dblp.org/search?q=ACSAC+conference
+  website: https://www.acsac.org/
+  cfp_url: https://www.acsac.org/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: ACSAC announced the 2026 location on its official site, but a dedicated 2026 CFP page was not identified in this precision pass; automated scanning is disabled.
 - id: esorics
   title: European Symposium on Research in Computer Security
   short_name: ESORICS
@@ -2310,8 +2207,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: raid
   title: International Symposium on Research in Attacks, Intrusions and Defenses
   short_name: RAID
@@ -2327,8 +2223,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: pets
   title: Privacy Enhancing Technologies Symposium
   short_name: PETS
@@ -2345,8 +2240,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: fc
   title: Financial Cryptography and Data Security
   short_name: FC
@@ -2364,8 +2258,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: crypto
   title: International Cryptology Conference
   short_name: CRYPTO
@@ -2377,16 +2270,14 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=CRYPTO+conference
-  cfp_url: https://dblp.org/search?q=CRYPTO+conference
+  website: https://www.iacr.org/conferences/
+  cfp_url: https://www.iacr.org/conferences/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: IACR conference pages could not be accessed directly in this verification pass because of robots restrictions, so CRYPTO scanning is disabled pending direct confirmation.
 - id: eurocrypt
-  title: Annual International Conference on the Theory and Applications of Cryptographic
-    Techniques
+  title: Annual International Conference on the Theory and Applications of Cryptographic Techniques
   short_name: EUROCRYPT
   aliases: []
   domain:
@@ -2396,16 +2287,14 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=EUROCRYPT+conference
-  cfp_url: https://dblp.org/search?q=EUROCRYPT+conference
+  website: https://www.iacr.org/conferences/
+  cfp_url: https://www.iacr.org/conferences/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: IACR conference pages could not be accessed directly in this verification pass because of robots restrictions, so EUROCRYPT scanning is disabled pending direct confirmation.
 - id: asiacrypt
-  title: International Conference on the Theory and Application of Cryptology and
-    Information Security
+  title: International Conference on the Theory and Application of Cryptology and Information Security
   short_name: ASIACRYPT
   aliases: []
   domain:
@@ -2415,13 +2304,12 @@
   tier: top
   recurring: true
   active: true
-  website: https://dblp.org/search?q=ASIACRYPT+conference
-  cfp_url: https://dblp.org/search?q=ASIACRYPT+conference
+  website: https://www.iacr.org/conferences/
+  cfp_url: https://www.iacr.org/conferences/
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: IACR conference pages could not be accessed directly in this verification pass because of robots restrictions, so ASIACRYPT scanning is disabled pending direct confirmation.
 - id: pkc
   title: International Conference on Practice and Theory of Public-Key Cryptography
   short_name: PKC
@@ -2438,8 +2326,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: ches
   title: Cryptographic Hardware and Embedded Systems
   short_name: CHES
@@ -2457,8 +2344,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: sacrypt
   title: Selected Areas in Cryptography
   short_name: SAC
@@ -2475,8 +2361,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: woot
   title: USENIX Workshop on Offensive Technologies
   short_name: WOOT
@@ -2492,8 +2377,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: hotsec
   title: USENIX Workshop on Hot Topics in Security
   short_name: HotSec
@@ -2509,8 +2393,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: wisec
   title: ACM Conference on Security and Privacy in Wireless and Mobile Networks
   short_name: WiSec
@@ -2527,8 +2410,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: codaspy
   title: Conference on Data and Application Security and Privacy
   short_name: CODASPY
@@ -2546,8 +2428,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: enigma
   title: USENIX Enigma
   short_name: Enigma
@@ -2563,8 +2444,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: wpes
   title: Workshop on Privacy in the Electronic Society
   short_name: WPES
@@ -2581,8 +2461,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: asiaccs
   title: ACM AsiaCCS Conference on Computer and Communications Security
   short_name: AsiaCCS
@@ -2599,8 +2478,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: dsn
   title: IEEE/IFIP International Conference on Dependable Systems and Networks
   short_name: DSN
@@ -2617,8 +2495,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: securecomm
   title: International Conference on Security and Privacy in Communication Networks
   short_name: SecureComm
@@ -2635,8 +2512,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: csf
   title: IEEE Computer Security Foundations Symposium
   short_name: CSF
@@ -2653,8 +2529,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: spw
   title: IEEE Security and Privacy Workshops
   short_name: S&P Workshops
@@ -2671,8 +2546,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: focs
   title: IEEE Symposium on Foundations of Computer Science
   short_name: FOCS
@@ -2688,8 +2562,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: stoc
   title: ACM Symposium on Theory of Computing
   short_name: STOC
@@ -2705,8 +2578,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: soda
   title: ACM-SIAM Symposium on Discrete Algorithms
   short_name: SODA
@@ -2722,8 +2594,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: socg
   title: Symposium on Computational Geometry
   short_name: SoCG
@@ -2740,8 +2611,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: icalp
   title: International Colloquium on Automata, Languages and Programming
   short_name: ICALP
@@ -2758,8 +2628,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: esa
   title: European Symposium on Algorithms
   short_name: ESA
@@ -2775,8 +2644,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: itcs
   title: Innovations in Theoretical Computer Science
   short_name: ITCS
@@ -2792,8 +2660,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: approx-random
   title: APPROX/RANDOM
   short_name: APPROX/RANDOM
@@ -2809,8 +2676,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: ccc
   title: Computational Complexity Conference
   short_name: CCC
@@ -2826,8 +2692,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: mfcs
   title: International Symposium on Mathematical Foundations of Computer Science
   short_name: MFCS
@@ -2843,8 +2708,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: latin
   title: Latin American Theoretical Informatics Symposium
   short_name: LATIN
@@ -2860,8 +2724,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: isaac
   title: International Symposium on Algorithms and Computation
   short_name: ISAAC
@@ -2877,8 +2740,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: ec
   title: ACM Conference on Economics and Computation
   short_name: EC
@@ -2895,8 +2757,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: aied
   title: International Conference on Artificial Intelligence in Education
   short_name: AIED
@@ -2913,8 +2774,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: edm
   title: International Conference on Educational Data Mining
   short_name: EDM
@@ -2932,8 +2792,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: sigcse
   title: ACM Technical Symposium on Computer Science Education
   short_name: SIGCSE
@@ -2949,8 +2808,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: iticse
   title: Innovation and Technology in Computer Science Education
   short_name: ITiCSE
@@ -2966,8 +2824,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: fie
   title: Frontiers in Education
   short_name: FIE
@@ -2983,8 +2840,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: ecml
   title: European Conference on Machine Learning
   short_name: ECML
@@ -3000,8 +2856,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: acml
   title: Asian Conference on Machine Learning
   short_name: ACML
@@ -3017,8 +2872,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: icann
   title: International Conference on Artificial Neural Networks
   short_name: ICANN
@@ -3035,8 +2889,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: gecco
   title: Genetic and Evolutionary Computation Conference
   short_name: GECCO
@@ -3052,8 +2905,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: cec
   title: IEEE Congress on Evolutionary Computation
   short_name: CEC
@@ -3069,8 +2921,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: nca
   title: IEEE International Symposium on Network Computing and Applications
   short_name: NCA
@@ -3087,8 +2938,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: trustcom
   title: IEEE TrustCom
   short_name: TrustCom
@@ -3105,8 +2955,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: cloud
   title: IEEE International Conference on Cloud Computing
   short_name: IEEE CLOUD
@@ -3123,8 +2972,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: ic2e
   title: IEEE International Conference on Cloud Engineering
   short_name: IC2E
@@ -3141,8 +2989,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: icac
   title: International Conference on Autonomic Computing
   short_name: ICAC
@@ -3158,8 +3005,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: hpdc
   title: International Symposium on High-Performance Distributed Computing
   short_name: HPDC
@@ -3176,8 +3022,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: debs
   title: International Conference on Distributed and Event-based Systems
   short_name: DEBS
@@ -3194,8 +3039,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: ppsn
   title: Parallel Problem Solving from Nature
   short_name: PPSN
@@ -3212,11 +3056,9 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: cpaior
-  title: Integration of Constraint Programming, Artificial Intelligence, and Operations
-    Research
+  title: Integration of Constraint Programming, Artificial Intelligence, and Operations Research
   short_name: CPAIOR
   aliases: []
   domain:
@@ -3231,8 +3073,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: sat
   title: International Conference on Theory and Applications of Satisfiability Testing
   short_name: SAT
@@ -3249,8 +3090,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: ijcar
   title: International Joint Conference on Automated Reasoning
   short_name: IJCAR
@@ -3267,8 +3107,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: cade
   title: Conference on Automated Deduction
   short_name: CADE
@@ -3285,8 +3124,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: socs
   title: Symposium on Combinatorial Search
   short_name: SoCS
@@ -3302,8 +3140,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: ismb
   title: Intelligent Systems for Molecular Biology
   short_name: ISMB
@@ -3320,8 +3157,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: recomb
   title: Research in Computational Molecular Biology
   short_name: RECOMB
@@ -3337,8 +3173,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: psb
   title: Pacific Symposium on Biocomputing
   short_name: PSB
@@ -3354,8 +3189,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: bcb
   title: ACM Conference on Bioinformatics, Computational Biology, and Health Informatics
   short_name: BCB
@@ -3372,8 +3206,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: iccad
   title: International Conference on Computer-Aided Design
   short_name: ICCAD
@@ -3390,8 +3223,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: dac
   title: Design Automation Conference
   short_name: DAC
@@ -3408,8 +3240,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: date
   title: Design, Automation and Test in Europe Conference
   short_name: DATE
@@ -3426,8 +3257,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: fpga
   title: ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
   short_name: FPGA
@@ -3444,8 +3274,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: rtss
   title: IEEE Real-Time Systems Symposium
   short_name: RTSS
@@ -3461,8 +3290,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: rtas
   title: IEEE Real-Time and Embedded Technology and Applications Symposium
   short_name: RTAS
@@ -3478,8 +3306,7 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.
 - id: emsoft
   title: International Conference on Embedded Software
   short_name: EMSOFT
@@ -3496,5 +3323,4 @@
   default_timezone: AoE
   parser: manual_review
   scan_enabled: false
-  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated
-    scans.
+  notes: Catalog seed entry. Verify the canonical venue URL before enabling automated scans.

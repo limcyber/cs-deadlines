@@ -1,0 +1,302 @@
+{
+  "exported_at": "2026-03-19T00:47:31.997Z",
+  "source": "admin-page-local-review",
+  "records": [
+    {
+      "id": "ase-2026",
+      "venue_id": "ase",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": "Munich, Germany",
+      "source_url": "https://conf.researchr.org/home/ase-2026",
+      "confidence": 0.35,
+      "checked_at": "2026-03-19T00:47:11.520Z",
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates.",
+      "scan_preview": [
+        "Mon 12 - Fri 16 October 2026",
+        ", Oct 15-16, 2026",
+        "Important Dates",
+        "up till Wed 29 Jul 2026",
+        "Thu 26 Mar 2026",
+        "Paper Submission"
+      ]
+    },
+    {
+      "id": "bmvc-2026",
+      "venue_id": "bmvc",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": "Lancaster, UK",
+      "source_url": "https://bmvc2026.bmva.org/calls/call-for-papers/",
+      "confidence": 0.35,
+      "checked_at": "2026-03-19T00:47:12.137Z",
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates.",
+      "scan_preview": [
+        "23rd—26th November 2026",
+        "Abstract Submission Deadline",
+        "Friday, 22 May 2026",
+        "Paper & Supplementary Material Submission Deadline",
+        "Friday, 29 May 2026",
+        "Monday, 8 June 2026"
+      ]
+    },
+    {
+      "id": "ccs-2026",
+      "venue_id": "ccs",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": "The Hague, The Netherlands",
+      "source_url": "https://www.sigsac.org/ccs/CCS2026/call-for/call-for-papers.html",
+      "confidence": 0.35,
+      "checked_at": "2026-03-19T00:47:12.768Z",
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates.",
+      "scan_preview": [
+        "By online artifacts uploading deadline",
+        "For Cycle B, CCS will pilot a 3 days grace period for artifacts provided through anonymous hosting services. After the artifact uploading deadline (May 2nd AoE), artifacts MUST be available at the provided URL and authors MUST NOT change the artifacts after the artifact uploading deadline.",
+        "After May 2nd AoE, papers with empty or dubious artifacts at the provided URL will be desk-rejected. Similarly, any update after the artifact deadline will lead to desk rejection. Official timestamps such as the ones provided by",
+        "Abstract submission deadline",
+        "Jan 7, 2026",
+        "Full paper submission deadline"
+      ]
+    },
+    {
+      "id": "chi-2026",
+      "venue_id": "chi",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": "Barcelona, Spain",
+      "source_url": "https://chi2026.acm.org/authors/papers/",
+      "confidence": 0.35,
+      "checked_at": "2026-03-19T00:47:14.092Z",
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates.",
+      "scan_preview": [
+        "Creant el demà junts • Barcelona, 13–17 April, 2026",
+        "2025-09-04",
+        "Abstract/Metadata Due",
+        "2025-09-11",
+        "Full Paper Due",
+        "2025-11-04"
+      ]
+    },
+    {
+      "id": "cscw-2026",
+      "venue_id": "cscw",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": "Salt Lake City, Utah, USA",
+      "source_url": "https://cscw.acm.org/2026/papers.html",
+      "confidence": 0.4,
+      "checked_at": "2026-03-19T00:47:14.607Z",
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates.",
+      "scan_preview": [
+        "MAY 2025 SUBMISSION CYCLE",
+        "May 14, 2025:",
+        "Expected notification date:",
+        "August 19, 2025, AoE",
+        "*ACM permits both desk (or bench) rejects and \"assistedâ desk rejects. For CSCW 2026, Assisted Desk Rejects are rejections based on the judgment of the senior PC member (SPC) and PC member that a paper is either out of scope or so far from acceptable as to make external reviews unnecessary.",
+        "September 16, 2025:"
+      ]
+    },
+    {
+      "id": "cvpr-2026",
+      "venue_id": "cvpr",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": "Denver, Colorado, USA",
+      "source_url": "https://cvpr.thecvf.com/Conferences/2026/CallForPapers",
+      "confidence": 0.65,
+      "checked_at": "2026-03-19T00:47:15.132Z",
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates.",
+      "scan_preview": [
+        "Nov 07, 2025 AOE",
+        "Nov 13, 2025 AOE",
+        "Nov 20, 2025 AOE",
+        "January 22, 2026",
+        "January 22-29, 2026",
+        "February 20, 2026"
+      ]
+    },
+    {
+      "id": "dis-2026",
+      "venue_id": "dis",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": "Singapore",
+      "source_url": "https://dis.acm.org/2026/papers/",
+      "confidence": 0.39,
+      "checked_at": "2026-03-19T00:47:15.644Z",
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates.",
+      "scan_preview": [
+        "Submission Site Opens",
+        "15 December 2025",
+        "Title and Abstract",
+        "9 January 2026",
+        "Paper and Pictorial Submission",
+        "19 January 2026"
+      ]
+    },
+    {
+      "id": "eacl-2026",
+      "venue_id": "eacl",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": "Rabat, Morocco",
+      "source_url": "https://2026.eacl.org/calls/papers/",
+      "confidence": 0.35,
+      "checked_at": "2026-03-19T00:47:17.391Z",
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates.",
+      "scan_preview": [
+        "The 19th Conference of the European Chapter of the Association for Computational Linguistics (EACL 2026) invites the submission of long and short papers on substantial, original, and unpublished research on Natural Language Processing. EACL 2026 will take place in Rabat, Morocco, from March 24 to 29, 2026.",
+        "ARR submission deadline:",
+        "6 October 2025",
+        "18 – 24 November 2025",
+        "11 December 2025",
+        "EACL commitment deadline:"
+      ]
+    },
+    {
+      "id": "eccv-2026",
+      "venue_id": "eccv",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": "Malmo, Sweden",
+      "source_url": "https://eccv.ecva.net/Conferences/2026/CallForPapers",
+      "confidence": 0.45,
+      "checked_at": "2026-03-19T00:47:18.335Z",
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates.",
+      "scan_preview": [
+        "Camera ready deadline:",
+        "Feb 26, 2026 11:00 PM CET or",
+        "Mar 05, 2026 11:00 PM CET or",
+        "Mar 12, 2026 11:00 PM CET or",
+        "May 02, 2026",
+        "May 11, 2026 11:00 PM CEST or"
+      ]
+    },
+    {
+      "id": "ecoop-2026",
+      "venue_id": "ecoop",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": "Brussels, Belgium",
+      "source_url": "https://2026.ecoop.org/track/ecoop-2026-technical-papers",
+      "confidence": 0.35,
+      "checked_at": "2026-03-19T00:47:19.046Z",
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates.",
+      "scan_preview": [
+        "Mon 29 June - Fri 3 July 2026",
+        "Mon 23 - Fri 27 Mar 2026",
+        "Round 2 Author response deadline",
+        "Thu 9 Apr 2026",
+        "Round 2 Notification",
+        "Mon 27 Apr 2026"
+      ]
+    },
+    {
+      "id": "ecsa-2026",
+      "venue_id": "ecsa",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": "Bolzano, Italy",
+      "source_url": "https://conf.researchr.org/dates/ecsa-2026",
+      "confidence": 0.35,
+      "checked_at": "2026-03-19T00:47:19.661Z",
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates.",
+      "scan_preview": [
+        "Mon 7 - Fri 11 September 2026",
+        "Fri 20 Mar 2026",
+        "Fri 27 Mar 2026",
+        "Mon 27 Apr 2026",
+        "Notification",
+        "Fri 1 May 2026"
+      ]
+    },
+    {
+      "id": "edbt-2026",
+      "venue_id": "edbt",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": "Tampere, Finland",
+      "source_url": "https://edbticdt2026.github.io/?contents=EDBT_CFP.html",
+      "confidence": 0.35,
+      "checked_at": "2026-03-19T00:47:20.362Z",
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates.",
+      "scan_preview": [
+        "EDBT/ICDT 2026 Joint Conference - 24th March - 27th March, 2026 - Tampere, Finland",
+        "24th March - 27th March, 2026"
+      ]
+    },
+    {
+      "id": "emnlp-2026",
+      "venue_id": "emnlp",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": "Budapest, Hungary",
+      "source_url": "https://2026.emnlp.org/calls/main_conference_papers/",
+      "confidence": 0.35,
+      "checked_at": "2026-03-19T00:47:20.899Z",
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates.",
+      "scan_preview": [
+        "ARR submission deadline (long & short papers)",
+        "May 25, 2026",
+        "Reviewer registration deadline for ALL authors",
+        "May 27, 2026",
+        "July 7 - July 13, 2026",
+        "July 30, 2026"
+      ]
+    },
+    {
+      "id": "eurosys-2026",
+      "venue_id": "eurosys",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": "Edinburgh, UK",
+      "source_url": "https://2026.eurosys.org/cfp.html",
+      "confidence": 0.44,
+      "checked_at": "2026-03-19T00:47:22.294Z",
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates.",
+      "scan_preview": [
+        "April 27th—30th, 2026",
+        "Spring deadline",
+        "Paper titles and abstracts due: Thursday, May 8, 2025 (AoE)",
+        "Full paper submissions due: Thursday, May 15, 2025 (AoE)",
+        "Reviews available: Wednesday, July 30, 2025 (AoE)",
+        "Author responses due: Friday, August 4, 2025 (AoE)"
+      ]
+    },
+    {
+      "id": "fse-2026",
+      "venue_id": "fse",
+      "year": 2026,
+      "status": "confirmed",
+      "deadlines": [],
+      "location": "Montreal, Canada",
+      "source_url": "https://conf.researchr.org/track/fse-2026/fse-2026-research-papers",
+      "confidence": 0.39,
+      "checked_at": "2026-03-19T00:47:23.329Z",
+      "notes": "Scanner extracted candidate lines and structured date candidates; auto-review may promote safe updates.",
+      "scan_preview": [
+        "Sun 5 - Thu 9 July 2026",
+        "” released April 20, 2023, which contains policy regarding the use of Generative AI tools and technologies, such as ChatGPT. Please also check the",
+        "” released April 20, 2023 and its accompanying FAQ including the following points:",
+        "Paper registration:",
+        "September 4, 2025",
+        "Full paper submission:"
+      ]
+    }
+  ]
+}

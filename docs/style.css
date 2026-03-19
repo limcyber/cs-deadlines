@@ -1,5 +1,8 @@
 :root {
+  /* Shared design tokens for the public and admin pages. */
   --bg: #0b1020;
+  --bg-grad-start: #0b1020;
+  --bg-grad-end: #0c1426;
   --panel: #11182b;
   --panel-2: #0f1627;
   --text: #edf2ff;
@@ -10,6 +13,33 @@
   --warning: #ffd166;
   --danger: #ff7b7b;
   --chip: #c7d2fe;
+  --row-grad-start: rgba(19,26,44,0.95);
+  --row-grad-end: rgba(16,23,40,0.95);
+  --row-hover-start: rgba(23,31,51,0.98);
+  --row-hover-end: rgba(18,26,44,0.98);
+  --shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+body[data-theme="light"] {
+  /* Light theme swaps the same token set rather than redefining component styles. */
+  --bg: #f6f7fb;
+  --bg-grad-start: #ffffff;
+  --bg-grad-end: #f0f2f8;
+  --panel: #ffffff;
+  --panel-2: #f6f8fc;
+  --text: #121521;
+  --muted: #4a5672;
+  --line: #d6dcea;
+  --accent: #22428c;
+  --success: #21824a;
+  --warning: #8c6500;
+  --danger: #b42318;
+  --chip: #3e4e73;
+  --row-grad-start: #ffffff;
+  --row-grad-end: #f6f8fc;
+  --row-hover-start: #fbfcff;
+  --row-hover-end: #f3f6fd;
+  --shadow: 0 4px 12px rgba(21,32,61,0.08);
 }
 
 * { box-sizing: border-box; }
@@ -17,7 +47,7 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
-  background: linear-gradient(180deg, #0b1020 0%, #0c1426 100%);
+  background: linear-gradient(180deg, var(--bg-grad-start) 0%, var(--bg-grad-end) 100%);
   color: var(--text);
 }
 
@@ -47,6 +77,84 @@ h1 {
   font-size: 0.95rem;
 }
 
+.hero-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle {
+  /* The toggle is styled like a compact switch so theme state reads at a glance. */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 170px;
+  height: 40px;
+  padding: 4px 10px 4px 6px;
+  background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.1s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.theme-toggle:active {
+  transform: translateY(1px);
+}
+
+.theme-track {
+  position: relative;
+  width: 62px;
+  height: 28px;
+  border-radius: 999px;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.theme-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffffff 0%, #d9e1f5 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease;
+}
+
+.theme-label {
+  min-width: 74px;
+  text-align: right;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  user-select: none;
+  color: var(--text);
+  opacity: 0.88;
+}
+
+.theme-toggle.is-light .theme-knob {
+  transform: translateX(34px);
+}
+
+.theme-toggle.is-light .theme-track {
+  background: #f3f6fd;
+  border-color: #cfd8ec;
+}
+
 .summary-box {
   min-width: 132px;
   background: var(--panel);
@@ -67,9 +175,22 @@ h1 {
 }
 
 .controls {
+  /* Filters stay close to the hero to support quick scan-and-refine behavior. */
   display: grid;
   gap: 10px;
   padding-top: 8px;
+}
+
+.disclaimer-wrap {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.disclaimer {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.3;
 }
 
 input, select {
@@ -105,19 +226,19 @@ input, select {
 }
 
 .control-row {
-  display: grid;
-  grid-template-columns: 1.1fr 1.1fr 1.1fr auto;
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   align-items: center;
 }
 
-.toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--muted);
-  font-size: 0.88rem;
-  white-space: nowrap;
+.control-row > select {
+  flex: 0 1 180px;
+}
+
+#sortFilter {
+  margin-left: auto;
+  order: 99;
 }
 
 .list {
@@ -128,15 +249,16 @@ input, select {
 }
 
 .venue-row {
-  background: linear-gradient(180deg, rgba(19,26,44,0.95) 0%, rgba(16,23,40,0.95) 100%);
+  /* Each venue uses a card row so dense metadata still feels scannable. */
+  background: linear-gradient(180deg, var(--row-grad-start) 0%, var(--row-grad-end) 100%);
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 10px 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  box-shadow: var(--shadow);
 }
 
 .venue-row:hover {
-  background: linear-gradient(180deg, rgba(23,31,51,0.98) 0%, rgba(18,26,44,0.98) 100%);
+  background: linear-gradient(180deg, var(--row-hover-start) 0%, var(--row-hover-end) 100%);
 }
 
 .row-main {
@@ -236,6 +358,7 @@ a:hover {
 }
 
 .status-chip {
+  /* Status chips represent urgency relative to "next deadline", not pipeline status. */
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
@@ -293,6 +416,7 @@ a:hover {
 }
 
 @media (max-width: 980px) {
+  /* Collapse the two-column deadline layout before the cards feel cramped. */
   .control-row {
     grid-template-columns: 1fr 1fr;
   }
@@ -308,9 +432,14 @@ a:hover {
 }
 
 @media (max-width: 720px) {
+  /* Mobile prioritizes readable metadata wrapping over strict single-line density. */
   .hero {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .hero-right {
+    justify-content: space-between;
   }
 
   .control-row {

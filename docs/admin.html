@@ -3,22 +3,57 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CS Deadlines Hub — Admin</title>
+  <title>Computer Science Conferences Tracker — Admin</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="admin.css" />
 </head>
 <body class="admin-page">
+  <!-- Admin keeps the same visual shell as the public page, but exposes curation controls. -->
   <header class="wrap hero admin-hero">
     <div>
-      <h1>CS Deadlines Hub — Admin</h1>
-      <p class="sub">Internal review dashboard for confirmed records, scanned previews, catalog seeds, and scan failures.</p>
+      <h1>Computer Science Conferences Tracker — Admin</h1>
+      <p class="sub">Editorial workspace for reviewing scans, confirming deadlines, and maintaining catalog quality.</p>
     </div>
     <nav class="admin-nav">
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle black and white theme" aria-pressed="false" title="Switch to white theme">
+        <span class="theme-track" aria-hidden="true">
+          <span class="theme-knob"></span>
+        </span>
+        <span class="theme-label">BLACK</span>
+      </button>
       <a href="./index.html">Open public page</a>
     </nav>
   </header>
 
   <section class="wrap admin-summary" id="summaryCards"></section>
+
+  <section class="wrap admin-toolbar">
+    <!-- Toolbar actions manage only local draft state until a patch is exported/applied. -->
+    <div class="toolbar-card toolbar-actions">
+      <div>
+        <strong>Review workspace</strong>
+        <p>Approve, reject, and edit records in the browser. Changes are saved to local draft storage and can be exported as a review patch for local scripts or GitHub Actions.</p>
+      </div>
+      <div class="toolbar-buttons">
+        <button id="saveDraftBtn" class="btn secondary">Save draft</button>
+        <button id="exportReviewsBtn" class="btn">Export review patch</button>
+        <button id="downloadSnapshotBtn" class="btn secondary">Download merged snapshot</button>
+        <button id="clearDraftBtn" class="btn danger ghost">Clear draft</button>
+      </div>
+      <div class="toolbar-status" id="draftStatus">No local draft yet.</div>
+    </div>
+
+    <div class="toolbar-card toolbar-actions">
+      <div>
+        <strong>GitHub Pages / Actions flow</strong>
+        <p>Because GitHub Pages is static, the admin page cannot safely write to repository files directly. Export the patch JSON, commit it, and let a local script or GitHub Action apply it to <code>data/instances.yml</code>.</p>
+      </div>
+      <div class="toolbar-buttons compact">
+        <label class="btn secondary file-label" for="importReviewsInput">Import review patch</label>
+        <input id="importReviewsInput" type="file" accept="application/json" hidden />
+      </div>
+    </div>
+  </section>
 
   <section class="wrap controls admin-controls">
     <input id="adminSearch" type="search" placeholder="Search by venue, alias, parser, note, or source" />
@@ -41,10 +76,13 @@
       </select>
       <label class="toggle"><input id="scanEnabledOnly" type="checkbox" /><span>Scan enabled only</span></label>
       <label class="toggle"><input id="activeOnly" type="checkbox" checked /><span>Active only</span></label>
+      <label class="toggle"><input id="previewOnly" type="checkbox" /><span>Preview only</span></label>
+      <label class="toggle"><input id="editedOnly" type="checkbox" /><span>Edited only</span></label>
     </div>
   </section>
 
   <main class="wrap admin-layout">
+    <!-- The first panels are workflow-oriented; the final table is the full audit view. -->
     <section class="admin-panel">
       <div class="panel-head">
         <h2>Review queue</h2>
@@ -86,6 +124,7 @@
               <th>Confidence</th>
               <th>Checked</th>
               <th>Source</th>
+              <th>Draft</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -95,6 +134,7 @@
   </main>
 
   <template id="adminRowTemplate">
+    <!-- Each row expands into an inline edit surface backed by local draft storage. -->
     <article class="admin-row">
       <div class="admin-row-top">
         <div>
@@ -107,6 +147,8 @@
         <div class="admin-deadline"></div>
         <div class="admin-links"></div>
       </div>
+      <div class="admin-actions"></div>
+      <div class="admin-edit-panel"></div>
       <details class="admin-details">
         <summary>Details</summary>
         <div class="admin-details-grid">
