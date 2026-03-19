@@ -10,6 +10,7 @@ async function loadData() {
 }
 
 const THEME_STORAGE_KEY = 'cs-deadlines-theme-v1';
+const LAYOUT_MQ = window.matchMedia('(max-width: 760px)');
 
 function safeStorageGet(key) {
   try {
@@ -39,6 +40,23 @@ function applyTheme(theme) {
     toggle.setAttribute('title', nextLabel);
     const label = toggle.querySelector('.theme-label');
     if (label) label.textContent = isLight ? 'WHITE' : 'BLACK';
+  }
+}
+
+function applyLayoutMode(isMobile) {
+  const mode = isMobile ? 'mobile' : 'desktop';
+  document.body.dataset.layout = mode;
+  const chip = document.getElementById('layoutChip');
+  if (chip) chip.textContent = isMobile ? 'Mobile layout' : 'Desktop layout';
+}
+
+function initLayoutMode() {
+  applyLayoutMode(!!LAYOUT_MQ.matches);
+  const onChange = event => applyLayoutMode(!!event.matches);
+  if (typeof LAYOUT_MQ.addEventListener === 'function') {
+    LAYOUT_MQ.addEventListener('change', onChange);
+  } else if (typeof LAYOUT_MQ.addListener === 'function') {
+    LAYOUT_MQ.addListener(onChange);
   }
 }
 
@@ -386,6 +404,7 @@ function render(records) {
 }
 
 initThemeToggle();
+initLayoutMode();
 
 loadData().then(records => {
   function rerender() {

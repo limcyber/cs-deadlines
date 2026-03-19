@@ -83,6 +83,24 @@ h1 {
   gap: 10px;
 }
 
+.layout-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  min-width: 118px;
+  padding: 0 12px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .theme-toggle {
   /* The toggle is styled like a compact switch so theme state reads at a glance. */
   display: inline-flex;
@@ -416,11 +434,6 @@ a:hover {
 }
 
 @media (max-width: 980px) {
-  /* Collapse the two-column deadline layout before the cards feel cramped. */
-  .control-row {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .row-main {
     grid-template-columns: 1fr;
     gap: 8px;
@@ -429,6 +442,143 @@ a:hover {
   .row-right {
     text-align: left;
   }
+}
+
+body[data-layout="mobile"] .wrap {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+body[data-layout="mobile"] .hero {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  padding-top: 18px;
+}
+
+body[data-layout="mobile"] h1 {
+  font-size: 1.56rem;
+}
+
+body[data-layout="mobile"] .sub {
+  font-size: 0.92rem;
+}
+
+body[data-layout="mobile"] .hero-right {
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+
+body[data-layout="mobile"] .theme-toggle,
+body[data-layout="mobile"] .summary-box,
+body[data-layout="mobile"] .layout-chip {
+  width: 100%;
+}
+
+body[data-layout="mobile"] .theme-toggle {
+  justify-content: space-between;
+}
+
+body[data-layout="mobile"] .summary-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  text-align: left;
+}
+
+body[data-layout="mobile"] .controls {
+  gap: 12px;
+}
+
+body[data-layout="mobile"] input,
+body[data-layout="mobile"] select {
+  padding: 12px 13px;
+  font-size: 1rem;
+}
+
+body[data-layout="mobile"] .quick-areas {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  margin-right: -16px;
+  padding-right: 16px;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+}
+
+body[data-layout="mobile"] .area-btn {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  scroll-snap-align: start;
+}
+
+body[data-layout="mobile"] .control-row {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+body[data-layout="mobile"] .control-row > select {
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+body[data-layout="mobile"] #sortFilter {
+  margin-left: 0;
+  order: 0;
+}
+
+body[data-layout="mobile"] .venue-row {
+  padding: 12px 12px 13px;
+  border-radius: 18px;
+}
+
+body[data-layout="mobile"] .meta-line {
+  align-items: flex-start;
+  gap: 6px;
+}
+
+body[data-layout="mobile"] .meta-text {
+  white-space: normal;
+  line-height: 1.35;
+}
+
+body[data-layout="mobile"] .badge {
+  font-size: 0.7rem;
+  padding: 4px 8px;
+}
+
+body[data-layout="mobile"] .row-main {
+  grid-template-columns: 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+body[data-layout="mobile"] .row-right {
+  text-align: left;
+}
+
+body[data-layout="mobile"] .links-line {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+body[data-layout="mobile"] .title {
+  font-size: 0.98rem;
+  line-height: 1.28;
+  margin-top: 6px;
+}
+
+body[data-layout="mobile"] .deadline-primary {
+  font-size: 0.92rem;
+}
+
+body[data-layout="mobile"] .deadline-secondary {
+  font-size: 0.76rem;
+}
+
+body[data-layout="mobile"] .empty-state {
+  padding: 22px 14px;
 }
 
 @media (max-width: 720px) {
@@ -443,7 +593,8 @@ a:hover {
   }
 
   .control-row {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .meta-text {
