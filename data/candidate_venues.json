@@ -120,10 +120,10 @@
     "confidence_band": "very_high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 111,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 112,
     "id": "cand-2026-0002",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "2026 European Conference on Visual Information Processing (EUVIP)",
@@ -138,10 +138,10 @@
     "confidence_band": "very_high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-05-21T07:04:16.923221+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 51,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 52,
     "id": "cand-2026-0008",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "2026 IEEE International Conference on Content-Based Multimedia Indexing (CBMI)",
@@ -156,10 +156,10 @@
     "confidence_band": "very_high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 111,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 112,
     "id": "cand-2026-0003",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "2026 IEEE International Conference on Quantum Computing and Engineering (QCE)",
@@ -174,10 +174,10 @@
     "confidence_band": "very_high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 111,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 112,
     "id": "cand-2026-0004",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "The 28th International Conference on Information and Communications Security (ICICS 2026)",
@@ -192,10 +192,10 @@
     "confidence_band": "very_high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 228,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 230,
     "id": "cand-2026-0015",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "APWG eCrime 2026",
@@ -210,10 +210,10 @@
     "confidence_band": "very_high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-29T06:47:26.802750+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 201,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 203,
     "id": "cand-2026-0005",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "TPS 2026",
@@ -228,10 +228,10 @@
     "confidence_band": "very_high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-05-30T06:34:32.062639+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 41,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 42,
     "id": "cand-2026-0013",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "2026 Asilomar Conference on Signals, Systems, and Computers",
@@ -246,10 +246,10 @@
     "confidence_band": "very_high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 111,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 112,
     "id": "cand-2026-0005",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "2027 IEEE 24th International Symposium on Biomedical Imaging (ISBI)",
@@ -282,10 +282,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 111,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 112,
     "id": "cand-2026-0007",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "ACM WiSec 2026",
@@ -318,10 +318,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-05-30T06:34:32.062639+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 41,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 42,
     "id": "cand-2026-0018",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "CSR 2026",
@@ -354,10 +354,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 174,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 175,
     "id": "cand-2026-0038",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "SSS 2026",
@@ -372,10 +372,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-29T06:47:26.802750+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 101,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 102,
     "id": "cand-2026-0012",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "10th International Cryptology and Information Security Conference 2026 (CRYPTOLOGY2026)",
@@ -390,10 +390,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0010",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "2026 IEEE International Conference on Quantum Software (IEEE QSW 2026)",
@@ -408,10 +408,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-04-02T07:49:04.749722+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 99,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 100,
     "id": "cand-2026-0014",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "5th International Conference on Security & Privacy (ICSP 2026)",
@@ -426,10 +426,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-05-07T06:21:39.365235+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 65,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 66,
     "id": "cand-2026-0020",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "AFT 2026",
@@ -444,10 +444,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-31T07:54:34.452867+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 101,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 102,
     "id": "cand-2026-0014",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "Fifteenth International Conference on Security and Cryptography for Networks (SCN 2026)",
@@ -462,10 +462,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0011",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "ICISS 2026",
@@ -480,10 +480,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0012",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "IFIP SEC 2026",
@@ -498,10 +498,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0013",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "IMF 2026",
@@ -516,10 +516,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-26T07:43:44.658083+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 106,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 107,
     "id": "cand-2026-0014",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "Information-Theoretic Cryptography Conference (ITC 2026)",
@@ -534,10 +534,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0014",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "ISC 2026",
@@ -552,10 +552,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-04-20T06:00:01.038022+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 100,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 102,
     "id": "cand-2026-0057",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "PQQS 2026",
@@ -570,10 +570,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-04-20T06:00:01.038022+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 147,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 149,
     "id": "cand-2026-0059",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "RISC 2026",
@@ -606,10 +606,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-06-16T09:07:28.604102+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 25,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 26,
     "id": "cand-2026-0033",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "Sixteenth International Conference on Security, Privacy and Applied Cryptographic Engineering (SPACE 2026)",
@@ -624,10 +624,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-06-18T08:22:47.846622+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 23,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 24,
     "id": "cand-2026-0034",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "The 27th Annual International Conference on Cryptology in India (Indocrypt 2026)",
@@ -642,10 +642,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-05-29T07:06:56.710959+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 43,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 44,
     "id": "cand-2026-0041",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "The 27th World Conference on Information Security Applications (WISA 2026)",
@@ -660,10 +660,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-05-29T07:06:56.710959+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 43,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 44,
     "id": "cand-2026-0031",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "The 5th International Conference on Advanced Security on Software and Systems (ASSS 2026)",
@@ -678,10 +678,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-07-08T06:11:03.245055+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 3,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 4,
     "id": "cand-2026-0038",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "The 8th Asian Post-Quantum Cryptographic Forum (APQC 2026)",
@@ -696,10 +696,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-06-18T08:22:47.846622+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 23,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 24,
     "id": "cand-2026-0037",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "The third International Conference on Cryptography and Information Security (VCRIS 2026)",
@@ -714,10 +714,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-04-04T06:41:28.549725+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 97,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 98,
     "id": "cand-2026-0022",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "Theory of Cryptography Conference (TCC 2026)",
@@ -732,10 +732,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 222,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 224,
     "id": "cand-2026-0016",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "TPS-ISA 2026",
@@ -750,10 +750,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-06-16T09:07:28.604102+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 25,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 26,
     "id": "cand-2026-0038",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "2027 Data Compression Conference (DCC)",
@@ -768,10 +768,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-05-21T07:04:16.923221+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 51,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 52,
     "id": "cand-2026-0033",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "International Conference on Provable and Practical Security (ProvSec 2026)",
@@ -786,10 +786,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-04-04T06:41:28.549725+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 226,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 229,
     "id": "cand-2026-0027",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "SciSec 2026",
@@ -804,10 +804,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 174,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 175,
     "id": "cand-2026-0046",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "An international scientific conference on cryptography and cryptographic information security tools “Cryptography in a multipolar world”ileCrypto 2026 (AgileCrypto 2026)",
@@ -822,10 +822,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-05-12T06:24:40.613213+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 60,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 61,
     "id": "cand-2026-0033",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "Eleventh International Joint Conference on Electronic Voting (E-Vote-ID 2026)",
@@ -840,10 +840,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0017",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "International Conference on Post-Quantum Cryptography (PQCrypto 2026)",
@@ -858,10 +858,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 143,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 144,
     "id": "cand-2026-0018",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "PrivaCI 2026",
@@ -876,10 +876,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0019",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "The 32nd International Conference on the Theory and Application of Cryptology and Information Security (Asiacrypt 2026)",
@@ -894,10 +894,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-04-04T06:41:28.549725+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 97,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 98,
     "id": "cand-2026-0029",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "CANS 2026",
@@ -912,10 +912,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 228,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 230,
     "id": "cand-2026-0020",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "Fast Software Encryption (FSE 2026)",
@@ -948,10 +948,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-06-23T07:02:07.689759+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 18,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 19,
     "id": "cand-2026-0052",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "Public Key Cryptography (PKC 2026)",
@@ -984,10 +984,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 228,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 229,
     "id": "cand-2026-0023",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "Histocrypt 2026",
@@ -1020,10 +1020,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-06-08T08:26:32.891383+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 33,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 34,
     "id": "cand-2026-0050",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "25th International Conference on Applied Cryptography and Network Security (ACNS 2027)",
@@ -1038,10 +1038,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-05-29T07:06:56.710959+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 86,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 88,
     "id": "cand-2026-0048",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "29th Conference on Public Key Cryptography (PKC 2027)",
@@ -1056,10 +1056,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-04-14T09:04:57.537614+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 88,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 89,
     "id": "cand-2026-0040",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "Constructive Approaches for SeCurity Analysis and Design of Embedded systems Conference 2027 (CASCADE 2027)",
@@ -1074,10 +1074,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-06-18T08:22:47.846622+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 23,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 24,
     "id": "cand-2026-0057",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "Real World Crypto Symposium (RWC 2027)",
@@ -1092,10 +1092,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0024",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "2026 IEEE International Workshop on Information Forensics and Security (WIFS)",
@@ -1128,10 +1128,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 113,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 114,
     "id": "cand-2026-0025",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "46th annual international conference on the theory and applications of cryptographic techniques (Eurocrypt 2027)",
@@ -1146,10 +1146,10 @@
     "confidence_band": "high",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-06-02T08:11:22.181173+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 39,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 40,
     "id": "cand-2026-0055",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "ACISP 2026",
@@ -1164,10 +1164,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0026",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "ACM SAC 2026",
@@ -1218,10 +1218,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-04-01T08:05:51.468433+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 100,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 101,
     "id": "cand-2026-0035",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "ARES 2026",
@@ -1236,10 +1236,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0029",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "C&C 2026",
@@ -1254,10 +1254,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-04-06T08:50:33.350764+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 95,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 96,
     "id": "cand-2026-0041",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "CASCADE 2026",
@@ -1290,10 +1290,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-26T07:43:44.658083+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 106,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 107,
     "id": "cand-2026-0032",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "CRISIS 2026",
@@ -1308,10 +1308,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-06-11T08:19:21.176587+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 30,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 31,
     "id": "cand-2026-0065",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "DCS-CI 2026",
@@ -1326,10 +1326,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0031",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "DIMVA 2026",
@@ -1344,10 +1344,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0032",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "DSC 2026",
@@ -1380,10 +1380,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-07-07T06:59:35.289347+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 4,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 5,
     "id": "cand-2026-0076",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "Euro S&P 2026",
@@ -1398,10 +1398,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0033",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "FPS 2026",
@@ -1416,10 +1416,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-06-11T08:19:21.176587+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 30,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 31,
     "id": "cand-2026-0069",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "HOST 2026",
@@ -1452,10 +1452,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-04-01T08:05:51.468433+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 100,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 101,
     "id": "cand-2026-0043",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "ISPEC 2026",
@@ -1470,10 +1470,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-06-25T06:59:14.314465+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 16,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 17,
     "id": "cand-2026-0079",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "PAM 2026",
@@ -1488,10 +1488,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0035",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "SACMAT 2026",
@@ -1506,10 +1506,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0036",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "SCP 2026",
@@ -1524,10 +1524,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0037",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "SSR 2026",
@@ -1542,10 +1542,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-24T06:45:43.048233+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 108,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 109,
     "id": "cand-2026-0039",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "SSS 2026",
@@ -1560,10 +1560,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-04-01T08:05:51.468433+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 100,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 101,
     "id": "cand-2026-0048",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "VehicleSec '26: 4th USENIX Symposium on Vehicle Security and Privacy",
@@ -1596,10 +1596,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-26T07:43:44.658083+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 106,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 107,
     "id": "cand-2026-0043",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "Fast Software Encryption (FSE 2027)",
@@ -1614,10 +1614,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-05-19T06:59:39.873888+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 53,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 54,
     "id": "cand-2026-0068",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "2026 IEEE International Workshop on Information Forensics and Security (WIFS)",
@@ -1650,10 +1650,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-05-21T07:04:16.923221+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 50,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 51,
     "id": "cand-2026-0072",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "Crypto Valley Conference 2025",
@@ -1740,10 +1740,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0044",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "DBSec 2026",
@@ -1758,10 +1758,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0045",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "Inscrypt 2026",
@@ -1776,10 +1776,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-26T07:43:44.658083+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 106,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 107,
     "id": "cand-2026-0050",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "NordSec 2026",
@@ -1794,10 +1794,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-04-14T09:04:57.537614+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 88,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 89,
     "id": "cand-2026-0072",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "SmartSP 2026",
@@ -1812,10 +1812,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0047",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "uASC 2026",
@@ -1848,10 +1848,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0049",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "2026 IEEE International Workshop on Machine Learning for Signal Processing",
@@ -1866,10 +1866,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-04-11T06:43:09.611989+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 90,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 91,
     "id": "cand-2026-0073",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "2026 IEEE Workshop on Signal Processing Systems (SiPS)",
@@ -1902,10 +1902,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-05-01T06:25:26.073745+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 71,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 72,
     "id": "cand-2026-0080",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "CASCADE 2027",
@@ -1920,10 +1920,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-06-29T08:30:34.276853+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 12,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 13,
     "id": "cand-2026-0104",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "HOST 2027",
@@ -1938,10 +1938,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-06-29T08:30:34.276853+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 12,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 13,
     "id": "cand-2026-0105",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "S&P (Oakland) 2027",
@@ -1956,10 +1956,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-04-28T06:17:08.664295+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 74,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 75,
     "id": "cand-2026-0080",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "ATC 2026",
@@ -1974,10 +1974,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-04-06T08:50:33.350764+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 95,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 96,
     "id": "cand-2026-0067",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "2027 IEEE International Workshop on Multimedia Signal Processing (MMSP)",
@@ -2010,10 +2010,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-06-21T08:13:16.820447+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 20,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 21,
     "id": "cand-2026-0105",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "2026 International Workshop on Acoustic Signal Enhancement (IWAENC)",
@@ -2028,10 +2028,10 @@
     "confidence_band": "medium",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-05-16T06:09:51.640010+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 56,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 57,
     "id": "cand-2026-0086",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "ADHOCNETS 2025",
@@ -2046,10 +2046,10 @@
     "confidence_band": "low",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0052",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "CNS 2025",
@@ -2118,10 +2118,10 @@
     "confidence_band": "low",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0056",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "ISC 2025",
@@ -2154,10 +2154,10 @@
     "confidence_band": "low",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0058",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "LATINCRYPT 2025",
@@ -2172,10 +2172,10 @@
     "confidence_band": "low",
     "notes": "Discovered from CS conference feed; needs human verification before adding to venues.yml.",
     "first_seen_at": "2026-03-19T01:53:31.743412+00:00",
-    "last_seen_at": "2026-07-10T06:59:08.838594+00:00",
-    "seen_count": 114,
+    "last_seen_at": "2026-07-11T05:56:32.878965+00:00",
+    "seen_count": 115,
     "id": "cand-2026-0059",
-    "discovered_at": "2026-07-10T06:59:08.838594+00:00"
+    "discovered_at": "2026-07-11T05:56:32.878965+00:00"
   },
   {
     "title": "SSR 2025",
